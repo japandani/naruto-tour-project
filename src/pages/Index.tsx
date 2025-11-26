@@ -16,7 +16,7 @@ const Index = () => {
               className="w-12 h-12 rounded-full object-cover ring-2 ring-primary shadow-md"
             />
             <div>
-              <h1 className="text-3xl font-bold text-background tracking-tight">JAPAN : ДА!</h1>
+              <h1 className="text-3xl font-bold text-background tracking-tight" style={{ fontFamily: 'Caveat, cursive' }}>JAPAN : ДА!</h1>
               <p className="text-xs text-background/70 tracking-widest uppercase">Экскурсионное бюро</p>
             </div>
           </div>
