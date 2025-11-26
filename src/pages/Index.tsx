@@ -128,7 +128,7 @@ const Index = () => {
               <div className="absolute -right-4 top-0 bottom-0 w-2 bg-gradient-to-b from-accent/60 via-accent to-accent/60 rounded-full"></div>
               <div className="bg-gradient-to-br from-background via-secondary/20 to-background border-4 border-accent/30 rounded-lg shadow-2xl p-8 md:p-12 relative overflow-hidden">
                 <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-10"
+                  className="absolute inset-0 bg-cover bg-center opacity-20"
                   style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/9aa43c59-344a-4bf6-87f3-76447ea8d652.jpg)' }}
                 ></div>
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
@@ -155,18 +155,24 @@ const Index = () => {
               <div className="absolute -left-4 top-0 bottom-0 w-2 bg-gradient-to-b from-accent/60 via-accent to-accent/60 rounded-full"></div>
               <div className="absolute -right-4 top-0 bottom-0 w-2 bg-gradient-to-b from-accent/60 via-accent to-accent/60 rounded-full"></div>
               <div className="bg-gradient-to-br from-background via-secondary/20 to-background border-4 border-accent/30 rounded-lg shadow-2xl p-8 md:p-12 relative overflow-hidden">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-20"
+                  style={{ backgroundImage: 'url(https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/5024cc90-00bd-410b-aa16-09f103714bda.jpg)' }}
+                ></div>
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-accent/40 to-transparent"></div>
-                <div className="flex items-start gap-6">
+                <div className="flex items-start gap-6 relative z-10">
                   <div className="flex-shrink-0">
                     <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center border-2 border-primary/30">
                       <span className="text-4xl font-bold text-primary">二</span>
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-3xl font-bold mb-4 text-primary">Второй свиток: Стихии</h3>
+                    <h3 className="text-3xl font-bold mb-2 text-primary">Свиток Второй: СЕРДЦЕ</h3>
+                    <p className="text-xl font-semibold mb-4 text-foreground">Шёпот храмов и безмолвный поклон оленей</p>
+                    <p className="text-base text-muted-foreground mb-2 italic">(Киото & Нара)</p>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                      Священная гора Фудзи, горячие источники онсэн, сады камней и водопады. Вы почувствуете, как японцы научились слушать природу и жить в гармонии с её силами. Вода, огонь, земля, ветер — всё это станет частью вашего опыта. Здесь вы поймёте, что такое «ма» — пустота, которая наполняет смыслом.
+                      Второй ключ — это встреча с душой древней Японии. В Киото, за высокими стенами, тень от сосны на стене чайного домика расскажет вам больше, чем целая книга. Вы станете гостем на частной церемонии у мастера, чья семья хранит это искусство веками. А в Наре вас ждёт диалог с самим временем — в парке Касуга, где священные олени, словно хранители этого места, почтительно склоняют головы в немом поклоне, принимая угощение. Это посвящение в благоговение, где вы поймёте, что истинная красота — в безмолвном диалоге между человеком, природой и вечностью.
                     </p>
                   </div>
                 </div>
