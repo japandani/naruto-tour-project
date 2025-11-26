@@ -7,23 +7,26 @@ import Icon from "@/components/ui/icon";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md shadow-lg">
+        <div className="container mx-auto px-6 py-5 flex items-center justify-between">
+          <div className="flex items-center gap-4">
             <img 
               src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/05aad210-d15a-4a99-8455-cd48817af582.jpg" 
               alt="Наруто логотип"
-              className="w-10 h-10 rounded-full object-cover"
+              className="w-12 h-12 rounded-full object-cover ring-2 ring-primary shadow-md"
             />
-            <h1 className="text-2xl font-bold text-foreground">Наруто</h1>
+            <div>
+              <h1 className="text-3xl font-bold text-background tracking-tight">НАРУТО</h1>
+              <p className="text-xs text-background/70 tracking-widest uppercase">Экскурсионное бюро</p>
+            </div>
           </div>
-          <div className="hidden md:flex gap-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors">Главная</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">О нас</a>
-            <a href="#tours" className="text-foreground hover:text-primary transition-colors">Туры</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Контакты</a>
+          <div className="hidden md:flex gap-10">
+            <a href="#home" className="text-background hover:text-primary transition-colors font-medium text-lg">Главная</a>
+            <a href="#about" className="text-background hover:text-primary transition-colors font-medium text-lg">О нас</a>
+            <a href="#tours" className="text-background hover:text-primary transition-colors font-medium text-lg">Туры</a>
+            <a href="#contact" className="text-background hover:text-primary transition-colors font-medium text-lg">Контакты</a>
           </div>
-          <Button variant="default" className="bg-primary hover:bg-primary/90">
+          <Button variant="default" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 text-base font-semibold shadow-lg">
             Заказать тур
           </Button>
         </div>
