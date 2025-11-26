@@ -116,8 +116,10 @@ const Index = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-foreground">
             <span style={{ fontFamily: 'Cormorant, serif' }}>Мити</span> <span className="text-6xl md:text-7xl" style={{ fontFamily: 'serif' }}>道</span> — это Путь
           </h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg max-w-3xl mx-auto">
-            Каждое путешествие начинается с решения. Каждый шаг ведёт к открытию.
+          <p className="text-center text-muted-foreground mb-16 text-lg max-w-3xl mx-auto leading-relaxed">
+            Но не как дорога на карте, а как философия жизни. Это бесконечное совершенствование, следование традиции и полное погружение в настоящее мгновение.<br/><br/>
+            Сакральный смысл этого понятия раскрывается в самых разных японских искусствах — от Пути чая (Садо) до Пути меча (Кэндо).<br/><br/>
+            Наше путешествие — это и есть ваш личный Мити. Путь, состоящий из четырёх свитков, где вы не просто увидите Японию, а пройдете через её сердце, стихии и дух, чтобы обрести новый взгляд на мир и на себя.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
