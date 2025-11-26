@@ -351,6 +351,39 @@ const Index = () => {
                 <span className="text-white text-sm font-semibold">Чайная церемония</span>
               </div>
             </div>
+
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/72fd2002-6dab-4070-b417-bd310cca59bc.jpg"
+                alt="Онсэн"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Онсэн</span>
+              </div>
+            </div>
+
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/a346351c-8c79-4e21-a7a7-cbd79227ce08.jpg"
+                alt="Пачинко"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Пачинко</span>
+              </div>
+            </div>
+
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/c0e71744-0ed2-4443-9a95-56532d1323c6.jpg"
+                alt="Харадзюку мода"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Харадзюку мода</span>
+              </div>
+            </div>
           </div>
 
           <Card className="max-w-4xl mx-auto">
