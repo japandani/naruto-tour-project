@@ -43,7 +43,7 @@ const Index = () => {
         </div>
         
         <div className="relative z-10 text-center text-white px-4 animate-fade-in max-w-5xl mx-auto">
-          <h1 className="md:text-7xl font-bold mb-8 drop-shadow-lg text-5xl leading-tight">Япония. Выше шума, глубже традиций.</h1>
+          <h1 className="md:text-7xl font-bold mb-8 drop-shadow-lg leading-tight text-5xl">Япония. Выше шума, глубже традиций.</h1>
           <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto drop-shadow-md leading-relaxed">
             Наше авторское путешествие — это ключ к пониманию Японии. Мы покажем вам не просто места, а смыслы. Услышать шёпот бамбуковой рощи и расшифровать код мегаполиса. Понять душу самурая в замке Химэдзи и ощутить дыхание будущего в Одайбе. Это погружение, после которого мир уже не будет прежним.
           </p>
