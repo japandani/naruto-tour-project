@@ -149,7 +149,7 @@ const Index = () => {
               </div>
               <div className="order-2">
                 <img 
-                  src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/9aa43c59-344a-4bf6-87f3-76447ea8d652.jpg"
+                  src="https://cdn.poehali.dev/files/0f051605-3c91-4caf-b22d-a3cf1a03e207.jpg"
                   alt="Токио и Осака"
                   className="w-full h-full object-cover rounded-lg shadow-2xl"
                 />
