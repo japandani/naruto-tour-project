@@ -61,21 +61,21 @@ const Index = () => {
                 О нас
               </h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                Экскурсионное бюро «Наруто» специализируется на создании незабываемых путешествий в Японию. 
-                Мы — команда профессионалов, влюблённых в японскую культуру и готовых поделиться этой любовью с вами.
+                Экскурсионное бюро «Наруто» — это 25 лет опыта на международном рынке. 
+                Основатель проекта Дани Pro — специалист по странам Азии и Востока, от марокканских мотивов до японского архипелага.
               </p>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Наша философия — показать настоящую Японию: от величественных храмов Киото до неоновых улиц Токио, 
-                от спокойствия дзен-садов до энергии современных мегаполисов.
+                Мы — международная команда профессионалов, работающая на многих языках. 
+                Наша философия — показать настоящую Японию во всём её многообразии.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-6 bg-secondary rounded-lg">
-                  <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                  <div className="text-sm text-muted-foreground">Довольных туристов</div>
+                  <div className="text-4xl font-bold text-primary mb-2">25</div>
+                  <div className="text-sm text-muted-foreground">Лет опыта</div>
                 </div>
                 <div className="text-center p-6 bg-secondary rounded-lg">
-                  <div className="text-4xl font-bold text-primary mb-2">12</div>
-                  <div className="text-sm text-muted-foreground">Лет опыта</div>
+                  <div className="text-4xl font-bold text-primary mb-2">15+</div>
+                  <div className="text-sm text-muted-foreground">Языков команды</div>
                 </div>
               </div>
             </div>
