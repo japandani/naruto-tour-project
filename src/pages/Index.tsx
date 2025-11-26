@@ -62,8 +62,19 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20 px-4">
-        <div className="container mx-auto max-w-7xl">
+      <section id="about" className="py-20 px-4 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-32 opacity-20 pointer-events-none">
+          <div className="absolute bottom-0 left-0 text-8xl animate-fade-in">🌸</div>
+          <div className="absolute bottom-2 left-16 text-6xl animate-fade-in" style={{ animationDelay: '0.2s' }}>🌸</div>
+          <div className="absolute bottom-5 left-32 text-5xl animate-fade-in" style={{ animationDelay: '0.4s' }}>🌸</div>
+          <div className="absolute bottom-0 right-0 text-8xl animate-fade-in" style={{ animationDelay: '0.1s' }}>🍂</div>
+          <div className="absolute bottom-3 right-16 text-7xl animate-fade-in" style={{ animationDelay: '0.3s' }}>🍁</div>
+          <div className="absolute bottom-6 right-36 text-6xl animate-fade-in" style={{ animationDelay: '0.5s' }}>🍂</div>
+          <div className="absolute bottom-4 left-1/3 text-5xl animate-fade-in" style={{ animationDelay: '0.6s' }}>🌸</div>
+          <div className="absolute bottom-1 right-1/3 text-6xl animate-fade-in" style={{ animationDelay: '0.7s' }}>🍁</div>
+        </div>
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
           <div className="flex flex-col gap-8">
             <div className="animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground leading-tight text-center">
