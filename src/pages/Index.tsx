@@ -42,10 +42,10 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
         </div>
         
-        <div className="relative z-10 text-center text-white px-4 animate-fade-in">
-          <h1 className="md:text-7xl font-bold mb-6 drop-shadow-lg text-5xl">Япония. Выше шума, глубже традиций.</h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
-            Авторское путешествие в страну восходящего солнца, где каждый день — это гармония величественных храмов и неоновых мегаполисов, тишины бамбуковых рощ и энергии токийских улиц, вкуса настоящего саке и красок японских садов
+        <div className="relative z-10 text-center text-white px-4 animate-fade-in max-w-5xl mx-auto">
+          <h1 className="md:text-7xl font-bold mb-8 drop-shadow-lg text-5xl leading-tight">Япония. Выше шума, глубже традиций.</h1>
+          <p className="text-lg md:text-xl mb-8 max-w-4xl mx-auto drop-shadow-md leading-relaxed">
+            Наше авторское путешествие — это ключ к пониманию Японии. Мы покажем вам не просто места, а смыслы. Услышать шёпот бамбуковой рощи и расшифровать код мегаполиса. Понять душу самурая в замке Химэдзи и ощутить дыхание будущего в Одайбе. Это погружение, после которого мир уже не будет прежним.
           </p>
           <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg">
             Ознакомиться с туром
