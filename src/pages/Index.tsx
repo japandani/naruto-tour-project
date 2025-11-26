@@ -59,11 +59,11 @@ const Index = () => {
       </section>
 
       <section id="about" className="py-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex flex-col gap-8">
             <div className="animate-fade-in">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground leading-tight">
-                Japan: ДА — это не просто путешествие.<br/>Это ответ.
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground leading-tight text-center">
+                Japan: ДА — это не просто путешествие. Это ответ.
               </h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 Ответ на зов безмолвных садов камней и шумных неоновых перекрёстков. На вопрос, который ваше сердце задавало Японии всю жизнь.
@@ -80,13 +80,6 @@ const Index = () => {
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Наш проект давно перестал быть просто «бюро». Для наших друзей из Европы и Азии он стал проводником в мир, где прошлое и будущее говорят на одном языке. А в последние годы мы стали живым мостом — тонким и прочным, как шёлковая нить — который связывает сердца путешественников из России с загадочной душой Японии.
               </p>
-            </div>
-            <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl animate-scale-in">
-              <img 
-                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/14b57510-3265-46ac-bf5c-afadcea89316.jpg"
-                alt="Японский сад"
-                className="w-full h-full object-cover"
-              />
             </div>
           </div>
         </div>
