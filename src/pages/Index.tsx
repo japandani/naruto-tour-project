@@ -67,7 +67,7 @@ const Index = () => {
           <div className="flex flex-col gap-8">
             <div className="animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground leading-tight text-center">
-                Japan: ДА — это не просто путешествие. Это ответ.
+                Japan: ДА — это не только путешествие. Это ответ.
               </h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 Ответ на зов безмолвных садов камней и шумных неоновых перекрёстков. На вопрос, который ваше сердце задавало Японии всю жизнь.
