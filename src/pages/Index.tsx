@@ -112,108 +112,113 @@ const Index = () => {
       </section>
 
       <section id="tours" className="py-20 px-4 bg-secondary/30">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
-            Популярные туры
+            Наш тур
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
-            Выберите своё идеальное путешествие
+          <p className="text-center text-muted-foreground mb-12 text-lg max-w-3xl mx-auto">
+            Путешествие по всем граням Японии — от древних традиций до современной поп-культуры
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/4490dcc9-4ef2-4060-9755-3f04e0e8840a.jpg"
-                  alt="Классическая Япония"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Хит
-                </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/10f34054-bdc4-480a-9253-5209e1b8171b.jpg"
+                alt="Манга и аниме"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Манга и аниме</span>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Классическая Япония</h3>
-                <p className="text-muted-foreground mb-4">
-                  Токио • Киото • Осака • 10 дней
-                </p>
-                <div className="flex items-center gap-2 mb-4 text-sm text-muted-foreground">
-                  <Icon name="Calendar" size={16} />
-                  <span>Круглый год</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm text-muted-foreground">от</div>
-                    <div className="text-2xl font-bold text-primary">₽180,000</div>
-                  </div>
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                    Подробнее
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            </div>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/14b57510-3265-46ac-bf5c-afadcea89316.jpg"
-                  alt="Сакура и храмы"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-4 right-4 bg-accent text-foreground px-3 py-1 rounded-full text-sm font-semibold">
-                  Сезон
-                </div>
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/b21df0ef-415e-47c3-a779-55523e04845e.jpg"
+                alt="Суши и кухня"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Суши и кухня</span>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Сакура и храмы</h3>
-                <p className="text-muted-foreground mb-4">
-                  Киото • Нара • Камакура • 7 дней
-                </p>
-                <div className="flex items-center gap-2 mb-4 text-sm text-muted-foreground">
-                  <Icon name="Calendar" size={16} />
-                  <span>Март - Апрель</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm text-muted-foreground">от</div>
-                    <div className="text-2xl font-bold text-primary">₽145,000</div>
-                  </div>
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                    Подробнее
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            </div>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-64 overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/2e08e3ee-c475-4d90-82e4-6c18e5b7ff61.jpg"
-                  alt="Ночной Токио"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/f4515ae5-f885-4d5a-b632-024123921fac.jpg"
+                alt="Сумо"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Сумо</span>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-2xl font-bold mb-3 text-foreground">Ночной Токио</h3>
-                <p className="text-muted-foreground mb-4">
-                  Токио • Йокогама • 5 дней
-                </p>
-                <div className="flex items-center gap-2 mb-4 text-sm text-muted-foreground">
-                  <Icon name="Calendar" size={16} />
-                  <span>Круглый год</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm text-muted-foreground">от</div>
-                    <div className="text-2xl font-bold text-primary">₽95,000</div>
-                  </div>
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                    Подробнее
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            </div>
+
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/c3bc6e36-07a0-4dc6-ba67-a25f3954a154.jpg"
+                alt="Синкансен"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Синкансен</span>
+              </div>
+            </div>
+
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/9fc47932-0c22-49d3-a0bb-35e2be519c91.jpg"
+                alt="Горы и природа"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Горы и природа</span>
+              </div>
+            </div>
+
+            <div className="relative h-48 rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/8bae6aa4-f3fc-4e90-8d1f-f8b0a9c0670f.jpg"
+                alt="Рамен"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-3">
+                <span className="text-white text-sm font-semibold">Рамен</span>
+              </div>
+            </div>
           </div>
+
+          <Card className="max-w-4xl mx-auto">
+            <CardContent className="p-8">
+              <h3 className="text-3xl font-bold mb-6 text-foreground text-center">Japan: ДА — Полное погружение</h3>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Это не просто тур по достопримечательностям. Это путешествие через все слои японской культуры — от традиционных чайных церемоний до районов Акихабара, от древних храмов до бейсбольных матчей, от суши-баров Токио до рамен-лавок Осаки.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Вы увидите Японию глазами местных жителей: попробуете уличную еду, прокатитесь на легендарном синкансене, посетите турнир сумо, исследуете мангу и аниме-культуру, поднимитесь в горы и насладитесь онсэнами.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">14</div>
+                  <div className="text-sm text-muted-foreground">Дней</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">8</div>
+                  <div className="text-sm text-muted-foreground">Городов</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-primary mb-2">∞</div>
+                  <div className="text-sm text-muted-foreground">Впечатлений</div>
+                </div>
+              </div>
+              <div className="text-center">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
+                  Узнать подробности тура
+                  <Icon name="ArrowRight" size={20} className="ml-2" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
