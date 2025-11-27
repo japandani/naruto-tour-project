@@ -135,6 +135,8 @@ const DecorativeBackground = () => (
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [formName, setFormName] = useState('');
+  const [formPhone, setFormPhone] = useState('');
   const bannerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -669,11 +671,18 @@ const Index = () => {
                 Оставьте контакты, и мы вам перезвоним!
               </p>
 
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={(e) => {
+                e.preventDefault();
+                const message = `Здравствуйте! Меня зовут ${formName || 'не указано'}. Мой телефон: ${formPhone || 'не указан'}. Хочу узнать о турах в Японию.`;
+                const whatsappUrl = `https://wa.me/79254644559?text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+              }}>
                 <div>
                   <Input 
                     type="text" 
                     placeholder="Ваше имя"
+                    value={formName}
+                    onChange={(e) => setFormName(e.target.value)}
                     className="bg-background/90 border-background/20 text-foreground placeholder:text-muted-foreground focus:border-primary"
                   />
                 </div>
@@ -681,6 +690,8 @@ const Index = () => {
                   <Input 
                     type="tel" 
                     placeholder="Ваш телефон"
+                    value={formPhone}
+                    onChange={(e) => setFormPhone(e.target.value)}
                     className="bg-background/90 border-background/20 text-foreground placeholder:text-muted-foreground focus:border-primary"
                   />
                 </div>
@@ -688,8 +699,8 @@ const Index = () => {
                   type="submit"
                   className="w-full bg-primary hover:bg-primary/90 text-background font-semibold text-base md:text-lg py-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
                 >
-                  Перезвоните мне
-                  <Icon name="Phone" size={18} className="ml-2" />
+                  Написать в WhatsApp
+                  <Icon name="MessageCircle" size={18} className="ml-2" />
                 </Button>
                 <p className="text-xs text-background/60 text-center leading-relaxed">
                   Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных.
