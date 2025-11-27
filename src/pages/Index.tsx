@@ -48,55 +48,55 @@ const AirportBoard = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-[#0a0a0a] rounded-xl shadow-2xl p-4 md:p-6 border-4 border-[#222]" style={{ 
-      boxShadow: '0 0 30px rgba(0,0,0,0.8), inset 0 0 20px rgba(0,0,0,0.5)',
+    <div className="max-w-2xl mx-auto bg-[#0a0a0a] rounded-lg shadow-2xl p-3 md:p-4 border-2 border-[#222]" style={{ 
+      boxShadow: '0 0 20px rgba(0,0,0,0.8), inset 0 0 15px rgba(0,0,0,0.5)',
       background: 'linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%)'
     }}>
-      <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#333]">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 md:w-10 md:h-10 bg-[#d4af37] rounded-full flex items-center justify-center">
-            <Icon name="Plane" size={20} className="text-black" />
+      <div className="flex items-center justify-between mb-2 md:mb-3 pb-2 border-b border-[#333]">
+        <div className="flex items-center gap-1.5">
+          <div className="w-6 h-6 md:w-7 md:h-7 bg-[#d4af37] rounded-full flex items-center justify-center">
+            <Icon name="Plane" size={14} className="text-black" />
           </div>
-          <span className="text-xs md:text-sm font-bold tracking-widest text-[#d4af37] uppercase">Sheremetyevo Airport</span>
+          <span className="text-[10px] md:text-xs font-bold tracking-widest text-[#d4af37] uppercase">Sheremetyevo Airport</span>
         </div>
-        <span className="text-xs text-[#888] font-mono">{new Date().toLocaleTimeString('ru-RU')}</span>
+        <span className="text-[9px] md:text-[10px] text-[#888] font-mono">{new Date().toLocaleTimeString('ru-RU')}</span>
       </div>
 
-      <div className="grid grid-cols-[auto_1fr_auto_auto] gap-3 md:gap-6 items-center mb-4 text-[#ffa500] font-mono">
-        <div className="text-xs md:text-sm text-[#888] uppercase tracking-wide">Рейс</div>
-        <div className="text-xs md:text-sm text-[#888] uppercase tracking-wide">Направление</div>
-        <div className="text-xs md:text-sm text-[#888] uppercase tracking-wide text-center">Дата</div>
-        <div className="text-xs md:text-sm text-[#888] uppercase tracking-wide text-right">Статус</div>
+      <div className="grid grid-cols-[auto_1fr_auto_auto] gap-2 md:gap-3 items-center mb-2 md:mb-3 text-[#ffa500] font-mono">
+        <div className="text-[9px] md:text-[10px] text-[#888] uppercase tracking-wide">Рейс</div>
+        <div className="text-[9px] md:text-[10px] text-[#888] uppercase tracking-wide">Направление</div>
+        <div className="text-[9px] md:text-[10px] text-[#888] uppercase tracking-wide text-center">Дата</div>
+        <div className="text-[9px] md:text-[10px] text-[#888] uppercase tracking-wide text-right">Статус</div>
         
-        <div className="text-lg md:text-2xl font-bold tracking-wider">
+        <div className="text-sm md:text-lg font-bold tracking-wider">
           {renderText('JD 2025', 1000)}
         </div>
-        <div className="text-lg md:text-2xl font-bold tracking-wider flex items-center gap-2">
+        <div className="text-sm md:text-lg font-bold tracking-wider flex items-center gap-1.5">
           {renderText('МОСКВА', 2000)}
-          <Icon name="ArrowRight" size={20} className="text-[#d4af37] flex-shrink-0" />
+          <Icon name="ArrowRight" size={14} className="text-[#d4af37] flex-shrink-0" />
           {renderText('ТОКИО', 3000)}
         </div>
-        <div className="text-lg md:text-2xl font-bold tracking-wider text-center">
+        <div className="text-sm md:text-lg font-bold tracking-wider text-center">
           {renderText('14.03', 4000)}
         </div>
         <div className="text-right">
-          <span className="inline-block bg-[#d4af37] text-black px-2 md:px-3 py-1 rounded text-xs md:text-sm font-bold uppercase tracking-wide">
+          <span className="inline-block bg-[#d4af37] text-black px-1.5 md:px-2 py-0.5 rounded text-[10px] md:text-xs font-bold uppercase tracking-wide">
             Посадка
           </span>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 md:gap-4 pt-3 border-t border-[#333]">
-        <div className="bg-[#1a1a1a] rounded p-3 border border-[#333]">
-          <div className="text-[10px] md:text-xs text-[#888] uppercase mb-1 tracking-wider">Длительность</div>
-          <div className="text-xl md:text-3xl font-bold text-[#ffa500] font-mono tracking-tight">
+      <div className="grid grid-cols-2 gap-2 md:gap-3 pt-2 border-t border-[#333]">
+        <div className="bg-[#1a1a1a] rounded p-2 border border-[#333]">
+          <div className="text-[9px] md:text-[10px] text-[#888] uppercase mb-0.5 tracking-wider">Длительность</div>
+          <div className="text-base md:text-xl font-bold text-[#ffa500] font-mono tracking-tight">
             {renderText('14 ДНЕЙ', 5000)}
           </div>
         </div>
-        <div className="bg-[#1a1a1a] rounded p-3 border border-[#333] flex flex-col justify-center">
-          <div className="flex items-center justify-center gap-2">
-            <span className="w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></span>
-            <span className="text-sm md:text-lg font-bold text-red-500 uppercase tracking-wide">
+        <div className="bg-[#1a1a1a] rounded p-2 border border-[#333] flex flex-col justify-center">
+          <div className="flex items-center justify-center gap-1.5">
+            <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></span>
+            <span className="text-[11px] md:text-sm font-bold text-red-500 uppercase tracking-wide">
               Последние 4 места
             </span>
           </div>
