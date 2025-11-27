@@ -467,46 +467,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="why-us" className="py-12 md:py-20 px-4 relative overflow-hidden">
-        <DecorativeBackground />
-        
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12 text-foreground">
-            Почему выбирают нас
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div className="text-center">
-              <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                <Icon name="Shield" size={28} className="text-primary md:w-8 md:h-8" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">Безопасность</h3>
-              <p className="text-muted-foreground text-sm">Страховка и поддержка 24/7</p>
-            </div>
-            <div className="text-center">
-              <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                <Icon name="Users" size={28} className="text-primary md:w-8 md:h-8" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">Гиды-эксперты</h3>
-              <p className="text-muted-foreground text-sm">Русскоязычные специалисты</p>
-            </div>
-            <div className="text-center">
-              <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                <Icon name="Star" size={28} className="text-primary md:w-8 md:h-8" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">Индивидуально</h3>
-              <p className="text-muted-foreground text-sm">Туры под ваши интересы</p>
-            </div>
-            <div className="text-center">
-              <div className="w-14 h-14 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                <Icon name="Heart" size={28} className="text-primary md:w-8 md:h-8" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">С любовью</h3>
-              <p className="text-muted-foreground text-sm">К каждой детали путешествия</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-12 md:py-20 px-4 relative overflow-hidden bg-gradient-to-b from-background to-accent/5">
         <DecorativeBackground />
         
