@@ -154,7 +154,7 @@ const Index = () => {
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg"
-            onClick={() => document.getElementById('tours')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('scrolls')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Сделать первый шаг по Пути
             <Icon name="ArrowRight" size={20} className="ml-2" />
@@ -199,6 +199,7 @@ const Index = () => {
       </section>
 
       <section id="path" className="py-12 md:py-20 px-4 relative overflow-hidden">
+        <div id="scrolls"></div>
         <DecorativeBackground />
         
         <div className="container mx-auto max-w-7xl relative z-10">
