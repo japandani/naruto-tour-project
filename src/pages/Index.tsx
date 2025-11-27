@@ -48,9 +48,9 @@ const AirportBoard = () => {
   };
 
   return (
-    <div className="max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto bg-[#0a0a0a]/50 backdrop-blur-md rounded-md md:rounded-lg shadow-2xl p-1.5 sm:p-2.5 md:p-3 lg:p-3.5 border border-[#222]/40 scale-90 sm:scale-95 md:scale-100" style={{ 
-      boxShadow: '0 0 20px rgba(0,0,0,0.5), inset 0 0 15px rgba(0,0,0,0.2)',
-      background: 'linear-gradient(180deg, rgba(15,15,15,0.5) 0%, rgba(26,26,26,0.5) 100%)'
+    <div className="max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl mx-auto bg-[#0a0a0a]/30 backdrop-blur-md rounded-md md:rounded-lg shadow-2xl p-1.5 sm:p-2.5 md:p-3 lg:p-3.5 border border-[#222]/30 scale-90 sm:scale-95 md:scale-100" style={{ 
+      boxShadow: '0 0 20px rgba(0,0,0,0.4), inset 0 0 15px rgba(0,0,0,0.15)',
+      background: 'linear-gradient(180deg, rgba(15,15,15,0.3) 0%, rgba(26,26,26,0.35) 100%)'
     }}>
       <div className="flex items-center justify-between mb-1 md:mb-2 pb-1 md:pb-1.5 border-b border-[#333]/40">
         <div className="flex items-center gap-1 md:gap-1.5">
