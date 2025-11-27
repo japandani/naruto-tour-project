@@ -597,7 +597,7 @@ const Index = () => {
                 </a>
                 
                 <a 
-                  href="#tours"
+                  href="/tour"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-foreground border-2 border-primary/30 rounded-lg hover:bg-secondary/80 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-lg"
                 >
                   <Icon name="ScrollText" size={20} />
