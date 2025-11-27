@@ -644,7 +644,9 @@ const Index = () => {
                         <Icon name="Instagram" size={20} className="text-background" />
                       </a>
                       <a 
-                        href="#" 
+                        href="https://t.me/japandani" 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-10 h-10 bg-background/10 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                         aria-label="Telegram"
                       >
