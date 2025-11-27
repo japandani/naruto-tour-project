@@ -297,7 +297,7 @@ const Index = () => {
 
             <div ref={(el) => (bannerRefs.current[2] = el)} className="relative w-full h-28 md:h-32 my-4 md:my-6 rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://cdn.poehali.dev/files/e236537e-a164-41a1-9400-5c568f105223.jpg"
+                src="https://cdn.poehali.dev/files/2c1d8a12-7c6e-4eea-9187-f60318a9cd7c.jpg"
                 alt="Деревня Ширакава-го"
                 className="w-full h-full object-cover object-center"
               />
