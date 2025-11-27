@@ -707,11 +707,11 @@ const Index = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img 
-                  src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/05aad210-d15a-4a99-8455-cd48817af582.jpg" 
-                  alt="Наруто логотип"
+                  src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/f6e8ec5d-14f7-497a-bf69-2d99142f26ed.jpg" 
+                  alt="Japan : ДА! логотип"
                   className="w-10 h-10 rounded-full object-cover"
                 />
-                <h3 className="text-lg md:text-xl font-bold">Наруто</h3>
+                <h3 className="text-lg md:text-xl font-bold" style={{ fontFamily: 'Caveat, cursive' }}>JAPAN : ДА!</h3>
               </div>
               <p className="text-xs md:text-sm opacity-80">
                 Эксклюзивные туры в Японию с 1999 года
@@ -726,7 +726,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="Mail" size={16} />
-                  <span>info@naruto-tours.ru</span>
+                  <span>info@japan-da.ru</span>
                 </div>
               </div>
             </div>
@@ -756,7 +756,7 @@ const Index = () => {
           </div>
           <div className="border-t border-background/20 pt-6 md:pt-8 text-center">
             <p className="text-xs md:text-sm opacity-70">
-              © 2024 Naruto Tours. Все права защищены.
+              © 2024 JAPAN : ДА! Все права защищены.
             </p>
           </div>
         </div>
