@@ -118,13 +118,36 @@ const ToursBoard = () => {
   }, []);
 
   useEffect(() => {
-    audioRef.current = new Audio();
-    audioRef.current.volume = 0.4;
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    
+    const playAirportBeep = () => {
+      const oscillator1 = audioContext.createOscillator();
+      const oscillator2 = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator1.connect(gainNode);
+      oscillator2.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator1.frequency.value = 1000;
+      oscillator2.frequency.value = 1200;
+      oscillator1.type = 'sine';
+      oscillator2.type = 'sine';
+      
+      gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+      gainNode.gain.linearRampToValueAtTime(0.15, audioContext.currentTime + 0.05);
+      gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.3);
+      
+      oscillator1.start(audioContext.currentTime);
+      oscillator2.start(audioContext.currentTime);
+      oscillator1.stop(audioContext.currentTime + 0.3);
+      oscillator2.stop(audioContext.currentTime + 0.3);
+    };
+    
+    audioRef.current = { play: playAirportBeep } as any;
+    
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current = null;
-      }
+      audioContext.close();
     };
   }, []);
 
@@ -171,7 +194,12 @@ const ToursBoard = () => {
                   ? 'border-[#00ff88]/40 hover:border-[#d4af37] hover:from-[#1a1a1a] hover:to-[#1a1a1a] hover:shadow-xl hover:shadow-[#d4af37]/40 hover:scale-[1.03] cursor-pointer' 
                   : 'border-[#333]/40 opacity-50'
               }`}
-              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseEnter={() => {
+                setHoveredIndex(index);
+                if (isAvailable && audioRef.current) {
+                  audioRef.current.play();
+                }
+              }}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className={`text-sm md:text-lg lg:text-xl font-bold font-mono tracking-tight transition-all duration-300 ${
