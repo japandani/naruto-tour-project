@@ -262,7 +262,7 @@ const Index = () => {
 
             <div className="relative w-full h-20 md:h-24 my-4 md:my-6 rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/2095e00c-2a43-4993-9423-73cca93c2f29.jpg"
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/0821ccd4-0169-4384-ab8e-a4264e002b44.jpg"
                 alt="Храмы и олени"
                 className="w-full h-full object-cover object-center"
               />
