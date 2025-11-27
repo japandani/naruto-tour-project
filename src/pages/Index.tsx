@@ -151,7 +151,11 @@ const Index = () => {
             Понять душу самурая в замке Химэдзи и ощутить дыхание будущего в Одайбе.<br className="hidden sm:block"/>
             Это погружение, после которого мир уже не будет прежним.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg">
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg"
+            onClick={() => document.getElementById('tours')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Сделать первый шаг по Пути
             <Icon name="ArrowRight" size={20} className="ml-2" />
           </Button>
