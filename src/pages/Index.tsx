@@ -129,21 +129,23 @@ const ToursBoard = () => {
   }, []);
 
   const playSound = () => {
-    if (!audioRef.current) return;
+    const phrases = [
+      'Настройтесь на приятное путешествие!',
+      'Ваш Путь — это наше призвание!'
+    ];
     
-    const utterance = new SpeechSynthesisUtterance('Please proceed to the gate');
-    utterance.lang = 'en-US';
-    utterance.rate = 0.85;
-    utterance.pitch = 1.1;
-    utterance.volume = 0.6;
+    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+    const utterance = new SpeechSynthesisUtterance(randomPhrase);
+    utterance.lang = 'ru-RU';
+    utterance.rate = 0.9;
+    utterance.pitch = 1.0;
+    utterance.volume = 0.7;
     
     const voices = speechSynthesis.getVoices();
-    const japaneseAccentVoice = voices.find(voice => 
-      voice.lang.includes('ja') || voice.name.includes('Japanese')
-    );
+    const russianVoice = voices.find(voice => voice.lang.includes('ru'));
     
-    if (japaneseAccentVoice) {
-      utterance.voice = japaneseAccentVoice;
+    if (russianVoice) {
+      utterance.voice = russianVoice;
     }
     
     speechSynthesis.cancel();
