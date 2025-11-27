@@ -144,21 +144,20 @@ const ToursBoard = () => {
   ];
 
   return (
-    <div className="max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto bg-[#0a0a0a]/30 backdrop-blur-md rounded-md md:rounded-lg shadow-2xl p-2 sm:p-3 md:p-3.5 lg:p-4 border border-[#222]/30 animate-fade-in" style={{ 
-      boxShadow: '0 0 20px rgba(0,0,0,0.4), inset 0 0 15px rgba(0,0,0,0.15)',
-      background: 'linear-gradient(180deg, rgba(15,15,15,0.3) 0%, rgba(26,26,26,0.35) 100%)'
+    <div className="max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#0a0a0a] backdrop-blur-xl rounded-lg md:rounded-xl shadow-2xl p-4 sm:p-5 md:p-6 lg:p-8 border-2 border-[#d4af37]/30 animate-fade-in" style={{ 
+      boxShadow: '0 0 40px rgba(212, 175, 55, 0.3), 0 0 80px rgba(212, 175, 55, 0.1), inset 0 0 30px rgba(0,0,0,0.4)',
     }}>
-      <div className="flex items-center justify-between mb-2 md:mb-2.5 pb-1.5 md:pb-2 border-b border-[#333]/40">
-        <div className="flex items-center gap-1.5 md:gap-2">
-          <div className="w-5 h-5 md:w-7 md:h-7 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0 animate-pulse">
-            <Icon name="Calendar" size={12} className="text-black md:w-4 md:h-4" />
+      <div className="flex items-center justify-between mb-4 md:mb-6 pb-3 md:pb-4 border-b-2 border-[#d4af37]/50">
+        <div className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-full flex items-center justify-center flex-shrink-0 animate-pulse shadow-lg shadow-[#d4af37]/50">
+            <Icon name="Calendar" size={16} className="text-black md:w-5 md:h-5" />
           </div>
-          <span className="text-[10px] md:text-xs font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap">Даты туров 2025</span>
+          <span className="text-xs md:text-base font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">Даты туров 2025</span>
         </div>
-        <span className="text-[8px] md:text-[10px] text-[#888] font-mono whitespace-nowrap">{new Date().toLocaleDateString('ru-RU')}</span>
+        <span className="text-[10px] md:text-xs text-[#999] font-mono whitespace-nowrap bg-[#0a0a0a]/60 px-2 py-1 rounded border border-[#333]/50">{new Date().toLocaleDateString('ru-RU')}</span>
       </div>
 
-      <div className="space-y-1.5 md:space-y-2">
+      <div className="space-y-3 md:space-y-4">
         {tours.map((tour, index) => {
           const isAvailable = tour.status === 'available';
           const TourRow = isAvailable ? 'a' : 'div';
@@ -167,35 +166,35 @@ const ToursBoard = () => {
             <TourRow
               key={index}
               {...(isAvailable ? { href: '#contact' } : {})}
-              className={`grid grid-cols-[1fr_auto] gap-2 md:gap-4 items-center bg-[#1a1a1a]/40 rounded p-1.5 md:p-2.5 border border-[#333]/40 transition-all duration-300 ${
+              className={`grid grid-cols-[1fr_auto] gap-3 md:gap-6 items-center bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] rounded-lg p-3 md:p-4 border-2 transition-all duration-300 ${
                 isAvailable 
-                  ? 'hover:border-[#d4af37]/60 hover:bg-[#1a1a1a]/60 hover:shadow-lg hover:shadow-[#d4af37]/20 hover:scale-[1.02] cursor-pointer' 
-                  : 'opacity-60'
+                  ? 'border-[#00ff88]/40 hover:border-[#d4af37] hover:from-[#1a1a1a] hover:to-[#1a1a1a] hover:shadow-xl hover:shadow-[#d4af37]/40 hover:scale-[1.03] cursor-pointer' 
+                  : 'border-[#333]/40 opacity-50'
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className={`text-sm md:text-lg lg:text-xl font-bold font-mono tracking-tight transition-colors duration-300 ${
+              <div className={`text-base md:text-2xl lg:text-3xl font-bold font-mono tracking-tight transition-all duration-300 ${
                 isAvailable 
-                  ? hoveredIndex === index ? 'text-[#d4af37]' : 'text-[#00ff88]'
-                  : 'text-[#666]'
+                  ? hoveredIndex === index ? 'text-[#d4af37] drop-shadow-[0_0_15px_rgba(212,175,55,0.8)]' : 'text-[#00ff88] drop-shadow-[0_0_10px_rgba(0,255,136,0.5)]'
+                  : 'text-[#555]'
               }`}>
                 {renderText(tour.dates, 1000 + index * 500)}
               </div>
               <div className="text-right">
                 {isAvailable ? (
-                  <div className="flex items-center gap-1.5 md:gap-2 justify-end">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50 flex-shrink-0"></span>
-                    <span className={`text-[10px] md:text-sm lg:text-base font-bold uppercase tracking-tight whitespace-nowrap transition-all duration-300 ${
-                      hoveredIndex === index ? 'text-[#d4af37] scale-110' : 'text-green-500'
+                  <div className="flex items-center gap-2 md:gap-3 justify-end">
+                    <span className="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/70 flex-shrink-0"></span>
+                    <span className={`text-xs md:text-lg lg:text-xl font-bold uppercase tracking-tight whitespace-nowrap transition-all duration-300 ${
+                      hoveredIndex === index ? 'text-[#d4af37] scale-110 drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]' : 'text-green-500 drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]'
                     }`}>
                       {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
                     </span>
                   </div>
                 ) : (
-                  <div className="flex items-center gap-1.5 md:gap-2 justify-end">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-red-600 rounded-full shadow-lg shadow-red-600/50 flex-shrink-0"></span>
-                    <span className="inline-block bg-red-600/20 text-red-500 px-2 md:px-3 py-0.5 md:py-1 rounded text-[10px] md:text-sm font-bold uppercase tracking-tight whitespace-nowrap border border-red-600/40">
+                  <div className="flex items-center gap-2 md:gap-3 justify-end">
+                    <span className="w-3 h-3 md:w-4 md:h-4 bg-red-600 rounded-full shadow-lg shadow-red-600/70 flex-shrink-0"></span>
+                    <span className="inline-block bg-red-600/30 text-red-400 px-3 md:px-4 py-1 md:py-1.5 rounded-md text-xs md:text-base font-bold uppercase tracking-tight whitespace-nowrap border-2 border-red-600/50">
                       Мест нет
                     </span>
                   </div>
