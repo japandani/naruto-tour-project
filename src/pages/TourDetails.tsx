@@ -6,85 +6,129 @@ import { useState } from "react";
 const TourDetails = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const tourLocations = [
+  const tourParts = [
     {
-      location: "Токио",
-      nights: 4,
-      subtitle: "Контрасты мегаполиса",
-      description: "Приватный ужин на смотровой площадке Roppongi Hills с сомелье, раскрывающим терруар японских вин. Ночная экскурсия в район Гиндза с визитом в ателье потомственного красильщика. Закрытый аукцион на рынке Цукидзи для избранных. Мастер-класс по каллиграфии в резиденции мастера Укиё-э.",
+      part: "ЧАСТЬ ПЕРВАЯ",
+      title: "РИТМ МЕГАПОЛИСА",
+      subtitle: "3 ночи в Токио",
       image: "https://cdn.poehali.dev/files/8b5c091f-7d0b-4acc-b0e4-df8a0a0e0d84.jpg",
-      highlights: ["Roppongi Hills", "Рынок Цукидзи", "Мастер-класс каллиграфии", "Гиндза"]
+      days: [
+        {
+          day: 1,
+          description: "Вечернее погружение в пульсирующий поток Сибуи, где неоновая река уносит вас в мир будущего. Первый ужин — как тихое посвящение в тайны японского вкуса."
+        },
+        {
+          day: 2,
+          description: "Утро на легендарном рынке Цукидзи — там, где рождается гастрономическая душа Японии. День в тени Императорского дворца — молчаливого стража истории. Вечер — парение над городом на смотровой площадке, где Токио раскрывается как драгоценный ларец."
+        },
+        {
+          day: 3,
+          description: "Парк Уэно — культурный оазис. Харадзюку — взрыв креативной энергии. Храм Мэйдзи — место, где время замедляет свой бег. Музей Эдо-Токио — путешествие сквозь эпохи."
+        }
+      ]
     },
     {
-      location: "Фудзи – Хаконе",
-      nights: 2,
-      subtitle: "Диалог со стихиями",
-      description: "Приватная церемония заваривания матчи на берегу озера Кавагутико. Ночное купание в открытом онсене с видом на Фудзи. Гастрономический ужин в рёкане, отмеченном тремя мишленовскими звездами.",
+      part: "ЧАСТЬ ВТОРАЯ",
+      title: "ДОРОГА К СВЯЩЕННОМУ",
+      subtitle: "Хаконе → Фудзи → Сиракава-го",
       image: "https://cdn.poehali.dev/files/99cdbe1d-6c5c-49c8-98b4-ae3956803345.jpg",
-      highlights: ["Церемония матчи", "Онсен с видом на Фудзи", "Рёкан 3 звезды Мишлен"]
+      days: [
+        {
+          day: 4,
+          description: "Путь лежит через древнюю Камакуру, где Великий Будда хранит многовековое спокойствие. Затем — Хаконе: озеро Аси, отражающее небо, горячие источники, дарящие очищение, и музей под открытым небом, где искусство встречается с природой."
+        },
+        {
+          day: 5,
+          description: "Утро с Фудзи-сан — фотосессия у зеркальных вод Кавагутико. Переезд в застывшую во времени деревню Сиракава-го, где традиционные дома-гассё складывают руки в молитве к небесам. Ночь в объятиях истории."
+        },
+        {
+          day: 6,
+          description: "Пробуждение в альпийской сказке. Неторопливый путь в Такаяму — город, хранящий душу старой Японии."
+        }
+      ]
     },
     {
-      location: "Камакура",
-      nights: 1,
-      subtitle: "Дух самураев",
-      description: "Медитация с монахом в храме Кэнтё-дзи. Частный показ в музее самурайских мечей.",
-      image: "https://cdn.poehali.dev/files/4490dcc9-4ef2-4060-9755-3f04e0e8840a.jpg",
-      highlights: ["Медитация с монахом", "Музей мечей", "Храм Кэнтё-дзи"]
-    },
-    {
-      location: "Киото",
-      nights: 3,
-      subtitle: "Сердце традиций",
-      description: "Чайная церемония в частном саду с потомственным мастером. Прогулка по бамбуковой роще Арасияма до восхода солнца. Урок икебаны в резиденции школы Икэнобо.",
-      image: "https://cdn.poehali.dev/files/aa2ac25f-09c8-4804-8c8e-a50b5b06597f.jpg",
-      highlights: ["Чайная церемония", "Бамбуковая роща на рассвете", "Урок икебаны"]
-    },
-    {
-      location: "Нара",
-      nights: 0,
-      subtitle: "В гармонии с природой",
-      description: "Кормление священных оленей в парке Тодай-дзи. Обед в храмовом комплексе с монастырской кухней.",
-      image: "https://cdn.poehali.dev/files/88dc4e44-1e82-46e7-b63e-56f60fb5af79.jpg",
-      highlights: ["Священные олени", "Монастырская кухня", "Парк Тодай-дзи"]
-    },
-    {
-      location: "Канадзава",
-      nights: 2,
-      subtitle: "Сокровища провинции",
-      description: "Экскурсия в квартал гейш Хигаси-Тяя с приватным выступлением. Мастер-класс по золотому лаку Кага. Дегустация саке в историческом хранилище.",
+      part: "ЧАСТЬ ТРЕТЬЯ",
+      title: "ДУША ПРОВИНЦИИ",
+      subtitle: "Такаяма → Канадзава",
       image: "https://cdn.poehali.dev/files/2c1d8a12-7c6e-4eea-9187-f60318a9cd7c.jpg",
-      highlights: ["Квартал гейш", "Золотой лак Кага", "Дегустация саке"]
+      days: [
+        {
+          day: 7,
+          description: "Утро на рынке Миягава, где местные жители делятся дарами природы. Прогулка по кварталу Санамати — застывшему в времени. Музей Хида-но-Сато — 30 традиционных домов под открытым небом."
+        },
+        {
+          day: 8,
+          description: "Живописная дорога в Канадзаву через горные перевалы. Сад Кэнроку-эн — где каждый камень рассказывает историю. Замок Канадзава — немой свидетель эпох. Район гейш — таинственный и прекрасный."
+        }
+      ]
     },
     {
-      location: "Осака",
-      nights: 1,
-      subtitle: "Энергия города",
-      description: "Ужин в ресторане, отмеченном звездой Мишлен, с шеф-поваром. Ночная прогулка на частной яхте по заливу Осака.",
+      part: "ЧАСТЬ ЧЕТВЕРТАЯ",
+      title: "СЕРДЦЕ ИМПЕРАТОРСКОЙ СТОЛИЦЫ",
+      subtitle: "2 ночи в Киото",
+      image: "https://cdn.poehali.dev/files/aa2ac25f-09c8-4804-8c8e-a50b5b06597f.jpg",
+      days: [
+        {
+          day: 9,
+          description: "Тысяча алых ворот Фусими Инари ведут в другое измерение. Район гейш Гион, где прошлое встречается с настоящим. Храм Киёмидзу-дера — павильон чистой воды над городом."
+        },
+        {
+          day: 10,
+          description: "Золотой павильон Кинкаку-дзи — символ совершенства. Бамбуковая роща Арасияма — шепот природы. Сад камней Рёан-дзи — дзен-загадка для души."
+        }
+      ]
+    },
+    {
+      part: "ЧАСТЬ ПЯТАЯ",
+      title: "МОРСКАЯ САГА",
+      subtitle: "2 ночи в Кобе",
       image: "https://cdn.poehali.dev/files/cb480393-3e94-4ef5-a40f-f18c0ee2f9cb.jpg",
-      highlights: ["Ресторан Мишлен", "Частная яхта", "Залив Осака"]
+      days: [
+        {
+          day: 11,
+          description: "Поездка-откровение в Хиросиму. Мемориальный парк мира — прикосновение к вечности. Остров Миядзима с парящими в море воротами-тории."
+        },
+        {
+          day: 12,
+          description: "Портовый Кобе — город контрастов. Канатная дорога на гору Рокко с панорамой залива. Дегустация легендарной говядины Кобе — вкус, достойный императоров."
+        }
+      ]
+    },
+    {
+      part: "ЭПИЛОГ",
+      title: "ВКУС ОСАКИ",
+      subtitle: "1 ночь в кулинарной столице",
+      image: "https://cdn.poehali.dev/files/17f6afe0-75de-4f05-8b83-ea6fe38355c0.jpg",
+      days: [
+        {
+          day: 13,
+          description: "Замок Осаки — величественный и неприступный. Дотонбори — безумный карнавал вкусов и ароматов. Прощальный взгляд с небоскреба Абэно Харукас — Япония остается в сердце навсегда."
+        }
+      ]
     }
   ];
 
-  const privileges = [
+  const uniqueFeatures = [
     {
-      icon: "Car",
-      title: "Персональный транспорт",
-      description: "Mercedes-Benz Class V с водителем-гидом на всём маршруте"
+      icon: "Sparkles",
+      title: "Гармония контрастов",
+      description: "От неоновых вспышек до горной тишины"
     },
     {
-      icon: "UtensilsCrossed",
-      title: "Гастрономия",
-      description: "30+ уникальных локаций, от уличной еды до мишленовских ресторанов"
+      icon: "Heart",
+      title: "Подлинность",
+      description: "Ночь в деревне ЮНЕСКО, встречи с традициями"
     },
     {
-      icon: "Home",
-      title: "Проживание",
-      description: "Бутик-отели и рёканы категории 5★"
+      icon: "Compass",
+      title: "Глубина",
+      description: "13 дней настоящего погружения в душу Японии"
     },
     {
-      icon: "Camera",
-      title: "Фотодневник",
-      description: "Профессиональный фотограф на 4 дня путешествия"
+      icon: "Star",
+      title: "Комфорт",
+      description: "Минивэн, тщательно подобранные отели, русскоязычный гид"
     }
   ];
 
@@ -150,112 +194,79 @@ const TourDetails = () => {
         </div>
         
         <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg" style={{ fontFamily: 'Cormorant, serif' }}>
-            Ваш путь
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 drop-shadow-lg leading-tight" style={{ fontFamily: 'Cormorant, serif' }}>
+            JAPAN: ДА! — ПУТЕШЕСТВИЕ,<br/>КОТОРОЕ СТАНЕТ ЛЕГЕНДОЙ
           </h1>
-          <p className="text-2xl sm:text-3xl md:text-4xl mb-8 drop-shadow-md font-light">
-            13 ночей погружения
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 drop-shadow-md font-light">
+            13 ночей от Токио до Осаки • Для тех, кто готов сказать «да» настоящей Японии
           </p>
-          <div className="flex flex-wrap gap-4 justify-center text-sm md:text-base">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <Icon name="Calendar" size={20} className="text-primary" />
-              <span>14 дней / 13 ночей</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <Icon name="MapPin" size={20} className="text-primary" />
-              <span>7 городов</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-              <Icon name="Star" size={20} className="text-primary" />
-              <span>Эксклюзивный тур</span>
-            </div>
-          </div>
         </div>
       </section>
 
       <section className="py-12 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
-            Маршрут погружения
-          </h2>
-          <p className="text-lg md:text-xl text-center mb-12 text-muted-foreground max-w-3xl mx-auto">
-            Каждая локация раскрывает новую грань Японии
-          </p>
+          {tourParts.map((part, partIndex) => (
+            <div key={partIndex} className="mb-16">
+              <div className="relative mb-8 rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src={part.image}
+                  alt={part.title}
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                  <p className="text-sm md:text-base text-primary font-bold mb-2 tracking-widest">{part.part}</p>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
+                    {part.title}
+                  </h2>
+                  <p className="text-base md:text-lg text-white/90">{part.subtitle}</p>
+                </div>
+              </div>
 
-          <div className="space-y-8">
-            {tourLocations.map((item, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-2xl transition-all duration-500 border-accent/20 group">
-                <CardContent className="p-0">
-                  <div className="grid md:grid-cols-[350px_1fr] gap-0">
-                    <div className="relative h-72 md:h-auto overflow-hidden">
-                      <img 
-                        src={item.image}
-                        alt={item.location}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="text-3xl md:text-4xl font-bold text-white mb-1" style={{ fontFamily: 'Cormorant, serif' }}>
-                          {item.location}
-                        </h3>
-                        {item.nights > 0 && (
-                          <div className="flex items-center gap-2 text-white/90">
-                            <Icon name="Moon" size={18} />
-                            <span className="text-sm font-medium">{item.nights} {item.nights === 1 ? 'ночь' : item.nights < 5 ? 'ночи' : 'ночей'}</span>
-                          </div>
-                        )}
+              <div className="space-y-4">
+                {part.days.map((day, dayIndex) => (
+                  <Card key={dayIndex} className="border-accent/20 hover:shadow-lg transition-all duration-300">
+                    <CardContent className="p-6 md:p-8">
+                      <div className="flex items-start gap-4 md:gap-6">
+                        <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                          <span className="text-lg font-bold text-white leading-none">{day.day}</span>
+                        </div>
+                        <div className="flex-1 pt-1">
+                          <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                            {day.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div className="p-6 md:p-8 flex flex-col justify-center">
-                      <h4 className="text-xl md:text-2xl font-bold mb-4 text-primary italic">
-                        {item.subtitle}
-                      </h4>
-                      <p className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed">
-                        {item.description}
-                      </p>
-                      
-                      <div className="flex flex-wrap gap-2">
-                        {item.highlights.map((highlight, idx) => (
-                          <span 
-                            key={idx}
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium"
-                          >
-                            <Icon name="Sparkles" size={14} />
-                            {highlight}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
       <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-accent/5 to-background">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
-            Эксклюзивные привилегии
+            Что делает это путешествие уникальным
           </h2>
           <p className="text-lg md:text-xl text-center mb-12 text-muted-foreground max-w-3xl mx-auto">
-            Каждая деталь продумана для вашего комфорта
+            Четыре столпа незабываемого опыта
           </p>
           
           <div className="grid md:grid-cols-2 gap-6 mb-16">
-            {privileges.map((privilege, index) => (
+            {uniqueFeatures.map((feature, index) => (
               <Card key={index} className="border-accent/20 hover:shadow-xl transition-all duration-300 group">
                 <CardContent className="p-6 md:p-8">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <Icon name={privilege.icon as any} size={28} className="text-primary" />
+                      <Icon name={feature.icon as any} size={28} className="text-primary" />
                     </div>
                     <div>
-                      <h4 className="text-xl md:text-2xl font-bold mb-2 text-foreground">{privilege.title}</h4>
+                      <h4 className="text-xl md:text-2xl font-bold mb-2 text-foreground">{feature.title}</h4>
                       <p className="text-base text-muted-foreground leading-relaxed">
-                        {privilege.description}
+                        {feature.description}
                       </p>
                     </div>
                   </div>
@@ -266,34 +277,16 @@ const TourDetails = () => {
 
           <div className="text-center">
             <div className="inline-block bg-gradient-to-br from-primary/10 via-accent/10 to-primary/5 rounded-2xl p-8 md:p-12 mb-8 border border-primary/20">
-              <p className="text-lg text-muted-foreground mb-2">Стоимость эксклюзивного тура</p>
-              <p className="text-5xl md:text-6xl font-bold text-primary mb-3" style={{ fontFamily: 'Cormorant, serif' }}>от 450 000 ₽</p>
+              <p className="text-lg text-muted-foreground mb-2">Стоимость легендарного путешествия</p>
+              <p className="text-5xl md:text-6xl font-bold text-primary mb-3" style={{ fontFamily: 'Cormorant, serif' }}>от 350 000 ₽</p>
               <p className="text-sm md:text-base text-muted-foreground mb-4">на человека при двухместном размещении</p>
-              <div className="flex flex-wrap gap-3 justify-center text-sm">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-500/10 text-green-700 rounded-full font-medium">
-                  <Icon name="Check" size={16} />
-                  Все трансферы
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-500/10 text-green-700 rounded-full font-medium">
-                  <Icon name="Check" size={16} />
-                  Входные билеты
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-500/10 text-green-700 rounded-full font-medium">
-                  <Icon name="Check" size={16} />
-                  Персональный гид
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-green-500/10 text-green-700 rounded-full font-medium">
-                  <Icon name="Check" size={16} />
-                  Проживание 5★
-                </span>
-              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/#contact">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 py-6 text-lg shadow-xl">
                   <Icon name="Send" size={20} className="mr-2" />
-                  Забронировать путь
+                  Забронировать путешествие
                 </Button>
               </a>
               <a href="/#tours">
