@@ -107,6 +107,74 @@ const AirportBoard = () => {
   );
 };
 
+const ToursBoard = () => {
+  const [animate, setAnimate] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimate(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const renderText = (text: string, baseDelay: number) => {
+    if (!animate) return <span className="opacity-0">{text}</span>;
+    return text.split('').map((char, i) => (
+      <FlipChar key={i} char={char} delay={baseDelay + i * 100} />
+    ));
+  };
+
+  const tours = [
+    { dates: '18.03 - 01.04', seats: 6, status: 'available' },
+    { dates: '03.04 - 15.04', seats: 3, status: 'available' },
+    { dates: '17.04 - 02.05', seats: 0, status: 'sold-out' },
+    { dates: '29.04 - 10.05', seats: 0, status: 'sold-out' },
+    { dates: '12.05 - 25.05', seats: 4, status: 'available' },
+  ];
+
+  return (
+    <div className="max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto bg-[#0a0a0a]/30 backdrop-blur-md rounded-md md:rounded-lg shadow-2xl p-2 sm:p-3 md:p-4 lg:p-5 border border-[#222]/30" style={{ 
+      boxShadow: '0 0 20px rgba(0,0,0,0.4), inset 0 0 15px rgba(0,0,0,0.15)',
+      background: 'linear-gradient(180deg, rgba(15,15,15,0.3) 0%, rgba(26,26,26,0.35) 100%)'
+    }}>
+      <div className="flex items-center justify-between mb-2 md:mb-3 pb-2 md:pb-2.5 border-b border-[#333]/40">
+        <div className="flex items-center gap-1.5 md:gap-2">
+          <div className="w-6 h-6 md:w-8 md:h-8 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
+            <Icon name="Calendar" size={14} className="text-black md:w-5 md:h-5" />
+          </div>
+          <span className="text-[10px] md:text-sm font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap">Даты туров 2025</span>
+        </div>
+        <span className="text-[9px] md:text-[11px] text-[#888] font-mono whitespace-nowrap">{new Date().toLocaleDateString('ru-RU')}</span>
+      </div>
+
+      <div className="space-y-2 md:space-y-3">
+        {tours.map((tour, index) => (
+          <div 
+            key={index}
+            className="grid grid-cols-[1fr_auto] gap-2 md:gap-4 items-center bg-[#1a1a1a]/40 rounded p-2 md:p-3 border border-[#333]/40 hover:border-[#d4af37]/30 transition-colors duration-300"
+          >
+            <div className="text-sm md:text-xl lg:text-2xl font-bold text-[#ffa500] font-mono tracking-tight">
+              {renderText(tour.dates, 1000 + index * 500)}
+            </div>
+            <div className="text-right">
+              {tour.status === 'available' ? (
+                <div className="flex items-center gap-1.5 md:gap-2 justify-end">
+                  <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50 flex-shrink-0"></span>
+                  <span className="text-[10px] md:text-sm lg:text-base font-bold text-green-500 uppercase tracking-tight whitespace-nowrap">
+                    {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
+                  </span>
+                </div>
+              ) : (
+                <span className="inline-block bg-[#888]/20 text-[#888] px-2 md:px-3 py-1 rounded text-[10px] md:text-sm font-bold uppercase tracking-tight whitespace-nowrap">
+                  Мест нет
+                </span>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const DecorativeBackground = () => (
   <>
     <div className="absolute top-0 left-0 right-0 h-24 md:h-32 opacity-20 pointer-events-none overflow-hidden">
@@ -603,237 +671,13 @@ const Index = () => {
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
-            Наши Туры в Японию
+            Даты туров 2025
           </h2>
           <p className="text-xl md:text-2xl text-center mb-12 md:mb-16 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Каждый тур — это уникальное путешествие, созданное с душой и вниманием к деталям
+            Выберите удобную дату для вашего путешествия
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-            
-            <Card className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 overflow-hidden border-2 border-primary/10 hover:border-primary/30">
-              <div className="relative h-64 md:h-80 overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/files/99cdbe1d-6c5c-49c8-98b4-ae3956803345.jpg"
-                  alt="Классический тур"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
-                    Классический Путь
-                  </h3>
-                  <p className="text-sm md:text-base text-white/90">14 дней • Токио • Киото • Осака • Фудзи</p>
-                </div>
-              </div>
-              <CardContent className="p-6 md:p-8">
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start gap-3">
-                    <Icon name="MapPin" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Главные святыни, неоновые улицы, вековые храмы и величественная Фудзи
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Calendar" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Круглый год | Группы до 8 человек
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Star" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Включено: трансферы, отели, рёканы, экскурсии с гидом
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between pt-4 border-t border-primary/10">
-                  <div>
-                    <p className="text-sm text-muted-foreground">от</p>
-                    <p className="text-2xl md:text-3xl font-bold text-primary">250 000 ₽</p>
-                  </div>
-                  <a href="#contact">
-                    <Button className="bg-primary hover:bg-primary/90">
-                      Узнать подробнее
-                      <Icon name="ArrowRight" size={18} className="ml-2" />
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 overflow-hidden border-2 border-primary/10 hover:border-primary/30">
-              <div className="relative h-64 md:h-80 overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/files/4b1e4f5c-51b4-4c68-9bb7-dd9c1e8b0b11.jpg"
-                  alt="Премиум тур"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
-                    Путь Императора
-                  </h3>
-                  <p className="text-sm md:text-base text-white/90">21 день • VIP формат • Индивидуально</p>
-                </div>
-              </div>
-              <CardContent className="p-6 md:p-8">
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Crown" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Эксклюзивные локации, закрытые церемонии, мастер-классы от мастеров
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Users" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Только для вас | Личный гид-переводчик 24/7
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Sparkles" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Премиум рёканы, мишленовские рестораны, приватные онсены
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between pt-4 border-t border-primary/10">
-                  <div>
-                    <p className="text-sm text-muted-foreground">от</p>
-                    <p className="text-2xl md:text-3xl font-bold text-primary">850 000 ₽</p>
-                  </div>
-                  <a href="#contact">
-                    <Button className="bg-primary hover:bg-primary/90">
-                      Узнать подробнее
-                      <Icon name="ArrowRight" size={18} className="ml-2" />
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 overflow-hidden border-2 border-primary/10 hover:border-primary/30">
-              <div className="relative h-64 md:h-80 overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/files/6fd0c52a-4862-4ffd-a0d8-55cb8da74c93.jpg"
-                  alt="Сакура тур"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
-                    Путь Сакуры
-                  </h3>
-                  <p className="text-sm md:text-base text-white/90">10 дней • Март-Апрель • Сезон цветения</p>
-                </div>
-              </div>
-              <CardContent className="p-6 md:p-8">
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Flower2" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Токио, Киото, Нара в момент расцвета сакуры — самое волшебное время
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Camera" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Фотосессии в лучших парках | Ханами пикники под сакурой
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Heart" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Романтичные прогулки, традиционные чайные церемонии
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between pt-4 border-t border-primary/10">
-                  <div>
-                    <p className="text-sm text-muted-foreground">от</p>
-                    <p className="text-2xl md:text-3xl font-bold text-primary">320 000 ₽</p>
-                  </div>
-                  <a href="#contact">
-                    <Button className="bg-primary hover:bg-primary/90">
-                      Узнать подробнее
-                      <Icon name="ArrowRight" size={18} className="ml-2" />
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl hover:shadow-primary/20 transition-all duration-500 overflow-hidden border-2 border-primary/10 hover:border-primary/30">
-              <div className="relative h-64 md:h-80 overflow-hidden">
-                <img 
-                  src="https://cdn.poehali.dev/files/d5c1c9e9-d2bf-4d71-8a8b-9d5e8b5e5e5e.jpg"
-                  alt="Индивидуальный тур"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
-                    Ваш Личный Путь
-                  </h3>
-                  <p className="text-sm md:text-base text-white/90">По вашему желанию • Индивидуально</p>
-                </div>
-              </div>
-              <CardContent className="p-6 md:p-8">
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Compass" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Создаём маршрут под ваши интересы: культура, кулинария, природа, аниме
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Clock" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Любая продолжительность | Гибкий график | Ваш темп
-                    </p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Settings" size={20} className="text-primary flex-shrink-0 mt-1" />
-                    <p className="text-sm md:text-base text-muted-foreground">
-                      Полная кастомизация: отели, питание, активности — всё по вашему выбору
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between pt-4 border-t border-primary/10">
-                  <div>
-                    <p className="text-sm text-muted-foreground">от</p>
-                    <p className="text-2xl md:text-3xl font-bold text-primary">По запросу</p>
-                  </div>
-                  <a href="#contact">
-                    <Button className="bg-primary hover:bg-primary/90">
-                      Обсудить детали
-                      <Icon name="ArrowRight" size={18} className="ml-2" />
-                    </Button>
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-
-          </div>
-
-          <div className="mt-12 md:mt-16 text-center max-w-3xl mx-auto">
-            <div className="bg-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20">
-              <Icon name="Lightbulb" size={32} className="text-primary mx-auto mb-4" />
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
-                Не нашли подходящий тур?
-              </h3>
-              <p className="text-base md:text-lg text-muted-foreground mb-6">
-                Мы создадим уникальное путешествие специально для вас — расскажите о ваших мечтах, и мы воплотим их в реальность
-              </p>
-              <a href="#contact">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Связаться с нами
-                  <Icon name="MessageCircle" size={20} className="ml-2" />
-                </Button>
-              </a>
-            </div>
-          </div>
+          <ToursBoard />
         </div>
       </section>
 
