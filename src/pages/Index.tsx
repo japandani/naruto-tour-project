@@ -611,7 +611,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="text-lg md:text-xl font-semibold mb-1 text-background">Телефон / Мессенджеры</h3>
-                    <p className="text-xl font-bold text-background mb-1">+7 (XXX) XXX-XX-XX</p>
+                    <p className="text-xl font-bold text-background mb-1">+7 (925) 464-45-59</p>
                     <p className="text-sm text-background/70">(Ежедневно с 10:00 до 22:00 по МСК)</p>
                   </div>
                 </div>
@@ -622,7 +622,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="text-lg md:text-xl font-semibold mb-1 text-background">Электронная почта</h3>
-                    <p className="text-xl font-bold text-background">info@naruto-tour.ru</p>
+                    <p className="text-xl font-bold text-background">salesdaproject@gmail.com</p>
                   </div>
                 </div>
 
@@ -722,11 +722,11 @@ const Index = () => {
               <div className="space-y-2 text-xs md:text-sm opacity-80">
                 <div className="flex items-center gap-2">
                   <Icon name="Phone" size={16} />
-                  <span>+7 (495) 123-45-67</span>
+                  <span>+7 (925) 464-45-59</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="Mail" size={16} />
-                  <span>info@japan-da.ru</span>
+                  <span>salesdaproject@gmail.com</span>
                 </div>
               </div>
             </div>
