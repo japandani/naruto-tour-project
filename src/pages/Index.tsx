@@ -109,6 +109,7 @@ const AirportBoard = () => {
 
 const ToursBoard = () => {
   const [animate, setAnimate] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   
   useEffect(() => {
     const timer = setTimeout(() => setAnimate(true), 500);
@@ -131,45 +132,66 @@ const ToursBoard = () => {
   ];
 
   return (
-    <div className="max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto bg-[#0a0a0a]/30 backdrop-blur-md rounded-md md:rounded-lg shadow-2xl p-2 sm:p-3 md:p-4 lg:p-5 border border-[#222]/30" style={{ 
+    <div className="max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto bg-[#0a0a0a]/30 backdrop-blur-md rounded-md md:rounded-lg shadow-2xl p-2 sm:p-3 md:p-3.5 lg:p-4 border border-[#222]/30 animate-fade-in" style={{ 
       boxShadow: '0 0 20px rgba(0,0,0,0.4), inset 0 0 15px rgba(0,0,0,0.15)',
       background: 'linear-gradient(180deg, rgba(15,15,15,0.3) 0%, rgba(26,26,26,0.35) 100%)'
     }}>
-      <div className="flex items-center justify-between mb-2 md:mb-3 pb-2 md:pb-2.5 border-b border-[#333]/40">
+      <div className="flex items-center justify-between mb-2 md:mb-2.5 pb-1.5 md:pb-2 border-b border-[#333]/40">
         <div className="flex items-center gap-1.5 md:gap-2">
-          <div className="w-6 h-6 md:w-8 md:h-8 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
-            <Icon name="Calendar" size={14} className="text-black md:w-5 md:h-5" />
+          <div className="w-5 h-5 md:w-7 md:h-7 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0 animate-pulse">
+            <Icon name="Calendar" size={12} className="text-black md:w-4 md:h-4" />
           </div>
-          <span className="text-[10px] md:text-sm font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap">Даты туров 2025</span>
+          <span className="text-[10px] md:text-xs font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap">Даты туров 2025</span>
         </div>
-        <span className="text-[9px] md:text-[11px] text-[#888] font-mono whitespace-nowrap">{new Date().toLocaleDateString('ru-RU')}</span>
+        <span className="text-[8px] md:text-[10px] text-[#888] font-mono whitespace-nowrap">{new Date().toLocaleDateString('ru-RU')}</span>
       </div>
 
-      <div className="space-y-2 md:space-y-3">
-        {tours.map((tour, index) => (
-          <div 
-            key={index}
-            className="grid grid-cols-[1fr_auto] gap-2 md:gap-4 items-center bg-[#1a1a1a]/40 rounded p-2 md:p-3 border border-[#333]/40 hover:border-[#d4af37]/30 transition-colors duration-300"
-          >
-            <div className="text-sm md:text-xl lg:text-2xl font-bold text-[#ffa500] font-mono tracking-tight">
-              {renderText(tour.dates, 1000 + index * 500)}
-            </div>
-            <div className="text-right">
-              {tour.status === 'available' ? (
-                <div className="flex items-center gap-1.5 md:gap-2 justify-end">
-                  <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50 flex-shrink-0"></span>
-                  <span className="text-[10px] md:text-sm lg:text-base font-bold text-green-500 uppercase tracking-tight whitespace-nowrap">
-                    {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
-                  </span>
-                </div>
-              ) : (
-                <span className="inline-block bg-[#888]/20 text-[#888] px-2 md:px-3 py-1 rounded text-[10px] md:text-sm font-bold uppercase tracking-tight whitespace-nowrap">
-                  Мест нет
-                </span>
-              )}
-            </div>
-          </div>
-        ))}
+      <div className="space-y-1.5 md:space-y-2">
+        {tours.map((tour, index) => {
+          const isAvailable = tour.status === 'available';
+          const TourRow = isAvailable ? 'a' : 'div';
+          
+          return (
+            <TourRow
+              key={index}
+              {...(isAvailable ? { href: '#contact' } : {})}
+              className={`grid grid-cols-[1fr_auto] gap-2 md:gap-4 items-center bg-[#1a1a1a]/40 rounded p-1.5 md:p-2.5 border border-[#333]/40 transition-all duration-300 ${
+                isAvailable 
+                  ? 'hover:border-[#d4af37]/60 hover:bg-[#1a1a1a]/60 hover:shadow-lg hover:shadow-[#d4af37]/20 hover:scale-[1.02] cursor-pointer' 
+                  : 'opacity-60'
+              }`}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+            >
+              <div className={`text-sm md:text-lg lg:text-xl font-bold font-mono tracking-tight transition-colors duration-300 ${
+                isAvailable 
+                  ? hoveredIndex === index ? 'text-[#d4af37]' : 'text-[#00ff88]'
+                  : 'text-[#666]'
+              }`}>
+                {renderText(tour.dates, 1000 + index * 500)}
+              </div>
+              <div className="text-right">
+                {isAvailable ? (
+                  <div className="flex items-center gap-1.5 md:gap-2 justify-end">
+                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50 flex-shrink-0"></span>
+                    <span className={`text-[10px] md:text-sm lg:text-base font-bold uppercase tracking-tight whitespace-nowrap transition-all duration-300 ${
+                      hoveredIndex === index ? 'text-[#d4af37] scale-110' : 'text-green-500'
+                    }`}>
+                      {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-1.5 md:gap-2 justify-end">
+                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-red-600 rounded-full shadow-lg shadow-red-600/50 flex-shrink-0"></span>
+                    <span className="inline-block bg-red-600/20 text-red-500 px-2 md:px-3 py-0.5 md:py-1 rounded text-[10px] md:text-sm font-bold uppercase tracking-tight whitespace-nowrap border border-red-600/40">
+                      Мест нет
+                    </span>
+                  </div>
+                )}
+              </div>
+            </TourRow>
+          );
+        })}
       </div>
     </div>
   );
