@@ -209,8 +209,9 @@ const TourDetails = () => {
                         alt={item.title}
                         className="w-full h-full object-cover"
                       />
-                      <div className="absolute top-4 left-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                        <span className="text-2xl font-bold text-white">День<br/>{item.day}</span>
+                      <div className="absolute top-4 left-4 w-14 h-14 bg-primary rounded-full flex flex-col items-center justify-center shadow-lg">
+                        <span className="text-[10px] font-semibold text-white leading-tight">День</span>
+                        <span className="text-xl font-bold text-white leading-tight">{item.day}</span>
                       </div>
                     </div>
                     
