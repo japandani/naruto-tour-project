@@ -48,11 +48,11 @@ const AirportBoard = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto bg-[#0a0a0a] rounded-lg shadow-2xl p-3 md:p-4 border-2 border-[#222]" style={{ 
-      boxShadow: '0 0 20px rgba(0,0,0,0.8), inset 0 0 15px rgba(0,0,0,0.5)',
-      background: 'linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%)'
+    <div className="max-w-3xl mx-auto bg-[#0a0a0a]/70 backdrop-blur-sm rounded-lg shadow-2xl p-2 md:p-3 border-2 border-[#222]/50" style={{ 
+      boxShadow: '0 0 20px rgba(0,0,0,0.6), inset 0 0 15px rgba(0,0,0,0.3)',
+      background: 'linear-gradient(180deg, rgba(15,15,15,0.7) 0%, rgba(26,26,26,0.7) 100%)'
     }}>
-      <div className="flex items-center justify-between mb-2 md:mb-3 pb-2 border-b border-[#333]">
+      <div className="flex items-center justify-between mb-1.5 md:mb-2 pb-1.5 border-b border-[#333]/50">
         <div className="flex items-center gap-1.5">
           <div className="w-6 h-6 md:w-7 md:h-7 bg-[#d4af37] rounded-full flex items-center justify-center">
             <Icon name="Plane" size={14} className="text-black" />
@@ -62,7 +62,7 @@ const AirportBoard = () => {
         <span className="text-[9px] md:text-[10px] text-[#888] font-mono">{new Date().toLocaleTimeString('ru-RU')}</span>
       </div>
 
-      <div className="grid grid-cols-[auto_1fr_auto_auto] gap-2 md:gap-3 items-center mb-2 md:mb-3 text-[#ffa500] font-mono">
+      <div className="grid grid-cols-[auto_1fr_auto_auto] gap-2 md:gap-3 items-center mb-1.5 md:mb-2 text-[#ffa500] font-mono">
         <div className="text-[9px] md:text-[10px] text-[#888] uppercase tracking-wide">Рейс</div>
         <div className="text-[9px] md:text-[10px] text-[#888] uppercase tracking-wide">Направление</div>
         <div className="text-[9px] md:text-[10px] text-[#888] uppercase tracking-wide text-center">Дата</div>
@@ -86,14 +86,14 @@ const AirportBoard = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 md:gap-3 pt-2 border-t border-[#333]">
-        <div className="bg-[#1a1a1a] rounded p-2 border border-[#333]">
+      <div className="grid grid-cols-2 gap-2 md:gap-3 pt-1.5 border-t border-[#333]/50">
+        <div className="bg-[#1a1a1a]/60 rounded p-1.5 border border-[#333]/50">
           <div className="text-[9px] md:text-[10px] text-[#888] uppercase mb-0.5 tracking-wider">Длительность</div>
           <div className="text-base md:text-xl font-bold text-[#ffa500] font-mono tracking-tight">
             {renderText('14 ДНЕЙ', 5000)}
           </div>
         </div>
-        <div className="bg-[#1a1a1a] rounded p-2 border border-[#333] flex flex-col justify-center">
+        <div className="bg-[#1a1a1a]/60 rounded p-1.5 border border-[#333]/50 flex flex-col justify-center">
           <div className="flex items-center justify-center gap-1.5">
             <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></span>
             <span className="text-[11px] md:text-sm font-bold text-red-500 uppercase tracking-wide">
