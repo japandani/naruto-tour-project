@@ -588,49 +588,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-12 md:py-20 px-4 relative overflow-hidden">
-        <DecorativeBackground />
-        
-        <div className="container mx-auto max-w-2xl relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 text-foreground">
-            Свяжитесь с нами
-          </h2>
-          <p className="text-center text-muted-foreground mb-8 md:mb-12 text-base md:text-lg">
-            Мы ответим на все ваши вопросы о турах в Японию
-          </p>
-          
-          <Card>
-            <CardContent className="p-4 md:p-8">
-              <form className="space-y-4 md:space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Ваше имя</label>
-                  <Input placeholder="Иван Иванов" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <Input type="email" placeholder="ivan@example.com" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Телефон</label>
-                  <Input type="tel" placeholder="+7 (999) 123-45-67" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Сообщение</label>
-                  <Textarea 
-                    placeholder="Расскажите, какой тур вас интересует..."
-                    rows={5}
-                  />
-                </div>
-                <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
-                  Отправить заявку
-                  <Icon name="Send" size={18} className="ml-2" />
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       <section id="contact" className="relative bg-foreground text-background overflow-hidden">
         <WaveDivider className="text-background -mb-1" />
         
