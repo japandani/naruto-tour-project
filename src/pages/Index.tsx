@@ -220,8 +220,8 @@ const Index = () => {
 
             <div className="relative w-full h-20 md:h-24 my-4 md:my-6 rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/3cafc177-8ee7-4052-958a-aa7e24e35235.jpg"
-                alt="Ночной мегаполис"
+                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/acfabe16-3ed9-4a80-bf0f-746fcd3f90de.jpg"
+                alt="Ворота тории на закате"
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30"></div>
