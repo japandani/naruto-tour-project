@@ -94,14 +94,14 @@ const AirportBoard = () => {
             {renderText('14 ДНЕЙ', 5000)}
           </div>
         </div>
-        <div className="bg-[#1a1a1a]/40 rounded p-1 md:p-2 border border-[#333]/40 flex flex-col justify-center">
+        <a href="#contact" className="bg-[#1a1a1a]/40 rounded p-1 md:p-2 border border-[#333]/40 flex flex-col justify-center hover:bg-[#1a1a1a]/60 hover:border-red-500/50 transition-all duration-300 cursor-pointer">
           <div className="flex items-center justify-center gap-0.5 md:gap-1.5">
             <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50 flex-shrink-0"></span>
             <span className="text-[9px] md:text-sm font-bold text-red-500 uppercase tracking-tight whitespace-nowrap">
               Последние 4 места
             </span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );
@@ -284,7 +284,7 @@ const Index = () => {
           <div className="flex items-center gap-3">
             <a href="#contact">
               <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
-                Оставить заявку
+                Связаться с нами
               </Button>
             </a>
             <button
