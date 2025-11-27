@@ -110,11 +110,45 @@ const AirportBoard = () => {
 const ToursBoard = () => {
   const [animate, setAnimate] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   
   useEffect(() => {
     const timer = setTimeout(() => setAnimate(true), 500);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    audioRef.current = new Audio();
+    audioRef.current.volume = 0.4;
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, []);
+
+  const playSound = () => {
+    if (!audioRef.current) return;
+    
+    const utterance = new SpeechSynthesisUtterance('Please proceed to the gate');
+    utterance.lang = 'en-US';
+    utterance.rate = 0.85;
+    utterance.pitch = 1.1;
+    utterance.volume = 0.6;
+    
+    const voices = speechSynthesis.getVoices();
+    const japaneseAccentVoice = voices.find(voice => 
+      voice.lang.includes('ja') || voice.name.includes('Japanese')
+    );
+    
+    if (japaneseAccentVoice) {
+      utterance.voice = japaneseAccentVoice;
+    }
+    
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+  };
 
   const renderText = (text: string, baseDelay: number) => {
     if (!animate) return <span className="opacity-0">{text}</span>;
@@ -160,7 +194,10 @@ const ToursBoard = () => {
                   ? 'hover:border-[#d4af37]/60 hover:bg-[#1a1a1a]/60 hover:shadow-lg hover:shadow-[#d4af37]/20 hover:scale-[1.02] cursor-pointer' 
                   : 'opacity-60'
               }`}
-              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseEnter={() => {
+                setHoveredIndex(index);
+                if (isAvailable) playSound();
+              }}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className={`text-sm md:text-lg lg:text-xl font-bold font-mono tracking-tight transition-colors duration-300 ${
