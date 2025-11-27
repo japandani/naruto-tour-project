@@ -153,12 +153,44 @@ const Index = () => {
           </p>
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg"
+            className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg mb-8 md:mb-10"
             onClick={() => document.getElementById('scrolls')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Сделать первый шаг по Пути
             <Icon name="ArrowRight" size={20} className="ml-2" />
           </Button>
+
+          <div className="max-w-3xl mx-auto bg-black/80 backdrop-blur-md border-2 border-primary/30 rounded-lg shadow-2xl p-4 md:p-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="flex items-center justify-center gap-2 mb-3 text-primary">
+              <Icon name="Plane" size={20} className="animate-pulse" />
+              <span className="text-xs md:text-sm font-bold tracking-widest uppercase">Следующий вылет</span>
+              <Icon name="Plane" size={20} className="animate-pulse" />
+            </div>
+            <div className="grid grid-cols-3 gap-3 md:gap-4 items-center">
+              <div className="text-center">
+                <div className="text-2xl md:text-4xl font-bold text-white mb-1 font-mono tracking-tight">14.03.2025</div>
+                <div className="text-[10px] md:text-xs text-primary/80 uppercase tracking-wider">Дата вылета</div>
+              </div>
+              <div className="text-center border-x border-primary/20 px-2">
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <span className="text-lg md:text-2xl font-bold text-white">Москва</span>
+                  <Icon name="ArrowRight" size={20} className="text-primary" />
+                  <span className="text-lg md:text-2xl font-bold text-white">Токио</span>
+                </div>
+                <div className="text-[10px] md:text-xs text-primary/80 uppercase tracking-wider">Маршрут</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl md:text-4xl font-bold text-white mb-1 font-mono">14 дней</div>
+                <div className="text-[10px] md:text-xs text-primary/80 uppercase tracking-wider">Длительность</div>
+              </div>
+            </div>
+            <div className="mt-4 pt-3 border-t border-primary/20 text-center">
+              <span className="inline-flex items-center gap-2 text-xs md:text-sm text-green-400 font-semibold">
+                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                Идёт набор группы
+              </span>
+            </div>
+          </div>
         </div>
 
         <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
