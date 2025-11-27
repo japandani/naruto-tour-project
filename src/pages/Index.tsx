@@ -5,6 +5,107 @@ import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
 import { useState, useEffect, useRef } from "react";
 
+const FlipChar = ({ char, delay }: { char: string; delay: number }) => {
+  const [displayChar, setDisplayChar] = useState('');
+  const chars = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ0123456789.-: ';
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const targetChar = char;
+    const interval = setInterval(() => {
+      if (currentIndex < chars.length) {
+        setDisplayChar(chars[Math.floor(Math.random() * chars.length)]);
+        currentIndex++;
+      } else {
+        setDisplayChar(targetChar);
+        clearInterval(interval);
+      }
+    }, delay / chars.length);
+
+    return () => clearInterval(interval);
+  }, [char, delay]);
+
+  return (
+    <span className="inline-block min-w-[0.6em] text-center bg-[#1a1a1a] border border-[#333] rounded-sm px-1 shadow-inner">
+      {displayChar || char}
+    </span>
+  );
+};
+
+const AirportBoard = () => {
+  const [animate, setAnimate] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setAnimate(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const renderText = (text: string, baseDelay: number) => {
+    if (!animate) return <span className="opacity-0">{text}</span>;
+    return text.split('').map((char, i) => (
+      <FlipChar key={i} char={char} delay={baseDelay + i * 100} />
+    ));
+  };
+
+  return (
+    <div className="max-w-4xl mx-auto bg-[#0a0a0a] rounded-xl shadow-2xl p-4 md:p-6 border-4 border-[#222]" style={{ 
+      boxShadow: '0 0 30px rgba(0,0,0,0.8), inset 0 0 20px rgba(0,0,0,0.5)',
+      background: 'linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%)'
+    }}>
+      <div className="flex items-center justify-between mb-4 pb-3 border-b border-[#333]">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 md:w-10 md:h-10 bg-[#d4af37] rounded-full flex items-center justify-center">
+            <Icon name="Plane" size={20} className="text-black" />
+          </div>
+          <span className="text-xs md:text-sm font-bold tracking-widest text-[#d4af37] uppercase">Sheremetyevo Airport</span>
+        </div>
+        <span className="text-xs text-[#888] font-mono">{new Date().toLocaleTimeString('ru-RU')}</span>
+      </div>
+
+      <div className="grid grid-cols-[auto_1fr_auto_auto] gap-3 md:gap-6 items-center mb-4 text-[#ffa500] font-mono">
+        <div className="text-xs md:text-sm text-[#888] uppercase tracking-wide">Рейс</div>
+        <div className="text-xs md:text-sm text-[#888] uppercase tracking-wide">Направление</div>
+        <div className="text-xs md:text-sm text-[#888] uppercase tracking-wide text-center">Дата</div>
+        <div className="text-xs md:text-sm text-[#888] uppercase tracking-wide text-right">Статус</div>
+        
+        <div className="text-lg md:text-2xl font-bold tracking-wider">
+          {renderText('JD 2025', 1000)}
+        </div>
+        <div className="text-lg md:text-2xl font-bold tracking-wider flex items-center gap-2">
+          {renderText('МОСКВА', 2000)}
+          <Icon name="ArrowRight" size={20} className="text-[#d4af37] flex-shrink-0" />
+          {renderText('ТОКИО', 3000)}
+        </div>
+        <div className="text-lg md:text-2xl font-bold tracking-wider text-center">
+          {renderText('14.03', 4000)}
+        </div>
+        <div className="text-right">
+          <span className="inline-block bg-[#d4af37] text-black px-2 md:px-3 py-1 rounded text-xs md:text-sm font-bold uppercase tracking-wide">
+            Посадка
+          </span>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-3 md:gap-4 pt-3 border-t border-[#333]">
+        <div className="bg-[#1a1a1a] rounded p-3 border border-[#333]">
+          <div className="text-[10px] md:text-xs text-[#888] uppercase mb-1 tracking-wider">Длительность</div>
+          <div className="text-xl md:text-3xl font-bold text-[#ffa500] font-mono tracking-tight">
+            {renderText('14 ДНЕЙ', 5000)}
+          </div>
+        </div>
+        <div className="bg-[#1a1a1a] rounded p-3 border border-[#333] flex flex-col justify-center">
+          <div className="flex items-center justify-center gap-2">
+            <span className="w-2 h-2 md:w-3 md:h-3 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50"></span>
+            <span className="text-sm md:text-lg font-bold text-red-500 uppercase tracking-wide">
+              Последние 4 места
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const DecorativeBackground = () => (
   <>
     <div className="absolute top-0 left-0 right-0 h-24 md:h-32 opacity-20 pointer-events-none overflow-hidden">
@@ -160,37 +261,7 @@ const Index = () => {
             <Icon name="ArrowRight" size={20} className="ml-2" />
           </Button>
 
-          <div className="max-w-3xl mx-auto bg-black/80 backdrop-blur-md border-2 border-primary/30 rounded-lg shadow-2xl p-4 md:p-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="flex items-center justify-center gap-2 mb-3 text-primary">
-              <Icon name="Plane" size={20} className="animate-pulse" />
-              <span className="text-xs md:text-sm font-bold tracking-widest uppercase">Следующий вылет</span>
-              <Icon name="Plane" size={20} className="animate-pulse" />
-            </div>
-            <div className="grid grid-cols-3 gap-3 md:gap-4 items-center">
-              <div className="text-center">
-                <div className="text-2xl md:text-4xl font-bold text-white mb-1 font-mono tracking-tight">14.03.2025</div>
-                <div className="text-[10px] md:text-xs text-primary/80 uppercase tracking-wider">Дата вылета</div>
-              </div>
-              <div className="text-center border-x border-primary/20 px-2">
-                <div className="flex items-center justify-center gap-2 mb-1">
-                  <span className="text-lg md:text-2xl font-bold text-white">Москва</span>
-                  <Icon name="ArrowRight" size={20} className="text-primary" />
-                  <span className="text-lg md:text-2xl font-bold text-white">Токио</span>
-                </div>
-                <div className="text-[10px] md:text-xs text-primary/80 uppercase tracking-wider">Маршрут</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl md:text-4xl font-bold text-white mb-1 font-mono">14 дней</div>
-                <div className="text-[10px] md:text-xs text-primary/80 uppercase tracking-wider">Длительность</div>
-              </div>
-            </div>
-            <div className="mt-4 pt-3 border-t border-primary/20 text-center">
-              <span className="inline-flex items-center gap-2 text-xs md:text-sm text-green-400 font-semibold">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                Идёт набор группы
-              </span>
-            </div>
-          </div>
+          <AirportBoard />
         </div>
 
         <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
