@@ -34,6 +34,7 @@ const DecorativeBackground = () => (
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const bannerRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const ctaRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,6 +51,10 @@ const Index = () => {
     bannerRefs.current.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
+
+    if (ctaRef.current) {
+      observer.observe(ctaRef.current);
+    }
 
     return () => observer.disconnect();
   }, []);
@@ -332,7 +337,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30"></div>
             </div>
 
-            <div className="text-center mt-12 md:mt-16 space-y-6">
+            <div ref={ctaRef} className="text-center mt-12 md:mt-16 space-y-6 opacity-0 transition-all duration-1000">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary" style={{ fontFamily: 'Cormorant, serif' }}>
                 Ваш Путь ждёт своего начала
               </h2>
