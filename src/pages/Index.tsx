@@ -128,30 +128,6 @@ const ToursBoard = () => {
     };
   }, []);
 
-  const playSound = () => {
-    const phrases = [
-      'Настройтесь на приятное путешествие!',
-      'Ваш Путь — это наше призвание!'
-    ];
-    
-    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-    const utterance = new SpeechSynthesisUtterance(randomPhrase);
-    utterance.lang = 'ru-RU';
-    utterance.rate = 0.9;
-    utterance.pitch = 1.0;
-    utterance.volume = 0.7;
-    
-    const voices = speechSynthesis.getVoices();
-    const russianVoice = voices.find(voice => voice.lang.includes('ru'));
-    
-    if (russianVoice) {
-      utterance.voice = russianVoice;
-    }
-    
-    speechSynthesis.cancel();
-    speechSynthesis.speak(utterance);
-  };
-
   const renderText = (text: string, baseDelay: number) => {
     if (!animate) return <span className="opacity-0">{text}</span>;
     return text.split('').map((char, i) => (
@@ -196,10 +172,7 @@ const ToursBoard = () => {
                   ? 'hover:border-[#d4af37]/60 hover:bg-[#1a1a1a]/60 hover:shadow-lg hover:shadow-[#d4af37]/20 hover:scale-[1.02] cursor-pointer' 
                   : 'opacity-60'
               }`}
-              onMouseEnter={() => {
-                setHoveredIndex(index);
-                if (isAvailable) playSound();
-              }}
+              onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className={`text-sm md:text-lg lg:text-xl font-bold font-mono tracking-tight transition-colors duration-300 ${
