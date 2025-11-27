@@ -231,7 +231,7 @@ const Index = () => {
 
             <div ref={(el) => (bannerRefs.current[0] = el)} className="relative w-full h-28 md:h-32 my-4 md:my-6 rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/f766517c-c772-4c49-ba63-bcfe5a2fc8d4.jpg"
+                src="https://cdn.poehali.dev/files/dcb65954-c32d-4362-8995-c701041e5cd8.jpg"
                 alt="Ночной Токио"
                 className="w-full h-full object-cover object-center"
               />
