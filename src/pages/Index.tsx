@@ -404,6 +404,124 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-12 md:py-20 px-4 relative overflow-hidden bg-gradient-to-b from-background to-accent/5">
+        <DecorativeBackground />
+        
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-foreground">
+            Почему <span className="text-primary">МЫ</span>?
+          </h2>
+          <p className="text-xl md:text-2xl text-center mb-3 md:mb-4 text-muted-foreground font-medium" style={{ fontFamily: 'Cormorant, serif' }}>
+            Собираем ваш Путь по крупицам одного большого пазла
+          </p>
+          <p className="text-base md:text-lg text-center text-muted-foreground mb-12 md:mb-16 max-w-5xl mx-auto leading-relaxed px-4">
+            Вы уже видели общую картину — четыре свитка, что составляют душу Японии. Но уникальность вашего путешествия рождается в деталях. Мы не предлагаем готовых маршрутов. Мы — творцы вашего личного Пути, внимательно собирающие его, как драгоценный пазл, где каждая крупица — это точность, глубина и смысл.
+          </p>
+
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-14 text-foreground">
+            Из чего мы складываем картину вашего идеального путешествия?
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto mb-12 md:mb-16">
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="Navigation" size={24} className="text-primary" />
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Бесшовного движения</h4>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Пока другие стоят в пробках, ваш комфортабельный минивен плавно везёт вас сквозь время и пространство. Он проедет сквозь энергетический вихрь Харадзюку и праздничную суету Дотонбори, чтобы остановиться в метре от древних скал Тодзимбо. Это не трансфер — это магия бесшовного перемещения.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="Home" size={24} className="text-primary" />
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Искусного крова</h4>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Мы подбираем отели и рёканы не по звёздам, а по душе. Это места, где после дня впечатлений вас ждёт не просто номер, а продолжение японской эстетики — вид на спящий сад, татами, хранящее тепло дерева, и онсэн, смывающий суету.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="UtensilsCrossed" size={24} className="text-primary" />
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Вкуса как откровения</h4>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Наши ежедневные гастрономические исследования в идзакая и рестораны подобраны так, чтобы за путешествие вы составили полную гастрономическую карту Японии. От нежного сашими с утреннего рынка до дымящегося рамэ в подвальчике на окраине.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="Camera" size={24} className="text-primary" />
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Впечатлений</h4>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Мы знаем все ракурсы, где утренний свет ложится на бамбуковую рощу Сагано, а неоновые вывески Осаки создают идеальный фон. Ваша лента взорвётся от восторга — мы обеспечим вам не просто фотографии, а живые портреты вашего Пути.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="Sparkles" size={24} className="text-primary" />
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Прикосновения к сути</h4>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Мы обеспечиваем не «встречу с мастером», а диалог с хранителем традиции в его личной мастерской. Мы находим тот самый онсэн, куда не водят группы, и тот вид на Фудзи, который не попадает в объективы толп.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="User" size={24} className="text-primary" />
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Вашего «Я»</h4>
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  Это главный элемент пазла. Ваши интересы, ваш ритм, ваши сокровенные ожидания. Мы встраиваем их в маршрут, создавая путешествие, которое будет говорить именно с вами.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl p-8 md:p-12 border border-primary/10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
+              Наше искусство — в гармонии деталей
+            </h3>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
+              Искусство не в том, чтобы найти хороший отель. Искусство — чтобы после бурного дня в неоновом Токио вы попали в рёкан, где царит безмолвие. Чтобы дорога от суеты мегаполиса к храму была не утомительной, а созерцательной. Чтобы каждый кадр вашего путешествия становился историей, а каждый вкус — воспоминанием.
+            </p>
+            <p className="text-base md:text-lg text-foreground font-semibold">
+              Мы создаём не список мест, а идеальный ритм, где каждая следующая крупица пазла готовит вас к восприятию следующей.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="py-12 md:py-20 px-4 relative overflow-hidden">
         <DecorativeBackground />
         
