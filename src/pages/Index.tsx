@@ -715,8 +715,6 @@ const Index = () => {
       </section>
 
       <section id="contact" className="relative bg-foreground text-background overflow-hidden">
-        <WaveDivider className="text-background -mb-1" />
-        
         <div className="container mx-auto max-w-6xl px-4 py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-12 md:gap-16">
             
