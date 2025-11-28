@@ -200,6 +200,12 @@ const TourDetails = () => {
           <p className="text-lg sm:text-xl md:text-2xl mb-8 drop-shadow-md font-light">
             13 ночей от Токио до Осаки • Для тех, кто готов сказать «да» настоящей Японии
           </p>
+          <a href="/">
+            <Button size="lg" variant="outline" className="bg-white/10 hover:bg-white/20 border-white/30 text-white px-8 py-6 text-base backdrop-blur-sm">
+              <Icon name="Home" size={20} className="mr-2" />
+              На главную
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -293,6 +299,12 @@ const TourDetails = () => {
                 <Button size="lg" variant="outline" className="px-10 py-6 text-lg border-2">
                   <Icon name="Calendar" size={20} className="mr-2" />
                   Выбрать даты
+                </Button>
+              </a>
+              <a href="/">
+                <Button size="lg" variant="outline" className="px-10 py-6 text-lg border-2">
+                  <Icon name="Home" size={20} className="mr-2" />
+                  На главную
                 </Button>
               </a>
             </div>
