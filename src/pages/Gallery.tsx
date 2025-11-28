@@ -1,89 +1,40 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const GALLERY_API = "https://functions.poehali.dev/0ca72437-b8dc-4114-b471-e5ad4f87ce23";
+
+interface Photo {
+  id: number;
+  url: string;
+  title: string;
+  description: string;
+  created_at: string;
+  display_order: number;
+}
 
 const Gallery = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [imageLoading, setImageLoading] = useState<{ [key: number]: boolean }>({});
+  const [galleryImages, setGalleryImages] = useState<Photo[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const galleryImages = [
-    {
-      url: "https://cdn.poehali.dev/files/4a9535ec-6d0a-491b-837c-cc6027622277.jpeg",
-      title: "Уличные детали",
-      description: "Милые находки на улицах Японии"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/e94fc926-fd25-4e3b-b610-e27b23010483.jpeg",
-      title: "Аниме-культура",
-      description: "Знакомство с японской поп-культурой"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/b34c93a1-8994-41fd-aee1-4e4ca54bbede.jpeg",
-      title: "Японский интерьер",
-      description: "Традиционный дизайн с теплым освещением"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/dfd6e2ea-c159-4663-b868-525d05a2609b.jpeg",
-      title: "Кошачье кафе",
-      description: "Встреча с пушистыми друзьями"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/543f946f-97a7-4d57-aee6-f284cd474bb1.jpeg",
-      title: "Уличная кофейня",
-      description: "Аутентичный японский кофе"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg",
-      title: "Традиционный рёкан",
-      description: "Ночь в японском стиле"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/d23c3a64-d493-4a96-920d-befa1219a8d9.jpeg",
-      title: "Цветущие холмы",
-      description: "Весенние краски Японии"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/a5ecbc18-7d24-4808-a2af-78b8cda22299.jpeg",
-      title: "Местные жители",
-      description: "Встречи с гостеприимными японцами"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/b9c020f7-a8ee-4854-ad4c-812198638a29.jpeg",
-      title: "Наш гид",
-      description: "Комфортный трансфер по Японии"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/c4fa33a7-df05-4792-bcdf-a872d31fc27d.jpeg",
-      title: "За рулём приключений",
-      description: "Путешествие по японским дорогам"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/f9e53de1-59a4-4d82-9edc-a3a86b58922e.jpeg",
-      title: "Деревня Сиракава-го",
-      description: "Среди рисовых полей и традиционных домов"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/63a5411c-4bf7-4d7a-b081-d988a2020bb6.jpeg",
-      title: "Чайная церемония",
-      description: "Погружение в традиции Японии"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/d16f7162-159b-4da6-af3a-dd6767d336f3.jpeg",
-      title: "Традиционные игры",
-      description: "Мастер-класс в японском парке"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg",
-      title: "Вечерний стадион",
-      description: "Незабываемые эмоции под открытым небом"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg",
-      title: "Морские острова",
-      description: "Семейные моменты у побережья"
-    },
-  ];
+  useEffect(() => {
+    loadPhotos();
+  }, []);
+
+  const loadPhotos = async () => {
+    try {
+      const response = await fetch(GALLERY_API);
+      const data = await response.json();
+      setGalleryImages(data.photos || []);
+    } catch (error) {
+      console.error("Error loading photos:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const openImage = (index: number) => {
     setSelectedImage(index);
@@ -192,8 +143,14 @@ const Gallery = () => {
 
       <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {galleryImages.map((image, index) => (
+          {loading ? (
+            <div className="text-center py-12">
+              <Icon name="Loader2" size={48} className="text-primary animate-spin mx-auto mb-4" />
+              <p className="text-muted-foreground">Загрузка галереи...</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {galleryImages.map((image, index) => (
               <div
                 key={index}
                 className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
@@ -225,8 +182,9 @@ const Gallery = () => {
                   <Icon name="ZoomIn" size={24} className="text-white" />
                 </div>
               </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

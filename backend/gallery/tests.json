@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "name": "Get gallery photos list",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "photos": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Verify admin token - invalid",
+      "method": "GET",
+      "path": "/?action=verify",
+      "headers": {
+        "X-Admin-Token": "invalid"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "valid": false
+      }
+    }
+  ]
+}

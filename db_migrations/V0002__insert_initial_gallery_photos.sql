@@ -1,0 +1,16 @@
+INSERT INTO t_p90508749_naruto_tour_project.gallery_photos (url, title, description, display_order) VALUES
+('https://cdn.poehali.dev/files/4a9535ec-6d0a-491b-837c-cc6027622277.jpeg', 'Уличные детали', 'Милые находки на улицах Японии', 15),
+('https://cdn.poehali.dev/files/e94fc926-fd25-4e3b-b610-e27b23010483.jpeg', 'Аниме-культура', 'Знакомство с японской поп-культурой', 14),
+('https://cdn.poehali.dev/files/b34c93a1-8994-41fd-aee1-4e4ca54bbede.jpeg', 'Японский интерьер', 'Традиционный дизайн с теплым освещением', 13),
+('https://cdn.poehali.dev/files/dfd6e2ea-c159-4663-b868-525d05a2609b.jpeg', 'Кошачье кафе', 'Встреча с пушистыми друзьями', 12),
+('https://cdn.poehali.dev/files/543f946f-97a7-4d57-aee6-f284cd474bb1.jpeg', 'Уличная кофейня', 'Аутентичный японский кофе', 11),
+('https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg', 'Традиционный рёкан', 'Ночь в японском стиле', 10),
+('https://cdn.poehali.dev/files/d23c3a64-d493-4a96-920d-befa1219a8d9.jpeg', 'Цветущие холмы', 'Весенние краски Японии', 9),
+('https://cdn.poehali.dev/files/a5ecbc18-7d24-4808-a2af-78b8cda22299.jpeg', 'Местные жители', 'Встречи с гостеприимными японцами', 8),
+('https://cdn.poehali.dev/files/b9c020f7-a8ee-4854-ad4c-812198638a29.jpeg', 'Наш гид', 'Комфортный трансфер по Японии', 7),
+('https://cdn.poehali.dev/files/c4fa33a7-df05-4792-bcdf-a872d31fc27d.jpeg', 'За рулём приключений', 'Путешествие по японским дорогам', 6),
+('https://cdn.poehali.dev/files/f9e53de1-59a4-4d82-9edc-a3a86b58922e.jpeg', 'Деревня Сиракава-го', 'Среди рисовых полей и традиционных домов', 5),
+('https://cdn.poehali.dev/files/63a5411c-4bf7-4d7a-b081-d988a2020bb6.jpeg', 'Чайная церемония', 'Погружение в традиции Японии', 4),
+('https://cdn.poehali.dev/files/d16f7162-159b-4da6-af3a-dd6767d336f3.jpeg', 'Традиционные игры', 'Мастер-класс в японском парке', 3),
+('https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg', 'Вечерний стадион', 'Незабываемые эмоции под открытым небом', 2),
+('https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg', 'Морские острова', 'Семейные моменты у побережья', 1);
