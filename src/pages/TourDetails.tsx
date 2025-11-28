@@ -12,7 +12,7 @@ const TourDetails = () => {
       part: "ЧАСТЬ ПЕРВАЯ",
       title: "РИТМ МЕГАПОЛИСА",
       subtitle: "3 ночи в Токио",
-      image: "https://cdn.poehali.dev/files/8b5c091f-7d0b-4acc-b0e4-df8a0a0e0d84.jpg",
+      image: "https://cdn.poehali.dev/files/f54d6a39-e24a-4283-bb72-d9245262a54b.JPG",
       days: [
         {
           day: 1,
@@ -35,7 +35,7 @@ const TourDetails = () => {
       part: "ЧАСТЬ ВТОРАЯ",
       title: "ДОРОГА К СВЯЩЕННОМУ",
       subtitle: "Путь к Фудзи через Камакуру и Хаконе",
-      image: "https://cdn.poehali.dev/files/99cdbe1d-6c5c-49c8-98b4-ae3956803345.jpg",
+      image: "https://cdn.poehali.dev/files/cee028be-5da3-424e-b18c-8ae1d766ef2e.jpg",
       days: [
         {
           day: 4,
@@ -58,7 +58,7 @@ const TourDetails = () => {
       part: "ЧАСТЬ ТРЕТЬЯ",
       title: "ДУША ПРОВИНЦИИ",
       subtitle: "Такаяма и Канадзава",
-      image: "https://cdn.poehali.dev/files/2c1d8a12-7c6e-4eea-9187-f60318a9cd7c.jpg",
+      image: "https://cdn.poehali.dev/files/3e2a1d66-1f30-4345-a539-d34af54ad21b.jpg",
       days: [
         {
           day: 7,
@@ -76,7 +76,7 @@ const TourDetails = () => {
       part: "ЧАСТЬ ЧЕТВЁРТАЯ",
       title: "СЕРДЦЕ ИМПЕРАТОРСКОЙ СТОЛИЦЫ",
       subtitle: "2 ночи в Киото",
-      image: "https://cdn.poehali.dev/files/aa2ac25f-09c8-4804-8c8e-a50b5b06597f.jpg",
+      image: "https://cdn.poehali.dev/files/0cccdb23-79a3-409f-9711-314b6b603a8e.JPG",
       days: [
         {
           day: 9,
@@ -94,7 +94,7 @@ const TourDetails = () => {
       part: "ЧАСТЬ ПЯТАЯ",
       title: "МОРСКАЯ САГА И ПАМЯТЬ",
       subtitle: "Хиросима, Миядзима и Кобе",
-      image: "https://cdn.poehali.dev/files/cb480393-3e94-4ef5-a40f-f18c0ee2f9cb.jpg",
+      image: "https://cdn.poehali.dev/files/78b28769-c277-4b58-9066-422b7a800308.jpg",
       days: [
         {
           day: 11,
@@ -112,7 +112,7 @@ const TourDetails = () => {
       part: "ЭПИЛОГ",
       title: "ПРОЩАНИЕ С ЯПОНИЕЙ В ОСАКЕ",
       subtitle: "Последняя ночь в кулинарной столице",
-      image: "https://cdn.poehali.dev/files/17f6afe0-75de-4f05-8b83-ea6fe38355c0.jpg",
+      image: "https://cdn.poehali.dev/files/40ed40fe-021f-4de3-9423-9685bdc3175f.JPG",
       days: [
         {
           day: 13,
