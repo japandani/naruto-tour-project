@@ -391,8 +391,8 @@ const TourDetails = () => {
 
       <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-background to-accent/5">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
               Стоимость и условия
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
