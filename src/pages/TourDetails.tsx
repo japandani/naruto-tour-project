@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
+import ContactSection from "@/components/ContactSection";
+import ContactSection from "@/components/ContactSection";
 
 const TourDetails = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -562,6 +564,8 @@ const TourDetails = () => {
           </div>
         </div>
       </section>
+
+      <ContactSection />
 
       <footer className="bg-foreground text-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">

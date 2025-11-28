@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
+import ContactSection from "@/components/ContactSection";
 
 const Gallery = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -295,6 +296,8 @@ const Gallery = () => {
           </div>
         </div>
       </section>
+
+      <ContactSection />
 
       <footer className="bg-foreground text-background py-8 px-4">
         <div className="container mx-auto max-w-6xl text-center">
