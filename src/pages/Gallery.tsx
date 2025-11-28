@@ -38,6 +38,31 @@ const Gallery = () => {
       title: "Осака",
       description: "Кулинарная столица"
     },
+    {
+      url: "https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg",
+      title: "Морские острова",
+      description: "Семейные моменты у побережья"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg",
+      title: "Вечерний стадион",
+      description: "Незабываемые эмоции под открытым небом"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/d16f7162-159b-4da6-af3a-dd6767d336f3.jpeg",
+      title: "Традиционные игры",
+      description: "Мастер-класс в японском парке"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/63a5411c-4bf7-4d7a-b081-d988a2020bb6.jpeg",
+      title: "Чайная церемония",
+      description: "Погружение в традиции Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/f9e53de1-59a4-4d82-9edc-a3a86b58922e.jpeg",
+      title: "Деревня Сиракава-го",
+      description: "Среди рисовых полей и традиционных домов"
+    },
   ];
 
   const openImage = (index: number) => {
