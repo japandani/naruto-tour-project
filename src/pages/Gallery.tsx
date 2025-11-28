@@ -259,20 +259,20 @@ const Gallery = () => {
             <Icon name="ChevronRight" size={32} className="text-white" />
           </button>
 
-          <div className="relative max-w-7xl max-h-[90vh] w-full" onClick={(e) => e.stopPropagation()}>
+          <div className="relative flex items-center justify-center max-w-[95vw] max-h-[90vh] w-full h-full" onClick={(e) => e.stopPropagation()}>
             <img
               src={galleryImages[selectedImage].url}
               alt={galleryImages[selectedImage].title}
-              className="w-full h-full object-contain rounded-lg animate-scale-in"
+              className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg animate-scale-in"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 md:p-6 rounded-b-lg">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
                 {galleryImages[selectedImage].title}
               </h3>
-              <p className="text-base md:text-lg text-white/90">
+              <p className="text-sm md:text-base lg:text-lg text-white/90">
                 {galleryImages[selectedImage].description}
               </p>
-              <p className="text-sm text-white/70 mt-2">
+              <p className="text-xs md:text-sm text-white/70 mt-2">
                 {selectedImage + 1} / {galleryImages.length}
               </p>
             </div>
