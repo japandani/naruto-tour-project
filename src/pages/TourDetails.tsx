@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
 import ContactSection from "@/components/ContactSection";
-import ContactSection from "@/components/ContactSection";
 
 const TourDetails = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
