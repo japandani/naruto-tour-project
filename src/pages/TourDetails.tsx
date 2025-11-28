@@ -396,7 +396,7 @@ const TourDetails = () => {
                 <div className="mb-4">
                   <div className="text-sm md:text-base text-muted-foreground uppercase tracking-widest mb-2">Стоимость тура</div>
                   <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
-                    450 000 ₽
+                    249 000 ₽
                   </div>
                   <div className="text-lg md:text-xl text-muted-foreground">на человека</div>
                 </div>
