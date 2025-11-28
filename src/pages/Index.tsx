@@ -5,6 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
 import WaveDivider from "@/components/WaveDivider";
 import { useState, useEffect, useRef } from "react";
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const FlipChar = ({ char, delay }: { char: string; delay: number }) => {
   const [displayChar, setDisplayChar] = useState('');
@@ -34,6 +36,7 @@ const FlipChar = ({ char, delay }: { char: string; delay: number }) => {
 };
 
 const AirportBoard = () => {
+  const { t } = useLanguage();
   const [animate, setAnimate] = useState(false);
   
   useEffect(() => {
@@ -58,47 +61,47 @@ const AirportBoard = () => {
           <div className="w-5 h-5 md:w-7 md:h-7 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
             <Icon name="Plane" size={12} className="text-black md:w-4 md:h-4" />
           </div>
-          <span className="text-[9px] md:text-xs font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap">Sheremetyevo Airport</span>
+          <span className="text-[9px] md:text-xs font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap">{t.airport.title}</span>
         </div>
         <span className="text-[8px] md:text-[10px] text-[#888] font-mono whitespace-nowrap">{new Date().toLocaleTimeString('ru-RU')}</span>
       </div>
 
       <div className="grid grid-cols-[auto_1fr_auto_auto] gap-0.5 md:gap-2 lg:gap-3 items-center mb-1 md:mb-2 text-[#ffa500] font-mono">
-        <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight">Рейс</div>
-        <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight">Направление</div>
-        <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight text-center">Дата</div>
-        <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight text-right">Статус</div>
+        <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight">{t.airport.flight}</div>
+        <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight">{t.airport.destination}</div>
+        <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight text-center">{t.airport.date}</div>
+        <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight text-right">{t.airport.status}</div>
         
         <div className="text-[10px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider whitespace-nowrap">
           {renderText('JD 2026', 1000)}
         </div>
         <div className="text-[10px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider flex items-center gap-0.5 md:gap-1.5">
-          {renderText('МОСКВА', 2000)}
+          {renderText(t.airport.moscow, 2000)}
           <Icon name="ArrowRight" size={10} className="text-[#d4af37] flex-shrink-0 md:w-4 md:h-4" />
-          {renderText('ТОКИО', 3000)}
+          {renderText(t.airport.tokyo, 3000)}
         </div>
         <div className="text-[10px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider text-center whitespace-nowrap">
           {renderText('14.03', 4000)}
         </div>
         <div className="text-right">
           <span className="inline-block bg-[#d4af37] text-black px-0.5 md:px-2 py-0.5 rounded text-[8px] md:text-xs font-bold uppercase tracking-tight whitespace-nowrap">
-            Посадка
+            {t.airport.boarding}
           </span>
         </div>
       </div>
 
       <div className="grid grid-cols-2 gap-1 md:gap-3 pt-1 md:pt-1.5 border-t border-[#333]/40">
         <div className="bg-[#1a1a1a]/40 rounded p-1 md:p-2 border border-[#333]/40">
-          <div className="text-[7px] md:text-[10px] text-[#888] uppercase mb-0 tracking-tight md:tracking-wider whitespace-nowrap">Длительность</div>
+          <div className="text-[7px] md:text-[10px] text-[#888] uppercase mb-0 tracking-tight md:tracking-wider whitespace-nowrap">{t.airport.duration}</div>
           <div className="text-xs md:text-lg lg:text-xl font-bold text-[#ffa500] font-mono tracking-tight whitespace-nowrap">
-            {renderText('14 ДНЕЙ', 5000)}
+            {renderText(t.airport.days, 5000)}
           </div>
         </div>
         <a href="#contact" className="bg-[#1a1a1a]/40 rounded p-1 md:p-2 border border-[#333]/40 flex flex-col justify-center hover:bg-[#1a1a1a]/60 hover:border-red-500/50 transition-all duration-300 cursor-pointer">
           <div className="flex items-center justify-center gap-0.5 md:gap-1.5">
             <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50 flex-shrink-0"></span>
             <span className="text-[9px] md:text-sm font-bold text-red-500 uppercase tracking-tight whitespace-nowrap">
-              Последние 4 места
+              {t.airport.bookNow}
             </span>
           </div>
         </a>
@@ -108,6 +111,7 @@ const AirportBoard = () => {
 };
 
 const ToursBoard = () => {
+  const { t } = useLanguage();
   const [animate, setAnimate] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -175,819 +179,429 @@ const ToursBoard = () => {
           <div className="w-6 h-6 md:w-7 md:h-7 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-full flex items-center justify-center flex-shrink-0 animate-pulse shadow-lg shadow-[#d4af37]/50">
             <Icon name="Calendar" size={14} className="text-black md:w-4 md:h-4" />
           </div>
-          <span className="text-[11px] md:text-sm font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">Даты туров 2026</span>
+          <span className="text-[11px] md:text-sm font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">
+            {t.toursBoard.title}
+          </span>
         </div>
-        <span className="text-[9px] md:text-[11px] text-[#999] font-mono whitespace-nowrap bg-[#0a0a0a]/60 px-1.5 py-0.5 rounded border border-[#333]/50">{new Date().toLocaleDateString('ru-RU')}</span>
+        <span className="text-[8px] md:text-[10px] text-[#888] font-mono whitespace-nowrap">{new Date().toLocaleDateString('ru-RU')}</span>
       </div>
 
-      <div className="space-y-1.5 md:space-y-2">
-        {tours.map((tour, index) => {
-          const isAvailable = tour.status === 'available';
-          const TourRow = isAvailable ? 'a' : 'div';
-          
-          return (
-            <TourRow
-              key={index}
-              {...(isAvailable ? { href: '#contact' } : {})}
-              className={`grid grid-cols-[1fr_auto] gap-2 md:gap-3 items-center bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] rounded-md p-2 md:p-2.5 border-2 transition-all duration-300 ${
-                isAvailable 
-                  ? 'border-[#00ff88]/40 hover:border-[#d4af37] hover:from-[#1a1a1a] hover:to-[#1a1a1a] hover:shadow-xl hover:shadow-[#d4af37]/40 hover:scale-[1.03] cursor-pointer' 
-                  : 'border-[#333]/40 opacity-50'
-              }`}
-              onMouseEnter={() => {
-                setHoveredIndex(index);
-                if (isAvailable && audioRef.current) {
-                  audioRef.current.play();
-                }
-              }}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <div className={`text-sm md:text-lg lg:text-xl font-bold font-mono tracking-tight transition-all duration-300 ${
-                isAvailable 
-                  ? hoveredIndex === index ? 'text-[#d4af37] drop-shadow-[0_0_15px_rgba(212,175,55,0.8)]' : 'text-[#00ff88] drop-shadow-[0_0_10px_rgba(0,255,136,0.5)]'
-                  : 'text-[#555]'
+      <div className="grid grid-cols-[1fr_auto_auto] gap-2 md:gap-3 items-center mb-2 md:mb-2 text-[#ffa500] font-mono">
+        <div className="text-[8px] md:text-[11px] text-[#d4af37] uppercase tracking-tight font-bold">{t.toursBoard.dates}</div>
+        <div className="text-[8px] md:text-[11px] text-[#d4af37] uppercase tracking-tight text-center font-bold">{t.toursBoard.seats}</div>
+        <div className="text-[8px] md:text-[11px] text-[#d4af37] uppercase tracking-tight text-right font-bold">{t.toursBoard.status}</div>
+      </div>
+
+      {tours.map((tour, index) => (
+        <div 
+          key={index}
+          className="grid grid-cols-[1fr_auto_auto] gap-2 md:gap-3 items-center mb-1.5 md:mb-2 py-1.5 md:py-2 border-b border-[#d4af37]/20 hover:bg-[#d4af37]/5 transition-all duration-300 rounded px-1 md:px-2 cursor-pointer"
+          onMouseEnter={() => {
+            setHoveredIndex(index);
+            if (audioRef.current) {
+              (audioRef.current as any).play();
+            }
+          }}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          <div className={`text-[11px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider whitespace-nowrap transition-all duration-300 ${
+            hoveredIndex === index ? 'text-[#d4af37] drop-shadow-[0_0_8px_rgba(212,175,55,0.8)]' : 'text-[#ffa500]'
+          }`}>
+            {renderText(tour.dates, 1000 + index * 500)}
+          </div>
+          <div className={`text-[11px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider text-center whitespace-nowrap transition-all duration-300 ${
+            hoveredIndex === index ? 'text-[#d4af37] drop-shadow-[0_0_8px_rgba(212,175,55,0.8)]' : 'text-[#ffa500]'
+          }`}>
+            {tour.status === 'available' ? renderText(tour.seats.toString(), 2000 + index * 500) : '—'}
+          </div>
+          <div className="text-right">
+            {tour.status === 'available' ? (
+              <span className={`inline-block px-1.5 md:px-3 py-0.5 md:py-1 rounded text-[8px] md:text-xs font-bold uppercase tracking-tight whitespace-nowrap transition-all duration-300 ${
+                hoveredIndex === index 
+                  ? 'bg-[#d4af37] text-black shadow-lg shadow-[#d4af37]/50 scale-105' 
+                  : 'bg-green-600/80 text-white'
               }`}>
-                {renderText(tour.dates, 1000 + index * 500)}
-              </div>
-              <div className="text-right">
-                {isAvailable ? (
-                  <div className="flex items-center gap-1.5 md:gap-2 justify-end">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/70 flex-shrink-0"></span>
-                    <span className={`text-[11px] md:text-sm lg:text-base font-bold uppercase tracking-tight whitespace-nowrap transition-all duration-300 ${
-                      hoveredIndex === index ? 'text-[#d4af37] scale-110 drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]' : 'text-green-500 drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]'
-                    }`}>
-                      {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
-                    </span>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-1.5 md:gap-2 justify-end">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-red-600 rounded-full shadow-lg shadow-red-600/70 flex-shrink-0"></span>
-                    <span className="inline-block bg-red-600/30 text-red-400 px-2 md:px-3 py-0.5 md:py-1 rounded text-[11px] md:text-sm font-bold uppercase tracking-tight whitespace-nowrap border-2 border-red-600/50">
-                      Мест нет
-                    </span>
-                  </div>
-                )}
-              </div>
-            </TourRow>
-          );
-        })}
+                {t.toursBoard.available}
+              </span>
+            ) : (
+              <span className="inline-block bg-red-600/80 text-white px-1.5 md:px-3 py-0.5 md:py-1 rounded text-[8px] md:text-xs font-bold uppercase tracking-tight whitespace-nowrap">
+                {t.toursBoard.soldOut}
+              </span>
+            )}
+          </div>
+        </div>
+      ))}
+
+      <div className="mt-3 md:mt-4 pt-2 md:pt-3 border-t-2 border-[#d4af37]/50">
+        <a 
+          href="#contact"
+          className="block w-full bg-gradient-to-r from-[#d4af37] to-[#f4d03f] text-black py-2 md:py-3 rounded-lg font-bold text-xs md:text-sm uppercase tracking-wider text-center hover:shadow-lg hover:shadow-[#d4af37]/50 transition-all duration-300 hover:scale-[1.02] active:scale-95"
+        >
+          {t.toursBoard.bookNow}
+        </a>
       </div>
     </div>
   );
 };
 
-const DecorativeBackground = () => (
-  <>
-    <div className="absolute top-0 left-0 right-0 h-24 md:h-32 opacity-20 pointer-events-none overflow-hidden">
-      <div className="absolute top-0 left-2 md:left-10 text-4xl md:text-7xl animate-fade-in">🌸</div>
-      <div className="absolute top-2 left-16 md:left-28 text-3xl md:text-5xl animate-fade-in" style={{ animationDelay: '0.2s' }}>🍁</div>
-      <div className="absolute top-1 left-28 md:left-48 text-4xl md:text-6xl animate-fade-in" style={{ animationDelay: '0.4s' }}>🌸</div>
-      <div className="absolute top-0 right-2 md:right-12 text-5xl md:text-8xl animate-fade-in" style={{ animationDelay: '0.1s' }}>🍂</div>
-      <div className="absolute top-3 right-16 md:right-32 text-4xl md:text-6xl animate-fade-in" style={{ animationDelay: '0.3s' }}>🌸</div>
-      <div className="absolute top-1 right-28 md:right-52 text-4xl md:text-7xl animate-fade-in" style={{ animationDelay: '0.5s' }}>🍁</div>
-      <div className="absolute top-4 left-1/3 text-3xl md:text-5xl animate-fade-in" style={{ animationDelay: '0.6s' }}>🍂</div>
-      <div className="absolute top-0 right-1/3 text-4xl md:text-6xl animate-fade-in" style={{ animationDelay: '0.7s' }}>🌸</div>
-    </div>
-    
-    <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 opacity-20 pointer-events-none overflow-hidden">
-      <div className="absolute bottom-0 left-0 text-5xl md:text-8xl animate-fade-in">🌸</div>
-      <div className="absolute bottom-1 left-10 md:left-16 text-4xl md:text-6xl animate-fade-in" style={{ animationDelay: '0.2s' }}>🌸</div>
-      <div className="absolute bottom-3 left-20 md:left-32 text-3xl md:text-5xl animate-fade-in" style={{ animationDelay: '0.4s' }}>🌸</div>
-      <div className="absolute bottom-0 right-0 text-5xl md:text-8xl animate-fade-in" style={{ animationDelay: '0.1s' }}>🍂</div>
-      <div className="absolute bottom-2 right-10 md:right-16 text-4xl md:text-7xl animate-fade-in" style={{ animationDelay: '0.3s' }}>🍁</div>
-      <div className="absolute bottom-4 right-20 md:right-36 text-4xl md:text-6xl animate-fade-in" style={{ animationDelay: '0.5s' }}>🍂</div>
-      <div className="absolute bottom-2 left-1/3 text-3xl md:text-5xl animate-fade-in" style={{ animationDelay: '0.6s' }}>🌸</div>
-      <div className="absolute bottom-0 right-1/3 text-4xl md:text-6xl animate-fade-in" style={{ animationDelay: '0.7s' }}>🍁</div>
-    </div>
-  </>
-);
-
 const Index = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [formName, setFormName] = useState('');
-  const [formPhone, setFormPhone] = useState('');
-  const bannerRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const { t } = useLanguage();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('scroll-fade-in');
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
 
-    bannerRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
-
-    return () => observer.disconnect();
-  }, []);
+  };
 
   return (
     <div className="min-h-screen bg-background">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-md shadow-lg">
-        <div className="container mx-auto px-4 md:px-6 py-3 md:py-5 flex items-center justify-between">
-          <div className="flex items-center gap-2 md:gap-4">
-            <img 
-              src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/f6e8ec5d-14f7-497a-bf69-2d99142f26ed.jpg" 
-              alt="Japan логотип"
-              className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover ring-2 ring-primary shadow-md"
-            />
-            <div>
-              <h1 className="text-xl md:text-3xl font-bold text-background tracking-tight" style={{ fontFamily: 'Caveat, cursive' }}>JAPAN : ДА!</h1>
-              <p className="text-[10px] md:text-xs text-background/70 tracking-widest uppercase">Экскурсионное бюро</p>
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center gap-2">
+              <Icon name="Plane" size={24} className="text-primary" />
+              <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                JAPAN : ДА!
+              </span>
             </div>
-          </div>
-          <div className="hidden lg:flex gap-6 xl:gap-10">
-            <a href="#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Главная</a>
-            <a href="#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">О нас</a>
-            <a href="#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Ваш Путь</a>
-            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Описание Пути</a>
-            <a href="/gallery" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Галерея</a>
-            <a href="#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
-          </div>
-          <div className="flex items-center gap-3">
-            <a href="#contact">
-              <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
-                Связаться с нами
-              </Button>
-            </a>
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden text-background p-2 hover:text-primary transition-colors"
-              aria-label="Меню"
-            >
-              <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
-            </button>
-          </div>
-        </div>
 
-        {mobileMenuOpen && (
-          <div className="lg:hidden bg-foreground/98 backdrop-blur-md border-t border-background/10 animate-fade-in">
-            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              <a 
-                href="#home" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
-              >
-                Главная
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-6">
+              <a href="#home" className="text-foreground hover:text-primary transition-colors">
+                {t.nav.home}
               </a>
-              <a 
-                href="#about" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
-              >
-                О нас
+              <a href="#about" className="text-foreground hover:text-primary transition-colors">
+                {t.nav.about}
               </a>
-              <a 
-                href="#path" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
-              >
-                Ваш Путь
+              <a href="#path" className="text-foreground hover:text-primary transition-colors">
+                {t.nav.path}
               </a>
-              <a 
-                href="/tour" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
-              >
-                Описание Пути
+              <a href="#tour" className="text-foreground hover:text-primary transition-colors">
+                {t.nav.tour}
               </a>
-              <a 
-                href="/gallery" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
-              >
-                Галерея
+              <a href="/gallery" className="text-foreground hover:text-primary transition-colors">
+                {t.nav.gallery}
               </a>
-              <a 
-                href="#contact" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
-              >
-                Контакты
+              <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+                {t.nav.contacts}
               </a>
-              <Button 
-                variant="default" 
-                className="bg-primary hover:bg-primary/90 text-white w-full py-3 text-base font-semibold shadow-lg mt-2"
-                onClick={() => setMobileMenuOpen(false)}
+              <LanguageSwitcher />
+            </div>
+
+            {/* Mobile Menu */}
+            <div className="md:hidden flex items-center gap-2">
+              <LanguageSwitcher />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                Заказать тур
+                <Icon name={isMenuOpen ? "X" : "Menu"} size={24} />
               </Button>
             </div>
           </div>
-        )}
+
+          {/* Mobile Menu Dropdown */}
+          {isMenuOpen && (
+            <div className="md:hidden py-4 space-y-4">
+              <a
+                href="#home"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.home}
+              </a>
+              <a
+                href="#about"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.about}
+              </a>
+              <a
+                href="#path"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.path}
+              </a>
+              <a
+                href="#tour"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.tour}
+              </a>
+              <a
+                href="/gallery"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.gallery}
+              </a>
+              <a
+                href="#contact"
+                className="block text-foreground hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.contacts}
+              </a>
+            </div>
+          )}
+        </div>
       </nav>
 
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/4490dcc9-4ef2-4060-9755-3f04e0e8840a.jpg)',
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
-        </div>
-
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 lg:w-40 overflow-hidden hidden md:block opacity-70">
-          <div className="film-strip-animation h-full flex flex-col gap-3" style={{ 
-            animation: 'filmScroll 60s linear infinite'
-          }}>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/d16f7162-159b-4da6-af3a-dd6767d336f3.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/63a5411c-4bf7-4d7a-b081-d988a2020bb6.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/f9e53de1-59a4-4d82-9edc-a3a86b58922e.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/c4fa33a7-df05-4792-bcdf-a872d31fc27d.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/b9c020f7-a8ee-4854-ad4c-812198638a29.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/a5ecbc18-7d24-4808-a2af-78b8cda22299.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/d23c3a64-d493-4a96-920d-befa1219a8d9.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/543f946f-97a7-4d57-aee6-f284cd474bb1.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/dfd6e2ea-c159-4663-b868-525d05a2609b.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/b34c93a1-8994-41fd-aee1-4e4ca54bbede.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/e94fc926-fd25-4e3b-b610-e27b23010483.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/4a9535ec-6d0a-491b-837c-cc6027622277.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
-              <img src="https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
-            </div>
-          </div>
-        </div>
-        
-        <div className="relative z-10 text-center text-white px-4 animate-fade-in max-w-5xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg">Япония. Выше шума, глубже традиций.</h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-4xl mx-auto drop-shadow-md leading-relaxed">
-            Наше авторское путешествие — это ключ к пониманию Японии.<br className="hidden sm:block"/>
-            Мы покажем вам не просто места, а смыслы.<br className="hidden sm:block"/>
-            Услышать шёпот бамбуковой рощи и расшифровать код мегаполиса.<br className="hidden sm:block"/>
-            Понять душу самурая в замке Химэдзи и ощутить дыхание будущего в Одайбе.<br className="hidden sm:block"/>
-            Это погружение, после которого мир уже не будет прежним.
+      {/* Hero Section */}
+      <section
+        id="home"
+        className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background"></div>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-fade-in">
+            {t.hero.title}
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-delay">
+            {t.hero.subtitle}
           </p>
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg mb-8 md:mb-10"
-            onClick={() => document.getElementById('scrolls')?.scrollIntoView({ behavior: 'smooth' })}
-          >
-            Сделать первый шаг по Пути
-            <Icon name="ArrowRight" size={20} className="ml-2" />
-          </Button>
-
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-delay-2">
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <a href="#contact">{t.hero.bookNow}</a>
+            </Button>
+            <Button size="lg" variant="outline">
+              <a href="#about">{t.hero.learnMore}</a>
+            </Button>
+          </div>
           <AirportBoard />
         </div>
-
-        <div className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <Icon name="ChevronDown" size={32} className="text-white" />
-        </div>
+        <WaveDivider />
       </section>
 
-      <section id="about" className="py-12 md:py-20 px-4 relative overflow-hidden">
-        <DecorativeBackground />
-        
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="flex flex-col gap-6 md:gap-8">
-            <div className="animate-fade-in">
-              <br />
-              <br />
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-foreground leading-tight text-center">
-                Japan: ДА — это не только путешествие. Это ответ.
-              </h2>
-              <br />
-              <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                Ответ на зов безмолвных садов камней и шумных неоновых перекрёстков. На вопрос, который ваше сердце задавало Японии всю жизнь.
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                <strong className="text-foreground">За этим ответом стоим Мы , команда ДА , во главе с руководителем проекта , Даниэлем А.</strong>
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                25 лет — это не просто стаж. Это целая жизнь, прожитая в ритме Японии. Это тысячи улочек, пройденных не как турист, а как искатель. Это сотни встреч, десятки тысяч историй, вплетённых в одно грандиозное полотно под названием «Путь». Путь, который начинается с простого слова — «ДА».
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                Слово «ДА» стало нашим ключом. Ключом к потаённым дверям, за которыми скрывается подлинная Япония. К тем местам, куда не ступает нога обычного туриста. К тем людям, чьи руки хранят многовековые традиции гончарного искусства, каллиграфии и чайной церемонии. К тем моментам тишины и понимания, которые меняют тебя навсегда.
-              </p>
-              <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed">
-                Наш проект давно перестал быть просто «бюро». Для наших друзей из Европы и Азии он стал проводником в мир, где прошлое и будущее говорят на одном языке. А в последние годы мы стали живым мостом — тонким и прочным, как шёлковая нить — который связывает сердца путешественников из России с загадочной душой Японии.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="path" className="py-12 md:py-20 px-4 relative overflow-hidden">
-        <div id="scrolls"></div>
-        <DecorativeBackground />
-        
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-foreground mt-16 md:mt-20">
-            <span style={{ fontFamily: 'Cormorant, serif' }}>Мити</span> <span className="text-5xl md:text-6xl lg:text-7xl" style={{ fontFamily: 'serif' }}>道</span> — это Путь
+      {/* About Section */}
+      <section id="about" className="py-20 bg-background relative">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            {t.about.title}
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground mb-8 md:mb-12 max-w-6xl mx-auto leading-relaxed px-4">
-            Но не как дорога на карте, а как философия жизни. Это бесконечное совершенствование, следование традиции и полное погружение в настоящее мгновение.<br className="hidden sm:block"/>
-            Сакральный смысл этого понятия раскрывается в самых разных японских искусствах — от Пути чая (Садо) до Пути меча (Кэндо).<br className="hidden sm:block"/>
-            Наше путешествие — это и есть ваш личный Мити. Путь, состоящий из четырёх свитков, где вы не просто увидите Японию, а пройдете через её сердце, стихии и дух, чтобы обрести новый взгляд на мир и на себя.
-          </p>
-
-          <div className="space-y-8 md:space-y-12 max-w-6xl mx-auto">
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl transform group-hover:scale-105 transition-transform duration-500"></div>
-              <div className="relative bg-background/80 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-accent/20 transition-all duration-500">
-                <div className="flex items-start gap-4 md:gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-500">
-                      <span className="text-3xl md:text-4xl font-bold text-white">一</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Первый</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">ЭНЕРГИЯ</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Лабиринты, где рождается завтра</p>
-                    <p className="text-sm text-primary/80 mb-4">(Токио & Осака)</p>
-                    <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      Первый ключ — это смелость принять будущее. Вы не просто увидите неоновые каньоны Токио и бьющую через край жизненную силу Осаки — вы научитесь слышать их ритм и находить тишину в самом сердце этого гула. Мы проведём вас по следам создателей современной Японии: от секретных баров в небоскребах, где заключаются многомиллионные сделки, до аутентичных закусочных в подворотнях Дотонбори, где рождаются новые гастрономические тренды. Это посвящение в дерзость и искусство понимать страну через пульс её самых динамичных городов.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div ref={(el) => (bannerRefs.current[0] = el)} className="relative w-full h-28 md:h-32 my-4 md:my-6 rounded-lg overflow-hidden shadow-xl">
-              <img 
-                src="https://cdn.poehali.dev/files/dcb65954-c32d-4362-8995-c701041e5cd8.jpg"
-                alt="Ночной Токио"
-                className="w-full h-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30"></div>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl transform group-hover:scale-105 transition-transform duration-500"></div>
-              <div className="relative bg-background/80 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-accent/20 transition-all duration-500">
-                <div className="flex items-start gap-4 md:gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-500">
-                      <span className="text-3xl md:text-4xl font-bold text-white">二</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Второй</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">СЕРДЦЕ</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Шёпот храмов и безмолвный поклон оленей</p>
-                    <p className="text-sm text-primary/80 mb-4">(Киото & Нара)</p>
-                    <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      Второй ключ — это встреча с душой древней Японии. В Киото, за высокими стенами, тень от сосны на стене чайного домика расскажет вам больше, чем целая книга. Вы станете гостем на частной церемонии у мастера, чья семья хранит это искусство веками. А в Наре вас ждёт диалог с самим временем — в парке Касуга, где священные олени, словно хранители этого места, почтительно склоняют головы в немом поклоне, принимая угощение. Это посвящение в благоговение, где вы поймёте, что истинная красота — в безмолвном диалоге между человеком, природой и вечностью.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div ref={(el) => (bannerRefs.current[1] = el)} className="relative w-full h-28 md:h-32 my-4 md:my-6 rounded-lg overflow-hidden shadow-xl">
-              <img 
-                src="https://cdn.poehali.dev/files/cdba4e1f-ca47-4f05-a867-2dbb489e4440.jpg"
-                alt="Святилище Фусими Инари"
-                className="w-full h-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30"></div>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl transform group-hover:scale-105 transition-transform duration-500"></div>
-              <div className="relative bg-background/80 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-accent/20 transition-all duration-500">
-                <div className="flex items-start gap-4 md:gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-500">
-                      <span className="text-3xl md:text-4xl font-bold text-white">三</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Третий</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">СТИХИЯ</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Шепот сада, вкус моря и душа саке</p>
-                    <p className="text-sm text-primary/80 mb-4">(Альпийские деревушки, Каназава, побережье Японского моря)</p>
-                    <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      Третий ключ — это погружение в стихию японской гармонии, где природа, искусство и человек становятся единым целым. В Каназаве вы войдете в сад Кэнроку-эн на рассвете, когда его туманные пейзажи принадлежат только вам. Здесь игра света сквозь клены становится разговором с вечностью. Вы спуститесь в каменные погреба, где в тишине рождается сакэ, и вкусите дух этой земли — терруар горных источников и рисовых полей. А уснете под шум Японского моря — древнюю колыбельную для рыбаков, чей улов на рассвете еще пахнет океанской свежестью. Это посвящение в вечную мудрость, где простота оказывается самой большой глубиной.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div ref={(el) => (bannerRefs.current[2] = el)} className="relative w-full h-28 md:h-32 my-4 md:my-6 rounded-lg overflow-hidden shadow-xl">
-              <img 
-                src="https://cdn.poehali.dev/files/2c1d8a12-7c6e-4eea-9187-f60318a9cd7c.jpg"
-                alt="Деревня Ширакава-го"
-                className="w-full h-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30"></div>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl transform group-hover:scale-105 transition-transform duration-500"></div>
-              <div className="relative bg-background/80 backdrop-blur-sm border border-accent/20 rounded-2xl p-6 md:p-8 shadow-2xl hover:shadow-accent/20 transition-all duration-500">
-                <div className="flex items-start gap-4 md:gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-500">
-                      <span className="text-3xl md:text-4xl font-bold text-white">四</span>
-                    </div>
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Четвёртый</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">ВЕЧНОСТЬ</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Дыхание земли и шепот веков</p>
-                    <p className="text-sm text-primary/80 mb-4">(Фудзияма, Хаконе, Камакура)</p>
-                    <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      Финальное посвящение — это встреча с самой сутью Японии. У подножия Фудзи вы ощутите благоговейную тишину, которую дарит её вечный лик. В долине Овакудани вы станете свидетелем дыхания спящего дракона — серные гейзеры напомнят о неукротимой мощи, что таится в недрах этой земли. Вы погрузитесь в воды онсена, где огонь земли и вода неба сливаются воедино. А в Камакуре, в тени великого Дайбуцу, вы откроете, как японское искусство рождается в самом сердце природы и веры. Это посвящение в гармонию между незыблемым и мимолетным, что навсегда изменяет душу.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div ref={(el) => (bannerRefs.current[3] = el)} className="relative w-full h-28 md:h-32 my-4 md:my-6 rounded-lg overflow-hidden shadow-xl">
-              <img 
-                src="https://cdn.poehali.dev/files/99cdbe1d-6c5c-49c8-98b4-ae3956803345.jpg"
-                alt="Фудзияма с сакурой"
-                className="w-full h-full object-cover object-center"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30"></div>
-            </div>
-
-            <div className="text-center mt-12 md:mt-16 space-y-6">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary" style={{ fontFamily: 'Cormorant, serif' }}>
-                Ваш Путь ждёт своего начала
-              </h2>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <a 
-                  href="#contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-lg"
-                >
-                  <Icon name="Send" size={20} />
-                  Начать свой Путь
-                </a>
-                
-                <a 
-                  href="/tour"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-foreground border-2 border-primary/30 rounded-lg hover:bg-secondary/80 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-lg"
-                >
-                  <Icon name="ScrollText" size={20} />
-                  Прочесть полный свиток
-                </a>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all">
+              <CardContent className="p-6 text-center">
+                <Icon name="Award" size={48} className="text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{t.about.experience}</h3>
+                <p className="text-muted-foreground">{t.about.experienceDesc}</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all">
+              <CardContent className="p-6 text-center">
+                <Icon name="Heart" size={48} className="text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{t.about.comfort}</h3>
+                <p className="text-muted-foreground">{t.about.comfortDesc}</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all">
+              <CardContent className="p-6 text-center">
+                <Icon name="Users" size={48} className="text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{t.about.guide}</h3>
+                <p className="text-muted-foreground">{t.about.guideDesc}</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all">
+              <CardContent className="p-6 text-center">
+                <Icon name="Shield" size={48} className="text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{t.about.safety}</h3>
+                <p className="text-muted-foreground">{t.about.safetyDesc}</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
+        <WaveDivider flip />
       </section>
 
-      <section className="py-12 md:py-20 px-4 relative overflow-hidden bg-gradient-to-b from-background to-accent/5">
-        <DecorativeBackground />
-        
-        <div className="container mx-auto max-w-7xl relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-foreground">
-            Почему <span className="text-primary">МЫ</span>?
-          </h2>
-          <p className="text-xl md:text-2xl text-center mb-3 md:mb-4 text-muted-foreground font-medium" style={{ fontFamily: 'Cormorant, serif' }}>
-            Собираем ваш Путь по крупицам одного большого пазла
-          </p>
-          <p className="text-base md:text-lg text-center text-muted-foreground mb-12 md:mb-16 max-w-5xl mx-auto leading-relaxed px-4">
-            Вы уже видели общую картину — четыре свитка, что составляют душу Японии. Но уникальность вашего путешествия рождается в деталях. Мы не предлагаем готовых маршрутов. Мы — творцы вашего личного Пути, внимательно собирающие его, как драгоценный пазл, где каждая крупица — это точность, глубина и смысл.
-          </p>
-
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-10 md:mb-14 text-foreground">
-            Из чего мы складываем картину вашего идеального путешествия?
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto mb-12 md:mb-16">
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Navigation" size={24} className="text-primary" />
-                  </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Бесшовного движения</h4>
-                </div>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Пока другие стоят в пробках, ваш комфортабельный минивен плавно везёт вас сквозь время и пространство. Он проедет сквозь энергетический вихрь Харадзюку и праздничную суету Дотонбори, чтобы остановиться в метре от древних скал Тодзимбо. Это не трансфер — это магия бесшовного перемещения.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Home" size={24} className="text-primary" />
-                  </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Искусного крова</h4>
-                </div>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Мы подбираем отели и рёканы не по звёздам, а по душе. Это места, где после дня впечатлений вас ждёт не просто номер, а продолжение японской эстетики — вид на спящий сад, татами, хранящее тепло дерева, и онсэн, смывающий суету.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="UtensilsCrossed" size={24} className="text-primary" />
-                  </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Вкуса как откровения</h4>
-                </div>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Наши ежедневные гастрономические исследования в идзакая и рестораны подобраны так, чтобы за путешествие вы составили полную гастрономическую карту Японии. От нежного сашими с утреннего рынка до дымящегося рамэ в подвальчике на окраине.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Camera" size={24} className="text-primary" />
-                  </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Впечатлений</h4>
-                </div>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Мы знаем все ракурсы, где утренний свет ложится на бамбуковую рощу Сагано, а неоновые вывески Осаки создают идеальный фон. Ваша лента взорвётся от восторга — мы обеспечим вам не просто фотографии, а живые портреты вашего Пути.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Sparkles" size={24} className="text-primary" />
-                  </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Прикосновения к сути</h4>
-                </div>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Мы обеспечиваем не «встречу с мастером», а диалог с хранителем традиции в его личной мастерской. Мы находим тот самый онсэн, куда не водят группы, и тот вид на Фудзи, который не попадает в объективы толп.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
-              <CardContent className="p-6 md:p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="User" size={24} className="text-primary" />
-                  </div>
-                  <h4 className="text-xl md:text-2xl font-bold text-foreground pt-2">Крупица Вашего «Я»</h4>
-                </div>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Это главный элемент пазла. Ваши интересы, ваш ритм, ваши сокровенные ожидания. Мы встраиваем их в маршрут, создавая путешествие, которое будет говорить именно с вами.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="max-w-4xl mx-auto text-center bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl p-8 md:p-12 border border-primary/10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
-              Наше искусство — в гармонии деталей
-            </h3>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-              Искусство не в том, чтобы найти хороший отель. Искусство — чтобы после бурного дня в неоновом Токио вы попали в рёкан, где царит безмолвие. Чтобы дорога от суеты мегаполиса к храму была не утомительной, а созерцательной. Чтобы каждый кадр вашего путешествия становился историей, а каждый вкус — воспоминанием.
-            </p>
-            <p className="text-base md:text-lg text-foreground font-semibold">
-              Мы создаём не список мест, а идеальный ритм, где каждая следующая крупица пазла готовит вас к восприятию следующей.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="tours" className="py-12 md:py-20 px-4 relative overflow-hidden">
-        <DecorativeBackground />
-        
-        <div className="container mx-auto max-w-6xl relative z-10">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
-            Даты туров 2026
-          </h2>
-          <p className="text-xl md:text-2xl text-center mb-12 md:mb-16 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Выберите удобную дату для вашего путешествия
-          </p>
-
+      {/* Path Section */}
+      <section id="path" className="py-20 bg-gradient-to-b from-background to-card relative">
+        <div className="container mx-auto px-4">
           <ToursBoard />
         </div>
       </section>
 
-      <section id="contact" className="relative bg-foreground text-background overflow-hidden">
-        <div className="container mx-auto max-w-6xl px-4 py-16 md:py-24">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-16">
-            
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-background" style={{ fontFamily: 'Cormorant, serif' }}>
-                  Начните своё путешествие в Японию
-                </h2>
-                <p className="text-base md:text-lg text-background/80 leading-relaxed">
-                  Мы ответим на все ваши вопросы и поможем организовать поездку вашей мечты.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Phone" size={20} className="text-background" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg md:text-xl font-semibold mb-1 text-background">Телефон / Мессенджеры</h3>
-                    <a href="tel:+79936285197" className="text-xl font-bold text-background mb-1 block hover:text-primary transition-colors">+7 (925) 464-45-59</a>
-                    <p className="text-sm text-background/70">(Ежедневно с 10:00 до 22:00 по МСК)</p>
-                  </div>
+      {/* Tour Card Section */}
+      <section id="tour" className="py-20 bg-card relative">
+        <div className="container mx-auto px-4">
+          <Card className="max-w-4xl mx-auto bg-background/50 backdrop-blur-sm border-primary/20">
+            <CardContent className="p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <img
+                    src="https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Japan Tour"
+                    className="rounded-lg w-full h-full object-cover"
+                  />
                 </div>
-
-                <div className="flex items-start gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Mail" size={20} className="text-background" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg md:text-xl font-semibold mb-1 text-background">Электронная почта</h3>
-                    <p className="text-xl font-bold text-background">salesdaproject@gmail.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 group">
-                  <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="Share2" size={20} className="text-background" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg md:text-xl font-semibold mb-2 text-background">Социальные сети</h3>
-                    <p className="text-sm text-background/70 mb-3">Следите за нашими путешествиями</p>
-                    <div className="flex gap-3">
-                      <a 
-                        href="#" 
-                        className="w-10 h-10 bg-background/10 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                        aria-label="Instagram"
-                      >
-                        <Icon name="Instagram" size={20} className="text-background" />
-                      </a>
-                      <a 
-                        href="https://t.me/japandani" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-background/10 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                        aria-label="Telegram"
-                      >
-                        <Icon name="Send" size={18} className="text-background" />
-                      </a>
-                      <a 
-                        href="#" 
-                        className="w-10 h-10 bg-background/10 hover:bg-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
-                        aria-label="VK"
-                      >
-                        <Icon name="MessageCircle" size={20} className="text-background" />
-                      </a>
+                <div className="flex flex-col justify-center">
+                  <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    {t.tourCard.title}
+                  </h3>
+                  <p className="text-lg text-muted-foreground mb-4">
+                    {t.tourCard.subtitle}
+                  </p>
+                  <p className="text-foreground mb-6">
+                    {t.tourCard.description}
+                  </p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex items-center gap-2">
+                      <Icon name="Calendar" size={20} className="text-primary" />
+                      <span>{t.tourCard.duration}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Icon name="DollarSign" size={20} className="text-primary" />
+                      <span className="font-bold text-primary">{t.tourCard.price}</span>
                     </div>
                   </div>
+                  <Button className="w-full">
+                    <a href="/tour-details">{t.tourCard.viewDetails}</a>
+                  </Button>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+        <WaveDivider />
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-background relative">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              {t.contact.title}
+            </h2>
+            <p className="text-center text-muted-foreground mb-12">
+              {t.contact.subtitle}
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
+                <CardContent className="p-6">
+                  <form onSubmit={handleSubmit} className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">
+                        {t.contact.name}
+                      </label>
+                      <Input
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">
+                        {t.contact.email}
+                      </label>
+                      <Input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">
+                        {t.contact.phone}
+                      </label>
+                      <Input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">
+                        {t.contact.message}
+                      </label>
+                      <Textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={4}
+                        required
+                      />
+                    </div>
+                    <Button type="submit" className="w-full">
+                      {t.contact.send}
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+              <div className="space-y-6">
+                <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <Icon name="Phone" size={24} className="text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold mb-1">{t.contact.phoneLabel}</h3>
+                        <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <Icon name="Mail" size={24} className="text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold mb-1">{t.contact.emailLabel}</h3>
+                        <p className="text-muted-foreground">info@japanda.ru</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <Icon name="MapPin" size={24} className="text-primary mt-1" />
+                      <div>
+                        <h3 className="font-semibold mb-1">{t.contact.address}</h3>
+                        <p className="text-muted-foreground">{t.contact.addressValue}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
-
-            <div className="bg-background/5 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-background/10">
-              <h3 className="text-2xl md:text-3xl font-bold mb-2 text-background" style={{ fontFamily: 'Cormorant, serif' }}>
-                Есть вопросы?
-              </h3>
-              <p className="text-sm md:text-base text-background/70 mb-6">
-                Оставьте контакты, и мы вам перезвоним!
-              </p>
-
-              <form className="space-y-4" onSubmit={(e) => {
-                e.preventDefault();
-                const message = `Здравствуйте! Меня зовут ${formName || 'не указано'}. Мой телефон: ${formPhone || 'не указан'}. Хочу узнать о турах в Японию.`;
-                const whatsappUrl = `https://wa.me/79254644559?text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, '_blank');
-              }}>
-                <div>
-                  <Input 
-                    type="text" 
-                    placeholder="Ваше имя"
-                    value={formName}
-                    onChange={(e) => setFormName(e.target.value)}
-                    className="bg-background/90 border-background/20 text-foreground placeholder:text-muted-foreground focus:border-primary"
-                  />
-                </div>
-                <div>
-                  <Input 
-                    type="tel" 
-                    placeholder="Ваш телефон"
-                    value={formPhone}
-                    onChange={(e) => setFormPhone(e.target.value)}
-                    className="bg-background/90 border-background/20 text-foreground placeholder:text-muted-foreground focus:border-primary"
-                  />
-                </div>
-                <Button 
-                  type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-background font-semibold text-base md:text-lg py-6 transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
-                >
-                  Написать в WhatsApp
-                  <Icon name="MessageCircle" size={18} className="ml-2" />
-                </Button>
-                <p className="text-xs text-background/60 text-center leading-relaxed">
-                  Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных.
-                </p>
-              </form>
-            </div>
-
           </div>
         </div>
       </section>
 
-      <footer className="bg-foreground text-background py-8 md:py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <img 
-                  src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/f6e8ec5d-14f7-497a-bf69-2d99142f26ed.jpg" 
-                  alt="Japan : ДА! логотип"
-                  className="w-10 h-10 rounded-full object-cover"
-                />
-                <h3 className="text-lg md:text-xl font-bold" style={{ fontFamily: 'Caveat, cursive' }}>JAPAN : ДА!</h3>
-              </div>
-              <p className="text-xs md:text-sm opacity-80">
-                Эксклюзивные туры в Японию с 1999 года
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base">Контакты</h4>
-              <div className="space-y-2 text-xs md:text-sm opacity-80">
-                <div className="flex items-center gap-2">
-                  <Icon name="Phone" size={16} />
-                  <a href="tel:+79936285197" className="hover:text-primary transition-colors">+7 (925) 464-45-59</a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Icon name="Mail" size={16} />
-                  <span>salesdaproject@gmail.com</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base">Навигация</h4>
-              <div className="space-y-2 text-xs md:text-sm opacity-80">
-                <div><a href="#home" className="hover:opacity-100 transition-opacity">Главная</a></div>
-                <div><a href="#about" className="hover:opacity-100 transition-opacity">О нас</a></div>
-                <div><a href="#tours" className="hover:opacity-100 transition-opacity">Туры</a></div>
-                <div><a href="#contact" className="hover:opacity-100 transition-opacity">Контакты</a></div>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold mb-3 md:mb-4 text-sm md:text-base">Социальные сети</h4>
-              <div className="flex gap-4">
-                <a href="#" className="hover:text-primary transition-colors">
-                  <Icon name="Facebook" size={20} />
-                </a>
-                <a href="#" className="hover:text-primary transition-colors">
-                  <Icon name="Instagram" size={20} />
-                </a>
-                <a href="#" className="hover:text-primary transition-colors">
-                  <Icon name="Twitter" size={20} />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-background/20 pt-6 md:pt-8 text-center">
-            <p className="text-xs md:text-sm opacity-70">
-              © 2024 JAPAN : ДА! Все права защищены.
-            </p>
-          </div>
+      {/* Footer */}
+      <footer className="bg-card border-t border-primary/20 py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-muted-foreground">
+            © 2024 {t.footer.company}. {t.footer.allRights}.
+          </p>
         </div>
       </footer>
     </div>
