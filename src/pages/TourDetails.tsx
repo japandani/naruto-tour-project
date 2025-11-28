@@ -474,7 +474,10 @@ const TourDetails = () => {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Авиабилеты до Токио и из Осаки</span>
+                    <div className="text-base md:text-lg text-muted-foreground">
+                      <div>Авиабилеты до Токио и из Осаки</div>
+                      <div className="text-sm text-muted-foreground/70 mt-1">Примерная стоимость: 60-75 тыс. руб.</div>
+                    </div>
                   </li>
 
                   <li className="flex items-start gap-3">
