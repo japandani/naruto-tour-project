@@ -393,7 +393,7 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
         </div>
 
-        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-40 overflow-hidden hidden lg:block opacity-70">
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 lg:w-40 overflow-hidden hidden md:block opacity-70">
           <div className="film-strip-animation h-full flex flex-col gap-3" style={{ 
             animation: 'filmScroll 60s linear infinite'
           }}>
