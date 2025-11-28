@@ -38,6 +38,31 @@ const Gallery = () => {
       title: "Деревня Сиракава-го",
       description: "Среди рисовых полей и традиционных домов"
     },
+    {
+      url: "https://cdn.poehali.dev/files/c4fa33a7-df05-4792-bcdf-a872d31fc27d.jpeg",
+      title: "За рулём приключений",
+      description: "Путешествие по японским дорогам"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/b9c020f7-a8ee-4854-ad4c-812198638a29.jpeg",
+      title: "Наш гид",
+      description: "Комфортный трансфер по Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/a5ecbc18-7d24-4808-a2af-78b8cda22299.jpeg",
+      title: "Местные жители",
+      description: "Встречи с гостеприимными японцами"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/d23c3a64-d493-4a96-920d-befa1219a8d9.jpeg",
+      title: "Цветущие холмы",
+      description: "Весенние краски Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg",
+      title: "Традиционный рёкан",
+      description: "Ночь в японском стиле"
+    },
   ];
 
   const openImage = (index: number) => {
