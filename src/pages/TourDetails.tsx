@@ -377,19 +377,10 @@ const TourDetails = () => {
               </Card>
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <a href="#contact" onClick={(e) => { e.preventDefault(); const contactSection = document.getElementById('contact'); if (contactSection) { contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }}>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 py-6 text-lg font-semibold shadow-xl">
-                <Icon name="Phone" size={20} className="mr-2" />
-                Узнать подробности
-              </Button>
-            </a>
-          </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-background to-accent/5">
+      <section className="pt-0 pb-16 md:pb-24 px-4 bg-gradient-to-b from-accent/5 to-accent/5">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
