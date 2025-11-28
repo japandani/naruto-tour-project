@@ -159,3 +159,16 @@
 .animate-scale-in {
   animation: scale-in 0.4s ease-out forwards;
 }
+
+@keyframes filmScroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.film-strip-animation {
+  will-change: transform;
+}

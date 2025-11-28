@@ -392,6 +392,49 @@ const Index = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
         </div>
+
+        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-40 overflow-hidden hidden lg:block opacity-70">
+          <div className="film-strip-animation h-full flex flex-col gap-3" style={{ 
+            animation: 'filmScroll 60s linear infinite'
+          }}>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/d16f7162-159b-4da6-af3a-dd6767d336f3.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/63a5411c-4bf7-4d7a-b081-d988a2020bb6.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/f9e53de1-59a4-4d82-9edc-a3a86b58922e.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/c4fa33a7-df05-4792-bcdf-a872d31fc27d.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/b9c020f7-a8ee-4854-ad4c-812198638a29.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/a5ecbc18-7d24-4808-a2af-78b8cda22299.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/d23c3a64-d493-4a96-920d-befa1219a8d9.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+          </div>
+        </div>
         
         <div className="relative z-10 text-center text-white px-4 animate-fade-in max-w-5xl mx-auto">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg">Япония. Выше шума, глубже традиций.</h1>
