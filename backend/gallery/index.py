@@ -11,7 +11,7 @@ from typing import Dict, Any, Optional
 from datetime import datetime
 import hashlib
 
-ADMIN_PASSWORD_HASH = "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+ADMIN_PASSWORD_HASH = "c3c24c5b46e3d1c4b5de4c8f7a9e6d2b5f8a1c3e7b4d9f2a6c8e1b5d4a7c9f3e2"
 
 def verify_admin_token(headers: Dict[str, str]) -> bool:
     token = headers.get('X-Admin-Token', '')
