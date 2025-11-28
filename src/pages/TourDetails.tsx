@@ -421,7 +421,7 @@ const TourDetails = () => {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Проживание в отелях 3-4* (13 ночей)</span>
+                    <span className="text-base md:text-lg text-muted-foreground">Отели 4* и рёканы (традиционные отели с онсенами) — 13 ночей</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
