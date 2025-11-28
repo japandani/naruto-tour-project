@@ -400,33 +400,36 @@ const TourDetails = () => {
             </p>
           </div>
 
-          <div className="mb-12 md:mb-16 text-center">
-            <Card className="inline-block border-2 border-primary/30 shadow-2xl">
-              <CardContent className="p-8 md:p-12">
-                <div className="mb-4">
-                  <div className="text-sm md:text-base text-muted-foreground uppercase tracking-widest mb-2">Стоимость тура</div>
-                  <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
+          <div className="mb-12 md:mb-16">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary/90 to-primary/80 p-1">
+              <div className="relative bg-background rounded-3xl p-8 md:p-12">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+                <div className="relative z-10 text-center">
+                  <div className="inline-block bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-2 mb-6">
+                    <span className="text-primary font-semibold text-sm tracking-widest uppercase">Стоимость тура</span>
+                  </div>
+                  <div className="text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-br from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
                     249 000 ₽
                   </div>
-                  <div className="text-lg md:text-xl text-muted-foreground">на человека</div>
-                </div>
-                <div className="pt-4 border-t border-accent/30">
-                  <div className="text-sm md:text-base text-muted-foreground">
-                    14 дней незабываемых впечатлений
+                  <div className="text-xl md:text-2xl text-muted-foreground mb-8">на человека</div>
+                  <div className="inline-flex items-center gap-2 text-base md:text-lg text-muted-foreground border-t border-accent/30 pt-6">
+                    <Icon name="Calendar" size={20} className="text-primary" />
+                    <span>14 дней незабываемых впечатлений</span>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <Card className="border-green-500/30 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300">
+            <Card className="border-primary/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 group">
               <CardContent className="p-8 md:p-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
-                    <Icon name="CheckCircle2" size={24} className="text-green-600" />
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="CheckCircle2" size={28} className="text-white" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Включено в тур</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>Включено в тур</h3>
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -473,13 +476,13 @@ const TourDetails = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-red-500/30 hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300">
+            <Card className="border-primary/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 group">
               <CardContent className="p-8 md:p-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-red-500/20 rounded-full flex items-center justify-center">
-                    <Icon name="XCircle" size={24} className="text-red-600" />
+                <div className="flex items-center gap-4 mb-8">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <Icon name="XCircle" size={28} className="text-white" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Не включено в тур</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>Не включено в тур</h3>
                 </div>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
@@ -513,7 +516,7 @@ const TourDetails = () => {
           </div>
 
           <div className="mt-12 md:mt-16">
-            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-transparent">
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
               <CardContent className="p-8 md:p-10">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
                   <Icon name="Info" size={28} className="text-primary" />
