@@ -560,7 +560,16 @@ const TourDetails = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <a href="/#contact">
+            <a 
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+            >
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 py-6 text-lg font-semibold shadow-xl">
                 <Icon name="Mail" size={20} className="mr-2" />
                 Забронировать место
