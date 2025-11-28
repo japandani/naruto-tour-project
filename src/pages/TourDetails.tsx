@@ -453,6 +453,10 @@ const TourDetails = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Помощь в оформлении визы</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
                     <span className="text-base md:text-lg text-muted-foreground">Организационная поддержка 24/7</span>
                   </li>
                 </ul>
@@ -472,10 +476,7 @@ const TourDetails = () => {
                     <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
                     <span className="text-base md:text-lg text-muted-foreground">Авиабилеты до Токио и из Осаки</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Виза в Японию (при необходимости)</span>
-                  </li>
+
                   <li className="flex items-start gap-3">
                     <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
                     <span className="text-base md:text-lg text-muted-foreground">Обеды и ужины (за исключением особых мероприятий)</span>
