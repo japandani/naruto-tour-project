@@ -134,7 +134,7 @@ const Gallery = () => {
             <a href="/#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Главная</a>
             <a href="/#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">О нас</a>
             <a href="/#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Ваш Путь</a>
-            <a href="/#tours" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Туры</a>
+            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Описание Пути</a>
             <a href="/gallery" className="text-primary transition-colors font-medium text-base xl:text-lg">Галерея</a>
             <a href="/#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
           </div>
@@ -160,7 +160,7 @@ const Gallery = () => {
               <a href="/#home" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Главная</a>
               <a href="/#about" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">О нас</a>
               <a href="/#path" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Ваш Путь</a>
-              <a href="/#tours" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Туры</a>
+              <a href="/tour" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Описание Пути</a>
               <a href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-primary transition-colors font-medium text-lg py-2">Галерея</a>
               <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Контакты</a>
               <a href="/" className="sm:hidden">
@@ -173,18 +173,24 @@ const Gallery = () => {
         )}
       </nav>
 
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-b from-foreground/5 to-background">
-        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto py-12 md:py-20">
+      <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-b from-foreground/5 to-background">
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto py-8 md:py-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground leading-tight" style={{ fontFamily: 'Cormorant, serif' }}>
             Галерея Японии
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light mb-6">
             Моменты, которые становятся воспоминаниями
           </p>
+          <a href="/tour">
+            <Button className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold shadow-lg">
+              <Icon name="BookOpen" size={20} className="mr-2" />
+              Ознакомься с маршрутом
+            </Button>
+          </a>
         </div>
       </section>
 
-      <section className="py-12 md:py-20 px-4">
+      <section className="py-8 md:py-12 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {galleryImages.map((image, index) => (
