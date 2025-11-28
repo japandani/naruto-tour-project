@@ -9,31 +9,6 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      url: "https://cdn.poehali.dev/files/8b5c091f-7d0b-4acc-b0e4-df8a0a0e0d84.jpg",
-      title: "Токио",
-      description: "Неоновые огни мегаполиса"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/99cdbe1d-6c5c-49c8-98b4-ae3956803345.jpg",
-      title: "Гора Фудзи",
-      description: "Священная вершина Японии"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/2c1d8a12-7c6e-4eea-9187-f60318a9cd7c.jpg",
-      title: "Такаяма",
-      description: "Традиционная архитектура"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/aa2ac25f-09c8-4804-8c8e-a50b5b06597f.jpg",
-      title: "Киото",
-      description: "Древняя столица императоров"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/cb480393-3e94-4ef5-a40f-f18c0ee2f9cb.jpg",
-      title: "Кобе",
-      description: "Портовый город"
-    },
-    {
       url: "https://cdn.poehali.dev/files/17f6afe0-75de-4f05-8b83-ea6fe38355c0.jpg",
       title: "Осака",
       description: "Кулинарная столица"
