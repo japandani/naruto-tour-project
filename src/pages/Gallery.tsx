@@ -9,11 +9,6 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      url: "https://cdn.poehali.dev/files/17f6afe0-75de-4f05-8b83-ea6fe38355c0.jpg",
-      title: "Осака",
-      description: "Кулинарная столица"
-    },
-    {
       url: "https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg",
       title: "Морские острова",
       description: "Семейные моменты у побережья"
