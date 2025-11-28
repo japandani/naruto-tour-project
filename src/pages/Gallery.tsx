@@ -286,7 +286,7 @@ const Gallery = () => {
             Готовы создать свои воспоминания?
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/#contact">
+            <a href="/#contact" onClick={(e) => { e.preventDefault(); window.location.href = '/#contact'; }}>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 py-6 text-lg shadow-xl">
                 <Icon name="Send" size={20} className="mr-2" />
                 Забронировать тур
