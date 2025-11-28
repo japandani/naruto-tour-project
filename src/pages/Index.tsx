@@ -732,7 +732,7 @@ const Index = () => {
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
-            Даты туров 2025
+            Даты туров 2026
           </h2>
           <p className="text-xl md:text-2xl text-center mb-12 md:mb-16 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Выберите удобную дату для вашего путешествия
