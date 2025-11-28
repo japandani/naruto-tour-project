@@ -70,7 +70,7 @@ const AirportBoard = () => {
         <div className="text-[7px] md:text-[10px] text-[#888] uppercase tracking-tight text-right">Статус</div>
         
         <div className="text-[10px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider whitespace-nowrap">
-          {renderText('JD 2025', 1000)}
+          {renderText('JD 2026', 1000)}
         </div>
         <div className="text-[10px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider flex items-center gap-0.5 md:gap-1.5">
           {renderText('МОСКВА', 2000)}
