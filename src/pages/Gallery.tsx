@@ -9,69 +9,9 @@ const Gallery = () => {
 
   const galleryImages = [
     {
-      url: "https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg",
-      title: "Морские острова",
-      description: "Семейные моменты у побережья"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg",
-      title: "Вечерний стадион",
-      description: "Незабываемые эмоции под открытым небом"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/d16f7162-159b-4da6-af3a-dd6767d336f3.jpeg",
-      title: "Традиционные игры",
-      description: "Мастер-класс в японском парке"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/63a5411c-4bf7-4d7a-b081-d988a2020bb6.jpeg",
-      title: "Чайная церемония",
-      description: "Погружение в традиции Японии"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/f9e53de1-59a4-4d82-9edc-a3a86b58922e.jpeg",
-      title: "Деревня Сиракава-го",
-      description: "Среди рисовых полей и традиционных домов"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/c4fa33a7-df05-4792-bcdf-a872d31fc27d.jpeg",
-      title: "За рулём приключений",
-      description: "Путешествие по японским дорогам"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/b9c020f7-a8ee-4854-ad4c-812198638a29.jpeg",
-      title: "Наш гид",
-      description: "Комфортный трансфер по Японии"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/a5ecbc18-7d24-4808-a2af-78b8cda22299.jpeg",
-      title: "Местные жители",
-      description: "Встречи с гостеприимными японцами"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/d23c3a64-d493-4a96-920d-befa1219a8d9.jpeg",
-      title: "Цветущие холмы",
-      description: "Весенние краски Японии"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg",
-      title: "Традиционный рёкан",
-      description: "Ночь в японском стиле"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/543f946f-97a7-4d57-aee6-f284cd474bb1.jpeg",
-      title: "Уличная кофейня",
-      description: "Аутентичный японский кофе"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/dfd6e2ea-c159-4663-b868-525d05a2609b.jpeg",
-      title: "Кошачье кафе",
-      description: "Встреча с пушистыми друзьями"
-    },
-    {
-      url: "https://cdn.poehali.dev/files/b34c93a1-8994-41fd-aee1-4e4ca54bbede.jpeg",
-      title: "Японский интерьер",
-      description: "Традиционный дизайн с теплым освещением"
+      url: "https://cdn.poehali.dev/files/4a9535ec-6d0a-491b-837c-cc6027622277.jpeg",
+      title: "Уличные детали",
+      description: "Милые находки на улицах Японии"
     },
     {
       url: "https://cdn.poehali.dev/files/e94fc926-fd25-4e3b-b610-e27b23010483.jpeg",
@@ -79,9 +19,69 @@ const Gallery = () => {
       description: "Знакомство с японской поп-культурой"
     },
     {
-      url: "https://cdn.poehali.dev/files/4a9535ec-6d0a-491b-837c-cc6027622277.jpeg",
-      title: "Уличные детали",
-      description: "Милые находки на улицах Японии"
+      url: "https://cdn.poehali.dev/files/b34c93a1-8994-41fd-aee1-4e4ca54bbede.jpeg",
+      title: "Японский интерьер",
+      description: "Традиционный дизайн с теплым освещением"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/dfd6e2ea-c159-4663-b868-525d05a2609b.jpeg",
+      title: "Кошачье кафе",
+      description: "Встреча с пушистыми друзьями"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/543f946f-97a7-4d57-aee6-f284cd474bb1.jpeg",
+      title: "Уличная кофейня",
+      description: "Аутентичный японский кофе"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg",
+      title: "Традиционный рёкан",
+      description: "Ночь в японском стиле"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/d23c3a64-d493-4a96-920d-befa1219a8d9.jpeg",
+      title: "Цветущие холмы",
+      description: "Весенние краски Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/a5ecbc18-7d24-4808-a2af-78b8cda22299.jpeg",
+      title: "Местные жители",
+      description: "Встречи с гостеприимными японцами"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/b9c020f7-a8ee-4854-ad4c-812198638a29.jpeg",
+      title: "Наш гид",
+      description: "Комфортный трансфер по Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/c4fa33a7-df05-4792-bcdf-a872d31fc27d.jpeg",
+      title: "За рулём приключений",
+      description: "Путешествие по японским дорогам"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/f9e53de1-59a4-4d82-9edc-a3a86b58922e.jpeg",
+      title: "Деревня Сиракава-го",
+      description: "Среди рисовых полей и традиционных домов"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/63a5411c-4bf7-4d7a-b081-d988a2020bb6.jpeg",
+      title: "Чайная церемония",
+      description: "Погружение в традиции Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/d16f7162-159b-4da6-af3a-dd6767d336f3.jpeg",
+      title: "Традиционные игры",
+      description: "Мастер-класс в японском парке"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg",
+      title: "Вечерний стадион",
+      description: "Незабываемые эмоции под открытым небом"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg",
+      title: "Морские острова",
+      description: "Семейные моменты у побережья"
     },
   ];
 
@@ -207,7 +207,7 @@ const Gallery = () => {
                 <img
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                   onLoad={() => setImageLoading(prev => ({ ...prev, [index]: false }))}
                   style={{ display: imageLoading[index] === false ? 'block' : 'none' }}
                 />
@@ -259,11 +259,11 @@ const Gallery = () => {
             <Icon name="ChevronRight" size={32} className="text-white" />
           </button>
 
-          <div className="relative max-w-7xl max-h-[90vh] w-full" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-7xl w-full flex items-center justify-center" onClick={(e) => e.stopPropagation()} style={{ maxHeight: '90vh' }}>
             <img
               src={galleryImages[selectedImage].url}
               alt={galleryImages[selectedImage].title}
-              className="w-full h-full object-contain rounded-lg animate-scale-in"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg animate-scale-in"
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
