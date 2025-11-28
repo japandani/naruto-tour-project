@@ -233,7 +233,7 @@ const TourDetails = () => {
           <div className="flex flex-wrap gap-6 md:gap-8 justify-center items-center text-sm md:text-base">
             <div className="flex items-center gap-2">
               <Icon name="MapPin" size={20} className="text-primary" />
-              <span>8 городов</span>
+              <span>15 городов</span>
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Camera" size={20} className="text-primary" />
@@ -241,7 +241,7 @@ const TourDetails = () => {
             </div>
             <div className="flex items-center gap-2">
               <Icon name="Users" size={20} className="text-primary" />
-              <span>До 8 человек</span>
+              <span>До 6 человек</span>
             </div>
           </div>
         </div>
