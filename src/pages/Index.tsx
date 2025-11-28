@@ -428,6 +428,21 @@ const Index = () => {
               <img src="https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
             </div>
             <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/543f946f-97a7-4d57-aee6-f284cd474bb1.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/dfd6e2ea-c159-4663-b868-525d05a2609b.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/b34c93a1-8994-41fd-aee1-4e4ca54bbede.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/e94fc926-fd25-4e3b-b610-e27b23010483.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
+              <img src="https://cdn.poehali.dev/files/4a9535ec-6d0a-491b-837c-cc6027622277.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
+            </div>
+            <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
               <img src="https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
             </div>
             <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">

@@ -58,6 +58,31 @@ const Gallery = () => {
       title: "Традиционный рёкан",
       description: "Ночь в японском стиле"
     },
+    {
+      url: "https://cdn.poehali.dev/files/543f946f-97a7-4d57-aee6-f284cd474bb1.jpeg",
+      title: "Уличная кофейня",
+      description: "Аутентичный японский кофе"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/dfd6e2ea-c159-4663-b868-525d05a2609b.jpeg",
+      title: "Кошачье кафе",
+      description: "Встреча с пушистыми друзьями"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/b34c93a1-8994-41fd-aee1-4e4ca54bbede.jpeg",
+      title: "Японский интерьер",
+      description: "Традиционный дизайн с теплым освещением"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/e94fc926-fd25-4e3b-b610-e27b23010483.jpeg",
+      title: "Аниме-культура",
+      description: "Знакомство с японской поп-культурой"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/4a9535ec-6d0a-491b-837c-cc6027622277.jpeg",
+      title: "Уличные детали",
+      description: "Милые находки на улицах Японии"
+    },
   ];
 
   const openImage = (index: number) => {
