@@ -379,6 +379,189 @@ const TourDetails = () => {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 px-4 bg-gradient-to-b from-background to-accent/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
+              Стоимость и условия
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Всё продумано до мелочей для вашего комфорта
+            </p>
+          </div>
+
+          <div className="mb-12 md:mb-16 text-center">
+            <Card className="inline-block border-2 border-primary/30 shadow-2xl">
+              <CardContent className="p-8 md:p-12">
+                <div className="mb-4">
+                  <div className="text-sm md:text-base text-muted-foreground uppercase tracking-widest mb-2">Стоимость тура</div>
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
+                    450 000 ₽
+                  </div>
+                  <div className="text-lg md:text-xl text-muted-foreground">на человека</div>
+                </div>
+                <div className="pt-4 border-t border-accent/30">
+                  <div className="text-sm md:text-base text-muted-foreground">
+                    14 дней незабываемых впечатлений
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+            <Card className="border-green-500/30 hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-300">
+              <CardContent className="p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                    <Icon name="CheckCircle2" size={24} className="text-green-600" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Включено в тур</h3>
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Проживание в отелях 3-4* (13 ночей)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Транспорт: комфортабельный минивэн на всё путешествие</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Русскоязычный гид на протяжении всего маршрута</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Входные билеты во все музеи и храмы по программе</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Экскурсии и мастер-классы согласно программе</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Завтраки в отелях</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Поездка на канатных дорогах и паромах</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Страховка на время путешествия</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Организационная поддержка 24/7</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-red-500/30 hover:shadow-2xl hover:shadow-red-500/10 transition-all duration-300">
+              <CardContent className="p-8 md:p-10">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-red-500/20 rounded-full flex items-center justify-center">
+                    <Icon name="XCircle" size={24} className="text-red-600" />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">Не включено в тур</h3>
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Авиабилеты до Токио и из Осаки</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Виза в Японию (при необходимости)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Обеды и ужины (за исключением особых мероприятий)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Личные расходы и покупки сувениров</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Дополнительные экскурсии вне программы</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Чаевые гиду и водителю (по желанию)</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
+                    <span className="text-base md:text-lg text-muted-foreground">Алкогольные напитки</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 md:mt-16">
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-transparent">
+              <CardContent className="p-8 md:p-10">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
+                  <Icon name="Info" size={28} className="text-primary" />
+                  Важная информация
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">Условия бронирования:</h4>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Предоплата 30% при бронировании</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Полная оплата за 30 дней до начала тура</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Места ограничены — до 8 человек в группе</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-foreground">Условия отмены:</h4>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>За 60+ дней — возврат 100% (минус банковская комиссия)</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>За 30-59 дней — возврат 50%</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-primary mt-1">•</span>
+                        <span>Менее 30 дней — без возврата</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 text-center">
+            <a href="/#contact">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 py-6 text-lg font-semibold shadow-xl">
+                <Icon name="Mail" size={20} className="mr-2" />
+                Забронировать место
+              </Button>
+            </a>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Остались вопросы? Свяжитесь с нами — мы всё подробно расскажем!
+            </p>
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-foreground text-background py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-8">
