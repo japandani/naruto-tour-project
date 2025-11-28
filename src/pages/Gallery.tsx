@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const GALLERY_API = "https://functions.poehali.dev/0ca72437-b8dc-4114-b471-e5ad4f87ce23";
 
@@ -14,6 +16,7 @@ interface Photo {
 }
 
 const Gallery = () => {
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [imageLoading, setImageLoading] = useState<{ [key: number]: boolean }>({});
@@ -82,17 +85,18 @@ const Gallery = () => {
             </div>
           </a>
           <div className="hidden lg:flex gap-6 xl:gap-10">
-            <a href="/#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Главная</a>
-            <a href="/#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">О нас</a>
-            <a href="/#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Ваш Путь</a>
-            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Описание Пути</a>
-            <a href="/gallery" className="text-primary transition-colors font-medium text-base xl:text-lg">Галерея</a>
-            <a href="/#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
+            <a href="/#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.home}</a>
+            <a href="/#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.about}</a>
+            <a href="/#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.path}</a>
+            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.tour}</a>
+            <a href="/gallery" className="text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.gallery}</a>
+            <a href="/#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.contacts}</a>
           </div>
           <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             <a href="/">
               <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
-                На главную
+                {t.nav.toHome}
               </Button>
             </a>
             <button
@@ -108,15 +112,15 @@ const Gallery = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden bg-foreground/98 backdrop-blur-md border-t border-background/10 animate-fade-in">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              <a href="/#home" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Главная</a>
-              <a href="/#about" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">О нас</a>
-              <a href="/#path" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Ваш Путь</a>
-              <a href="/tour" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Описание Пути</a>
-              <a href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-primary transition-colors font-medium text-lg py-2">Галерея</a>
-              <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Контакты</a>
+              <a href="/#home" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.home}</a>
+              <a href="/#about" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.about}</a>
+              <a href="/#path" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.path}</a>
+              <a href="/tour" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.tour}</a>
+              <a href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-primary transition-colors font-medium text-lg py-2">{t.nav.gallery}</a>
+              <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.contacts}</a>
               <a href="/" className="sm:hidden">
                 <Button variant="default" className="w-full bg-primary hover:bg-primary/90 text-white font-semibold">
-                  На главную
+                  {t.nav.toHome}
                 </Button>
               </a>
             </div>
@@ -127,15 +131,15 @@ const Gallery = () => {
       <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-b from-foreground/5 to-background">
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto py-8 md:py-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground leading-tight" style={{ fontFamily: 'Cormorant, serif' }}>
-            Галерея Японии
+            {t.gallery.title}
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light mb-6">
-            Моменты, которые становятся воспоминаниями
+            {t.gallery.subtitle}
           </p>
           <a href="/tour">
             <Button className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold shadow-lg">
               <Icon name="BookOpen" size={20} className="mr-2" />
-              Ознакомься с маршрутом
+              {t.gallery.viewRoute}
             </Button>
           </a>
         </div>
