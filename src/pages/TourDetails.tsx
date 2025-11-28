@@ -223,7 +223,16 @@ const TourDetails = () => {
                 Выбрать дату
               </Button>
             </a>
-            <a href="/#contact">
+            <a 
+              href="#contact"
+              onClick={(e) => {
+                e.preventDefault();
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+            >
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-8 py-6 text-lg font-semibold shadow-2xl">
                 <Icon name="Phone" size={20} className="mr-2" />
                 Связаться с нами
