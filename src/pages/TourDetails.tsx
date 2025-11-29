@@ -391,26 +391,28 @@ const TourDetails = () => {
             </p>
           </div>
 
-          <div className="mb-12 md:mb-16">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary/90 to-primary/80 p-1">
-              <div className="relative bg-background rounded-3xl p-8 md:p-12">
-                <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
-                <div className="relative z-10 text-center">
-                  <div className="inline-block bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-2 mb-6">
-                    <span className="text-primary font-semibold text-sm tracking-widest uppercase">Стоимость тура</span>
+          <div className="mb-8 md:mb-12">
+            <Card className="border-primary/30 bg-gradient-to-br from-primary/5 to-transparent">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="text-center md:text-left">
+                    <div className="text-sm text-muted-foreground uppercase tracking-wider mb-2">Стоимость тура</div>
+                    <div className="text-5xl md:text-6xl font-bold text-primary mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
+                      249 000 ₽
+                    </div>
+                    <div className="text-base text-muted-foreground mb-3">на человека</div>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <span>*</span>
+                      <span>Доплата за одноместное размещение 39 000 ₽</span>
+                    </div>
                   </div>
-                  <div className="text-6xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-br from-primary via-primary/90 to-primary/70 bg-clip-text text-transparent mb-4" style={{ fontFamily: 'Cormorant, serif' }}>
-                    249 000 ₽
-                  </div>
-                  <div className="text-xl md:text-2xl text-muted-foreground mb-8">на человека</div>
-                  <div className="inline-flex items-center gap-2 text-base md:text-lg text-muted-foreground border-t border-accent/30 pt-6">
-                    <Icon name="Calendar" size={20} className="text-primary" />
-                    <span>14 дней незабываемых впечатлений</span>
+                  <div className="flex items-center gap-3 text-muted-foreground border-l-0 md:border-l border-accent/30 pl-0 md:pl-6">
+                    <Icon name="Calendar" size={24} className="text-primary" />
+                    <span className="text-base md:text-lg">14 дней<br/>незабываемых<br/>впечатлений</span>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
