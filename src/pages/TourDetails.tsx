@@ -275,7 +275,7 @@ const TourDetails = () => {
           <div className="space-y-16 md:space-y-24">
             {tourParts.map((part, index) => (
               <div key={index} className="relative">
-                <div className="relative h-32 md:h-48 rounded-2xl overflow-hidden shadow-2xl mb-6">
+                <div className="relative h-32 md:h-48 rounded-2xl overflow-hidden shadow-2xl mb-4">
                   <img 
                     src={part.image}
                     alt={part.title}
