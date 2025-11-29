@@ -509,44 +509,153 @@ const TourDetails = () => {
           <div className="mt-12 md:mt-16">
             <Card className="border-primary/30 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
               <CardContent className="p-8 md:p-10">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-                  <Icon name="Info" size={28} className="text-primary" />
-                  Важная информация
+                <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center" style={{ fontFamily: 'Cormorant, serif' }}>
+                  Условия бронирования и участия в туре
                 </h3>
-                <div className="grid md:grid-cols-2 gap-6">
+
+                <div className="space-y-8">
                   <div>
-                    <h4 className="font-bold text-lg mb-3 text-foreground">Условия бронирования:</h4>
-                    <ul className="space-y-2 text-muted-foreground">
+                    <h4 className="font-bold text-xl mb-4 text-primary flex items-center gap-2">
+                      <Icon name="Calendar" size={24} />
+                      1. Порядок бронирования и оплаты
+                    </h4>
+                    <div className="space-y-4 text-muted-foreground pl-8">
+                      <div>
+                        <p className="font-semibold text-foreground mb-2">ШАГ 1: БРОНИРОВАНИЕ</p>
+                        <ul className="space-y-1">
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Покупка авиабилетов является гарантией бронирования мест в туре</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>После покупки необходимо предоставить подтверждение бронирования перелета</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground mb-2">ШАГ 2: ВИЗОВОЕ СОПРОВОЖДЕНИЕ (за 3 месяца до поездки)</p>
+                        <ul className="space-y-1">
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Полное визовое сопровождение и консульский сбор включены в стоимость тура</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground mb-2">ШАГ 3: ОПЛАТА ТУРА</p>
+                        <ul className="space-y-1">
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Депозит 30 000 руб. с человека (вносится за 45 дней до поездки, невозвратный)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Платеж 100 000 руб. с человека (вносится за 7 дней до вылета)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Остаток стоимости тура оплачивается во время тура, но не позднее 2-го дня программы</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-xl mb-4 text-primary flex items-center gap-2">
+                      <Icon name="XCircle" size={24} />
+                      2. Условия отмены
+                    </h4>
+                    <ul className="space-y-2 text-muted-foreground pl-8">
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>Предоплата 30% при бронировании</span>
+                        <span>При отмене за 45 дней и более — удерживается депозит 30 000 руб.</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>Полная оплата за 30 дней до начала тура</span>
+                        <span>При отмене менее чем за 45 дней — удерживается 100% стоимости тура</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>Места ограничены — до 8 человек в группе</span>
+                        <span>При отказе в визе — возвращаются все оплаченные средства за вычетом фактически понесенных расходов</span>
                       </li>
                     </ul>
                   </div>
+
                   <div>
-                    <h4 className="font-bold text-lg mb-3 text-foreground">Условия отмены:</h4>
-                    <ul className="space-y-2 text-muted-foreground">
+                    <h4 className="font-bold text-xl mb-4 text-primary flex items-center gap-2">
+                      <Icon name="Shield" size={24} />
+                      3. Правила поведения во время тура
+                    </h4>
+                    <div className="space-y-3 text-muted-foreground pl-8">
+                      <div>
+                        <p className="font-semibold text-foreground mb-2">Общие правила:</p>
+                        <ul className="space-y-1 text-sm">
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Соблюдение законов Японии и уважение местных традиций</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Пунктуальность — соблюдение времени сбора группы</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Следование указаниям гида</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground mb-2">В транспорте VIP-класса:</p>
+                        <ul className="space-y-1 text-sm">
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Запрещено употребление пищи и напитков (кроме бутилированной воды)</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Соблюдение чистоты и использование ремней безопасности</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-semibold text-foreground mb-2">Безопасность:</p>
+                        <ul className="space-y-1 text-sm">
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Иметь при себе копию паспорта и страховки</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <span className="text-primary mt-1">•</span>
+                            <span>Сообщать гиду о любых проблемах со здоровьем</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="font-bold text-xl mb-4 text-primary flex items-center gap-2">
+                      <Icon name="Heart" size={24} />
+                      4. Медицинская страховка
+                    </h4>
+                    <ul className="space-y-2 text-muted-foreground pl-8">
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>За 60+ дней — возврат 100% (минус банковская комиссия)</span>
+                        <span>Все участники обязаны иметь медицинскую страховку на весь период пребывания</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-primary mt-1">•</span>
-                        <span>За 30-59 дней — возврат 50%</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <span className="text-primary mt-1">•</span>
-                        <span>Менее 30 дней — без возврата</span>
+                        <span>Рекомендуется расширенная страховка, покрывающая активные виды отдыха</span>
                       </li>
                     </ul>
+                  </div>
+
+                  <div className="pt-6 border-t border-primary/20">
+                    <p className="text-center text-sm text-muted-foreground italic">
+                      Подписывая договор, вы подтверждаете согласие со всеми условиями тура
+                    </p>
                   </div>
                 </div>
               </CardContent>
