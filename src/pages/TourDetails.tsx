@@ -316,7 +316,7 @@ const TourDetails = () => {
         </div>
       </section>
 
-      <section id="dates" className="pt-8 md:pt-12 pb-16 md:pb-24 px-4 bg-gradient-to-b from-accent/5 to-background">
+      <section id="dates" className="pt-0 md:pt-0 pb-16 md:pb-24 px-4 bg-gradient-to-b from-accent/5 to-background">
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
