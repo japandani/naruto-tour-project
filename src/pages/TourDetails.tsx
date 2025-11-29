@@ -425,23 +425,23 @@ const TourDetails = () => {
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Проживание в отелях 3-4* (13 ночей)</span>
+                    <span className="text-base md:text-lg text-muted-foreground">Проживание в отелях по программе</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Транспорт: комфортабельный минивэн на всё путешествие</span>
+                    <span className="text-base md:text-lg text-muted-foreground">Все трансферы и переезды на комфортабельном минивэне VIP-класса с личным водителем</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Русскоязычный гид на протяжении всего маршрута</span>
+                    <span className="text-base md:text-lg text-muted-foreground">Услуги русскоязычного гида-сопровождающего</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Входные билеты во все музеи и храмы по программе</span>
+                    <span className="text-base md:text-lg text-muted-foreground">Экскурсии по программе</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Экскурсии и мастер-классы согласно программе</span>
+                    <span className="text-base md:text-lg text-muted-foreground">Входные билеты в музеи и храмы</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
@@ -449,19 +449,11 @@ const TourDetails = () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Поездка на канатных дорогах и паромах</span>
+                    <span className="text-base md:text-lg text-muted-foreground">Полное визовое сопровождение и консульский сбор</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Страховка на время путешествия</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Помощь в оформлении визы</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Организационная поддержка 24/7</span>
+                    <span className="text-base md:text-lg text-muted-foreground">eSIM карта для интернета 20 ГБ на весь период тура</span>
                   </li>
                 </ul>
               </CardContent>
