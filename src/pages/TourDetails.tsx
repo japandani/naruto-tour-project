@@ -261,9 +261,9 @@ const TourDetails = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 px-4 pb-8 md:pb-12 bg-gradient-to-b from-background to-accent/5">
+      <section className="pt-8 md:pt-12 px-4 pb-8 md:pb-12 bg-gradient-to-b from-background to-accent/5">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
               Ваш Путь день за днём
             </h2>
@@ -275,7 +275,7 @@ const TourDetails = () => {
           <div className="space-y-16 md:space-y-24">
             {tourParts.map((part, index) => (
               <div key={index} className="relative">
-                <div className="relative h-32 md:h-48 rounded-2xl overflow-hidden shadow-2xl mb-8">
+                <div className="relative h-32 md:h-48 rounded-2xl overflow-hidden shadow-2xl mb-6">
                   <img 
                     src={part.image}
                     alt={part.title}
