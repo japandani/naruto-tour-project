@@ -415,85 +415,84 @@ const TourDetails = () => {
             </Card>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-            <Card className="border-primary/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 group">
-              <CardContent className="p-8 md:p-10">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="CheckCircle2" size={28} className="text-white" />
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            <Card className="border-primary/20 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center shadow-md">
+                    <Icon name="CheckCircle2" size={20} className="text-white" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>Включено в тур</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>Включено в тур</h3>
                 </div>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Проживание в отелях по программе</span>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Проживание в отелях по программе</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Все трансферы и переезды на комфортабельном минивэне VIP-класса с личным водителем</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Все трансферы и переезды на комфортабельном минивэне VIP-класса с личным водителем</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Услуги русскоязычного гида-сопровождающего</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Услуги русскоязычного гида-сопровождающего</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Экскурсии по программе</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Экскурсии по программе</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Входные билеты в музеи и храмы</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Входные билеты в музеи и храмы</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Завтраки в отелях</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Завтраки в отелях</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Полное визовое сопровождение и консульский сбор</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Полное визовое сопровождение и консульский сбор</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-green-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">eSIM карта для интернета 20 ГБ на весь период тура</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={16} className="text-green-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">eSIM карта для интернета 20 ГБ на весь период тура</span>
                   </li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card className="border-primary/20 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 group">
-              <CardContent className="p-8 md:p-10">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Icon name="XCircle" size={28} className="text-white" />
+            <Card className="border-primary/20 hover:border-primary/40 hover:shadow-xl transition-all duration-300">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-md">
+                    <Icon name="XCircle" size={20} className="text-white" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>Не включено в тур</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>Не включено в тур</h3>
                 </div>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Авиабилеты до Токио и из Осаки</span>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Авиабилеты до Токио и из Осаки</span>
                   </li>
-
-                  <li className="flex items-start gap-3">
-                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Обеды и ужины (за исключением особых мероприятий)</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Обеды и ужины (за исключением особых мероприятий)</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Личные расходы и покупки сувениров</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Личные расходы и покупки сувениров</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Дополнительные экскурсии вне программы</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Дополнительные экскурсии вне программы</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Чаевые гиду и водителю (по желанию)</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Чаевые гиду и водителю (по желанию)</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <Icon name="X" size={20} className="text-red-600 mt-1 flex-shrink-0" />
-                    <span className="text-base md:text-lg text-muted-foreground">Алкогольные напитки</span>
+                  <li className="flex items-start gap-2">
+                    <Icon name="X" size={16} className="text-red-600 mt-0.5 flex-shrink-0" />
+                    <span className="text-sm md:text-base text-muted-foreground">Алкогольные напитки</span>
                   </li>
                 </ul>
               </CardContent>
