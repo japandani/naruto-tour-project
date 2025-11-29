@@ -396,7 +396,7 @@ const Index = () => {
 
         <div className="absolute left-0 top-0 bottom-0 w-24 md:w-32 lg:w-40 overflow-hidden hidden md:block opacity-70">
           <div className="film-strip-animation h-full flex flex-col gap-3" style={{ 
-            animation: 'filmScroll 60s linear infinite'
+            animation: 'filmScroll 30s linear infinite'
           }}>
             <div className="film-frame border-4 border-black/80 bg-black/20 p-1 rounded-sm shadow-xl">
               <img src="https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg" alt="Галерея" className="w-full h-32 object-cover rounded-sm" />
