@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import TourDetails from "./pages/TourDetails";
 import Gallery from "./pages/Gallery";
+import Vlog from "./pages/Vlog";
 import NotFound from "./pages/NotFound";
 import TelegramButton from "./components/TelegramButton";
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/tour" element={<TourDetails />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/vlog" element={<Vlog />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -152,6 +152,7 @@ const TourDetails = () => {
             <a href="/#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Ваш Путь</a>
             <a href="/tour" className="text-primary transition-colors font-medium text-base xl:text-lg">Описание Пути</a>
             <a href="/gallery" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Галерея</a>
+            <a href="/vlog" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Vlog</a>
             <a href="/#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
           </div>
           <div className="flex items-center gap-3">
@@ -178,6 +179,7 @@ const TourDetails = () => {
               <a href="/#path" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Ваш Путь</a>
               <a href="/tour" onClick={() => setMobileMenuOpen(false)} className="text-primary transition-colors font-medium text-lg py-2">Описание Пути</a>
               <a href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Галерея</a>
+              <a href="/vlog" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Vlog</a>
               <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Контакты</a>
               <a href="/#contact" className="sm:hidden">
                 <Button variant="default" className="w-full bg-primary hover:bg-primary/90 text-white font-semibold">
