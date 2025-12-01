@@ -293,8 +293,8 @@ const TourDetails = () => {
 
                 <div className="space-y-6 md:space-y-8">
                   {part.days.map((dayInfo, dayIndex) => (
-                    <>
-                      <Card key={dayIndex} className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
+                    <div key={dayIndex}>
+                      <Card className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
                         <CardContent className="p-6 md:p-8">
                           <div className="flex items-start gap-4 md:gap-6">
                             <div className="flex-shrink-0">
@@ -447,7 +447,7 @@ const TourDetails = () => {
                           </Card>
                         </div>
                       )}
-                    </>
+                    </div>
                   ))}
                 </div>
               </div>
