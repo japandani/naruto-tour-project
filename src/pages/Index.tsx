@@ -403,8 +403,8 @@ const Index = () => {
         </div>
 
 
-        <div className="relative z-10 text-center text-white px-4 animate-fade-in max-w-5xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg leading-tight md:leading-snug">Япония.<br/>Выше шума, глубже традиций.</h1>
+        <div className="relative z-10 text-center text-white px-4 animate-fade-in max-w-5xl mx-auto mt-12 md:mt-20">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg">Япония. Выше шума, глубже традиций.</h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-4xl mx-auto drop-shadow-md leading-relaxed">
             Наше авторское путешествие — это ключ к пониманию Японии.<br className="hidden sm:block"/>
             Мы покажем вам не просто места, а смыслы.<br className="hidden sm:block"/>
