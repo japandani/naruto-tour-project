@@ -320,9 +320,11 @@ const TourDetails = () => {
                             <CardContent className="p-8 md:p-10">
                               <div className="flex flex-col md:flex-row gap-6 items-start">
                                 <div className="flex-shrink-0">
-                                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-3xl shadow-lg">
-                                    🌸
-                                  </div>
+                                  <img 
+                                    src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/fffeaa73-6441-46f2-ad09-e821e76b7da9.jpg"
+                                    alt="Михаил"
+                                    className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover ring-4 ring-primary/20 shadow-xl"
+                                  />
                                 </div>
                                 <div className="flex-1">
                                   <div className="flex items-center gap-2 mb-3">
@@ -352,9 +354,11 @@ const TourDetails = () => {
                             <CardContent className="p-8 md:p-10">
                               <div className="flex flex-col md:flex-row gap-6 items-start">
                                 <div className="flex-shrink-0">
-                                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-3xl shadow-lg">
-                                    ⛰️
-                                  </div>
+                                  <img 
+                                    src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/e16417d9-4176-44d4-9b73-671b1dc0cca7.jpg"
+                                    alt="Анна"
+                                    className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover ring-4 ring-primary/20 shadow-xl"
+                                  />
                                 </div>
                                 <div className="flex-1">
                                   <div className="flex items-center gap-2 mb-3">
@@ -384,9 +388,11 @@ const TourDetails = () => {
                             <CardContent className="p-8 md:p-10">
                               <div className="flex flex-col md:flex-row gap-6 items-start">
                                 <div className="flex-shrink-0">
-                                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-3xl shadow-lg">
-                                    🏯
-                                  </div>
+                                  <img 
+                                    src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/3d67f1b4-acd9-42a9-bae7-d3cf27c672ec.jpg"
+                                    alt="Екатерина"
+                                    className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover ring-4 ring-primary/20 shadow-xl"
+                                  />
                                 </div>
                                 <div className="flex-1">
                                   <div className="flex items-center gap-2 mb-3">
@@ -416,9 +422,11 @@ const TourDetails = () => {
                             <CardContent className="p-8 md:p-10">
                               <div className="flex flex-col md:flex-row gap-6 items-start">
                                 <div className="flex-shrink-0">
-                                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-3xl shadow-lg">
-                                    ✨
-                                  </div>
+                                  <img 
+                                    src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/97cf5917-ab19-447c-b382-084be5a457c1.jpg"
+                                    alt="Дмитрий"
+                                    className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover ring-4 ring-primary/20 shadow-xl"
+                                  />
                                 </div>
                                 <div className="flex-1">
                                   <div className="flex items-center gap-2 mb-3">
