@@ -293,23 +293,153 @@ const TourDetails = () => {
 
                 <div className="space-y-6 md:space-y-8">
                   {part.days.map((dayInfo, dayIndex) => (
-                    <Card key={dayIndex} className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
-                      <CardContent className="p-6 md:p-8">
-                        <div className="flex items-start gap-4 md:gap-6">
-                          <div className="flex-shrink-0">
-                            <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
-                              {dayInfo.day}
+                    <>
+                      <Card key={dayIndex} className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 border-accent/20">
+                        <CardContent className="p-6 md:p-8">
+                          <div className="flex items-start gap-4 md:gap-6">
+                            <div className="flex-shrink-0">
+                              <div className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center text-2xl md:text-3xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                {dayInfo.day}
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              <h4 className="text-xl md:text-2xl font-bold mb-3 text-foreground">{dayInfo.title}</h4>
+                              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                                {dayInfo.description}
+                              </p>
                             </div>
                           </div>
-                          <div className="flex-1">
-                            <h4 className="text-xl md:text-2xl font-bold mb-3 text-foreground">{dayInfo.title}</h4>
-                            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                              {dayInfo.description}
-                            </p>
-                          </div>
+                        </CardContent>
+                      </Card>
+                      
+                      {/* Отзыв после 3-го дня (конец Токио) */}
+                      {dayInfo.day === 3 && (
+                        <div className="relative my-8 md:my-12">
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl blur-xl"></div>
+                          <Card className="relative border-2 border-primary/20 bg-gradient-to-br from-background via-accent/5 to-background shadow-2xl">
+                            <CardContent className="p-8 md:p-10">
+                              <div className="flex flex-col md:flex-row gap-6 items-start">
+                                <div className="flex-shrink-0">
+                                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-3xl shadow-lg">
+                                    🌸
+                                  </div>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-2 mb-3">
+                                    <Icon name="Quote" size={24} className="text-primary" />
+                                    <span className="text-sm font-semibold text-primary uppercase tracking-widest">Отзыв путешественника</span>
+                                  </div>
+                                  <p className="text-lg md:text-xl text-foreground leading-relaxed mb-4 italic">
+                                    "Токио — это не город, это живая энергия. После перекрёстка Сибуя я понял: здесь будущее уже наступило. А вечер в старинной идзакае вернул меня на столетия назад. Япония умеет удивлять."
+                                  </p>
+                                  <div className="flex items-center gap-3">
+                                    <div className="h-px flex-1 bg-primary/20"></div>
+                                    <span className="text-sm text-muted-foreground font-medium">Михаил, март 2024</span>
+                                    <div className="h-px flex-1 bg-primary/20"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
                         </div>
-                      </CardContent>
-                    </Card>
+                      )}
+                      
+                      {/* Отзыв после 6-го дня (Альпы) */}
+                      {dayInfo.day === 6 && (
+                        <div className="relative my-8 md:my-12">
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl blur-xl"></div>
+                          <Card className="relative border-2 border-primary/20 bg-gradient-to-br from-background via-accent/5 to-background shadow-2xl">
+                            <CardContent className="p-8 md:p-10">
+                              <div className="flex flex-col md:flex-row gap-6 items-start">
+                                <div className="flex-shrink-0">
+                                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-3xl shadow-lg">
+                                    ⛰️
+                                  </div>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-2 mb-3">
+                                    <Icon name="Quote" size={24} className="text-primary" />
+                                    <span className="text-sm font-semibold text-primary uppercase tracking-widest">Отзыв путешественника</span>
+                                  </div>
+                                  <p className="text-lg md:text-xl text-foreground leading-relaxed mb-4 italic">
+                                    "Фудзи-сан в отражении озера — это момент, когда останавливается время. А ночь в традиционном доме Сиракава-го под скрип древесины и пение птиц — как путешествие в прошлое. Эти три дня изменили моё восприятие Японии навсегда."
+                                  </p>
+                                  <div className="flex items-center gap-3">
+                                    <div className="h-px flex-1 bg-primary/20"></div>
+                                    <span className="text-sm text-muted-foreground font-medium">Анна, апрель 2024</span>
+                                    <div className="h-px flex-1 bg-primary/20"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      )}
+                      
+                      {/* Отзыв после 10-го дня (Киото) */}
+                      {dayInfo.day === 10 && (
+                        <div className="relative my-8 md:my-12">
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl blur-xl"></div>
+                          <Card className="relative border-2 border-primary/20 bg-gradient-to-br from-background via-accent/5 to-background shadow-2xl">
+                            <CardContent className="p-8 md:p-10">
+                              <div className="flex flex-col md:flex-row gap-6 items-start">
+                                <div className="flex-shrink-0">
+                                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-3xl shadow-lg">
+                                    🏯
+                                  </div>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-2 mb-3">
+                                    <Icon name="Quote" size={24} className="text-primary" />
+                                    <span className="text-sm font-semibold text-primary uppercase tracking-widest">Отзыв путешественника</span>
+                                  </div>
+                                  <p className="text-lg md:text-xl text-foreground leading-relaxed mb-4 italic">
+                                    "Киото — это душа Японии. Золотой павильон на рассвете, тысячи алых ворот Фусими Инари, шёпот бамбуковой рощи. Здесь каждый камень, каждое дерево дышат историей. Я плакала в саду камней Рёан-дзи, не понимая почему. Просто чувствовала."
+                                  </p>
+                                  <div className="flex items-center gap-3">
+                                    <div className="h-px flex-1 bg-primary/20"></div>
+                                    <span className="text-sm text-muted-foreground font-medium">Екатерина, март 2024</span>
+                                    <div className="h-px flex-1 bg-primary/20"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      )}
+                      
+                      {/* Отзыв после 13-го дня (финал путешествия) */}
+                      {dayInfo.day === 13 && (
+                        <div className="relative my-8 md:my-12">
+                          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-primary/10 to-primary/5 rounded-2xl blur-xl"></div>
+                          <Card className="relative border-2 border-primary/20 bg-gradient-to-br from-background via-accent/5 to-background shadow-2xl">
+                            <CardContent className="p-8 md:p-10">
+                              <div className="flex flex-col md:flex-row gap-6 items-start">
+                                <div className="flex-shrink-0">
+                                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-3xl shadow-lg">
+                                    ✨
+                                  </div>
+                                </div>
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-2 mb-3">
+                                    <Icon name="Quote" size={24} className="text-primary" />
+                                    <span className="text-sm font-semibold text-primary uppercase tracking-widest">Отзыв путешественника</span>
+                                  </div>
+                                  <p className="text-lg md:text-xl text-foreground leading-relaxed mb-4 italic">
+                                    "Эти две недели — лучшее путешествие в моей жизни. Каждый день — новое открытие. От неонового хаоса Токио до тишины горных онсэнов, от мишленовских ресторанов до уличных рамен-баров. Япония не просто показала мне красоту — она научила меня видеть её по-другому. Спасибо за этот опыт. Я вернусь."
+                                  </p>
+                                  <div className="flex items-center gap-3">
+                                    <div className="h-px flex-1 bg-primary/20"></div>
+                                    <span className="text-sm text-muted-foreground font-medium">Дмитрий, май 2024</span>
+                                    <div className="h-px flex-1 bg-primary/20"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      )}
+                    </>
                   ))}
                 </div>
               </div>
