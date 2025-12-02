@@ -582,7 +582,7 @@ export default function Blog() {
               <p className="text-muted-foreground mb-6">
                 Получайте новые статьи о путешествиях по Японии прямо на почту
               </p>
-              <a href="https://t.me/vetkaSakury" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/japandani" target="_blank" rel="noopener noreferrer">
                 <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3">
                   Подписаться
                 </Button>
