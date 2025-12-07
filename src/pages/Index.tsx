@@ -162,9 +162,9 @@ const ToursBoard = () => {
   const tours = [
     { dates: '18.03 - 01.04', seats: 6, status: 'available', season: 'spring' },
     { dates: '03.04 - 15.04', seats: 3, status: 'available', season: 'spring' },
-    { dates: '17.04 - 02.05', seats: 0, status: 'sold-out' },
-    { dates: '29.04 - 10.05', seats: 0, status: 'sold-out' },
-    { dates: '12.05 - 25.05', seats: 0, status: 'sold-out' },
+    { dates: '17.04 - 02.05', seats: 0, status: 'sold-out', season: 'spring' },
+    { dates: '29.04 - 10.05', seats: 0, status: 'sold-out', season: 'spring' },
+    { dates: '12.05 - 25.05', seats: 0, status: 'sold-out', season: 'spring' },
     { dates: '16.10 - 29.10', seats: 6, status: 'available', season: 'autumn' },
     { dates: '01.11 - 14.11', seats: 4, status: 'available', season: 'autumn' },
   ];
