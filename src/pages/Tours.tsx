@@ -154,14 +154,22 @@ const Tours = () => {
           {/* Upcoming Tours */}
           <div className="mb-12">
             <h3 className="text-3xl font-bold mb-6">Ближайшие даты</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
               {[
                 { dates: '18 марта - 1 апреля 2025', seats: 6, status: 'available' },
                 { dates: '3 апреля - 15 апреля 2025', seats: 3, status: 'filling' },
-                { dates: '17 апреля - 2 мая 2025', seats: 0, status: 'sold-out' },
+                { dates: '12 мая - 25 мая 2025', seats: 0, status: 'sold-out' },
+                { dates: '16 октября - 29 октября 2025', seats: 6, status: 'available', season: 'autumn' },
+                { dates: '1 ноября - 14 ноября 2025', seats: 4, status: 'filling', season: 'autumn' },
               ].map((tour, index) => (
                 <Card key={index} className={`border-2 ${tour.status === 'sold-out' ? 'opacity-60' : 'hover:border-primary'} transition-all`}>
                   <CardContent className="p-6">
+                    {tour.season === 'autumn' && (
+                      <div className="flex items-center gap-2 mb-3 text-orange-600">
+                        <Icon name="Leaf" size={16} />
+                        <span className="text-xs font-semibold uppercase">Сезон момодзи</span>
+                      </div>
+                    )}
                     <div className="flex items-center gap-2 mb-4">
                       <Icon name="Calendar" className="text-primary" size={20} />
                       <span className="font-bold">{tour.dates}</span>
