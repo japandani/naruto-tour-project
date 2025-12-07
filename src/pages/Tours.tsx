@@ -158,7 +158,7 @@ const Tours = () => {
               {[
                 { dates: '18 марта - 1 апреля 2025', seats: 6, status: 'available', season: 'spring' },
                 { dates: '3 апреля - 15 апреля 2025', seats: 3, status: 'filling', season: 'spring' },
-                { dates: '12 мая - 25 мая 2025', seats: 0, status: 'sold-out', season: 'spring' },
+                { dates: '12 мая - 25 мая 2025', seats: 0, status: 'sold-out' },
                 { dates: '16 октября - 29 октября 2025', seats: 6, status: 'available', season: 'autumn' },
                 { dates: '1 ноября - 14 ноября 2025', seats: 4, status: 'filling', season: 'autumn' },
               ].map((tour, index) => (
