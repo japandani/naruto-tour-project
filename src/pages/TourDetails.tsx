@@ -124,13 +124,13 @@ const TourDetails = () => {
   ];
 
   const tourDates = [
-    { date: "18 марта - 1 апреля 2026", status: "available", seats: 6 },
-    { date: "3 апреля - 15 апреля 2026", status: "available", seats: 3 },
-    { date: "17 апреля - 2 мая 2026", status: "closed", seats: 0 },
-    { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0 },
-    { date: "12 мая - 25 мая 2026", status: "closed", seats: 0 },
-    { date: "16 октября - 29 октября 2026", status: "available", seats: 6 },
-    { date: "1 ноября - 14 ноября 2026", status: "available", seats: 4 }
+    { date: "18 марта - 1 апреля 2026", status: "available", seats: 6, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
+    { date: "3 апреля - 15 апреля 2026", status: "available", seats: 3, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
+    { date: "17 апреля - 2 мая 2026", status: "closed", seats: 0, season: "spring" },
+    { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0, season: "spring" },
+    { date: "12 мая - 25 мая 2026", status: "closed", seats: 0, season: "spring" },
+    { date: "16 октября - 29 октября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
+    { date: "1 ноября - 14 ноября 2026", status: "available", seats: 4, season: "autumn", badge: "🍁 Момодзи (красные клёны)" }
   ];
 
   return (
@@ -479,6 +479,11 @@ const TourDetails = () => {
                         <Icon name="Calendar" size={16} className="text-primary" />
                       </div>
                       <div>
+                        {tour.badge && (
+                          <div className={`text-[10px] md:text-xs font-semibold mb-0.5 ${tour.season === 'spring' ? 'text-pink-400' : 'text-orange-400'}`}>
+                            {tour.badge}
+                          </div>
+                        )}
                         <div className="text-sm md:text-base font-bold text-foreground">{tour.date}</div>
                         <div className="text-xs text-muted-foreground">14 дней | 13 ночей</div>
                       </div>
