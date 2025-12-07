@@ -160,11 +160,11 @@ const ToursBoard = () => {
   };
 
   const tours = [
-    { dates: '18.03 - 01.04', seats: 6, status: 'available', season: 'spring' },
-    { dates: '03.04 - 15.04', seats: 3, status: 'available', season: 'spring' },
-    { dates: '17.04 - 02.05', seats: 0, status: 'sold-out', season: 'spring' },
-    { dates: '29.04 - 10.05', seats: 0, status: 'sold-out', season: 'spring' },
-    { dates: '12.05 - 25.05', seats: 0, status: 'sold-out', season: 'spring' },
+    { dates: '18.03 - 01.04', seats: 6, status: 'available', season: 'spring', hanami: true },
+    { dates: '03.04 - 15.04', seats: 3, status: 'available', season: 'spring', hanami: true },
+    { dates: '17.04 - 02.05', seats: 0, status: 'sold-out', season: 'spring', hanami: false },
+    { dates: '29.04 - 10.05', seats: 0, status: 'sold-out', season: 'spring', hanami: false },
+    { dates: '12.05 - 25.05', seats: 0, status: 'sold-out', season: 'spring', hanami: false },
     { dates: '16.10 - 29.10', seats: 6, status: 'available', season: 'autumn' },
     { dates: '01.11 - 14.11', seats: 4, status: 'available', season: 'autumn' },
   ];
@@ -206,7 +206,7 @@ const ToursBoard = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className="flex flex-col gap-0.5 md:gap-1">
-                {tour.season === 'spring' && (
+                {tour.season === 'spring' && tour.hanami && (
                   <div className="flex items-center gap-1 md:gap-1.5 animate-fade-in">
                     <span className="text-xs md:text-sm animate-bounce" style={{ animationDuration: '2s' }}>🌸</span>
                     <span className="text-[8px] md:text-[10px] text-pink-400 font-semibold uppercase tracking-wide">Ханами (цветение сакуры)</span>
