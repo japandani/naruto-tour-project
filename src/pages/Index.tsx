@@ -164,7 +164,9 @@ const ToursBoard = () => {
     { dates: '03.04 - 15.04', seats: 3, status: 'available' },
     { dates: '17.04 - 02.05', seats: 0, status: 'sold-out' },
     { dates: '29.04 - 10.05', seats: 0, status: 'sold-out' },
-    { dates: '12.05 - 25.05', seats: 4, status: 'available' },
+    { dates: '12.05 - 25.05', seats: 0, status: 'sold-out' },
+    { dates: '16.10 - 29.10', seats: 6, status: 'available' },
+    { dates: '01.11 - 14.11', seats: 4, status: 'available' },
   ];
 
   return (
