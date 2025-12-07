@@ -124,11 +124,13 @@ const TourDetails = () => {
   ];
 
   const tourDates = [
-    { date: "18 марта - 1 апреля 2026", status: "available", seats: 4 },
+    { date: "18 марта - 1 апреля 2026", status: "available", seats: 6 },
     { date: "3 апреля - 15 апреля 2026", status: "available", seats: 3 },
-    { date: "17 апреля - 2 мая 2026", status: "waitlist", seats: 0 },
+    { date: "17 апреля - 2 мая 2026", status: "closed", seats: 0 },
     { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0 },
-    { date: "12 мая - 26 мая 2026", status: "available", seats: 4 }
+    { date: "12 мая - 25 мая 2026", status: "closed", seats: 0 },
+    { date: "16 октября - 29 октября 2026", status: "available", seats: 6 },
+    { date: "1 ноября - 14 ноября 2026", status: "available", seats: 4 }
   ];
 
   return (
@@ -457,56 +459,56 @@ const TourDetails = () => {
       </section>
 
       <section id="dates" className="pt-0 md:pt-0 pb-16 md:pb-24 px-4 bg-gradient-to-b from-accent/5 to-background">
-        <div className="container mx-auto max-w-5xl">
-          <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
+        <div className="container mx-auto max-w-3xl">
+          <div className="text-center mb-6 md:mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
               Даты туров 2026
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               Выберите удобную дату для вашего путешествия
             </p>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-3">
             {tourDates.map((tour, index) => (
-              <Card key={index} className="group hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-accent/20">
-                <CardContent className="p-6 md:p-8">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div className="flex items-center gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 bg-primary/10 rounded-full flex items-center justify-center">
-                        <Icon name="Calendar" size={24} className="text-primary" />
+              <Card key={index} className="group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-accent/20">
+                <CardContent className="p-3 md:p-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                        <Icon name="Calendar" size={16} className="text-primary" />
                       </div>
                       <div>
-                        <div className="text-xl md:text-2xl font-bold text-foreground mb-1">{tour.date}</div>
-                        <div className="text-sm text-muted-foreground">14 дней | 13 ночей</div>
+                        <div className="text-sm md:text-base font-bold text-foreground">{tour.date}</div>
+                        <div className="text-xs text-muted-foreground">14 дней | 13 ночей</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
                       {tour.status === 'available' ? (
                         <>
-                          <a href="/#contact" className="flex items-center gap-2">
-                            <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/70"></span>
-                            <span className="text-sm md:text-base font-semibold text-green-600 hover:text-green-700 transition-colors">
+                          <a href="/#contact" className="flex items-center gap-1.5">
+                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/70"></span>
+                            <span className="text-xs md:text-sm font-semibold text-green-600 hover:text-green-700 transition-colors">
                               {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
                             </span>
                           </a>
                           <a href="#contact" onClick={(e) => { e.preventDefault(); const contactSection = document.getElementById('contact'); if (contactSection) { contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }}>
-                            <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 font-semibold">
+                            <Button className="bg-primary hover:bg-primary/90 text-white px-3 py-1.5 text-xs md:text-sm font-semibold">
                               Забронировать
                             </Button>
                           </a>
                         </>
                       ) : tour.status === 'waitlist' ? (
-                        <a href="/#contact" className="flex items-center gap-2">
-                          <span className="w-3 h-3 bg-orange-500 rounded-full shadow-lg shadow-orange-500/70"></span>
-                          <span className="inline-block bg-orange-500/20 text-orange-600 px-4 py-2 rounded text-sm font-bold uppercase border-2 border-orange-500/30 hover:bg-orange-500/30 transition-colors">
+                        <a href="/#contact" className="flex items-center gap-1.5">
+                          <span className="w-2 h-2 bg-orange-500 rounded-full shadow-lg shadow-orange-500/70"></span>
+                          <span className="inline-block bg-orange-500/20 text-orange-600 px-2 py-1 rounded text-xs font-bold uppercase border border-orange-500/30 hover:bg-orange-500/30 transition-colors">
                             Лист ожидания
                           </span>
                         </a>
                       ) : (
-                        <div className="flex items-center gap-2">
-                          <span className="w-3 h-3 bg-red-600 rounded-full shadow-lg shadow-red-600/70"></span>
-                          <span className="inline-block bg-red-600/20 text-red-600 px-4 py-2 rounded text-sm font-bold uppercase border-2 border-red-600/30">
+                        <div className="flex items-center gap-1.5">
+                          <span className="w-2 h-2 bg-red-600 rounded-full shadow-lg shadow-red-600/70"></span>
+                          <span className="inline-block bg-red-600/20 text-red-600 px-2 py-1 rounded text-xs font-bold uppercase border border-red-600/30">
                             Группа закрыта
                           </span>
                         </div>
