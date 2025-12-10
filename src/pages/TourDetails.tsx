@@ -323,7 +323,7 @@ const TourDetails = () => {
                               <div className="flex flex-col md:flex-row gap-6 items-start">
                                 <div className="flex-shrink-0">
                                   <img 
-                                    src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/fffeaa73-6441-46f2-ad09-e821e76b7da9.jpg"
+                                    src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/23bbe788-4ade-40e8-87ea-64f0bd36d887.jpg"
                                     alt="Алина"
                                     className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover ring-4 ring-primary/20 shadow-xl"
                                   />
