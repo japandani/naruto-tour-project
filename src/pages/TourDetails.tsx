@@ -324,7 +324,7 @@ const TourDetails = () => {
                                 <div className="flex-shrink-0">
                                   <img 
                                     src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/fffeaa73-6441-46f2-ad09-e821e76b7da9.jpg"
-                                    alt="Михаил"
+                                    alt="Алина"
                                     className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover ring-4 ring-primary/20 shadow-xl"
                                   />
                                 </div>
@@ -334,11 +334,11 @@ const TourDetails = () => {
                                     <span className="text-sm font-semibold text-primary uppercase tracking-widest">Отзыв путешественника</span>
                                   </div>
                                   <p className="text-lg md:text-xl text-foreground leading-relaxed mb-4 italic">
-                                    "Даниэль превратил первые дни в настоящее приключение! Утро на рынке Цукидзи — он привёл нас к своему знакомому торговцу, и мы попробовали тунца прямо с ножа. А вечером устроил нам караоке-марафон в Синдзюку — пели японские хиты, не зная ни слова. Водитель терпеливо ждал нас до двух ночи, и минивэн стал нашим уютным домом на колёсах. Так начинаются настоящие путешествия!"
+                                    "Третий день в Токио стал гастрономическим откровением! Утро на Цукидзи — Даниэль провёл нас по секретным лоткам, где местные завтракают. Мы ели свежайшие устрицы размером с ладонь, пробовали тамагояки у мастера, который готовит его 40 лет. В TeamLab я буквально плакала от красоты — это не музей, это параллельная вселенная. А вечерний рамен в Роппонги... Боже, я поняла, что всю жизнь ела не рамен, а его бледную копию. Густой бульон, тающаяся свинина, идеальная лапша — я заказала вторую порцию, хотя едва дышала от первой. Даниэль смеялся: 'Теперь ты понимаешь, почему японцы готовы стоять в очереди час ради хорошего рамена'. Понимаю!"
                                   </p>
                                   <div className="flex items-center gap-3">
                                     <div className="h-px flex-1 bg-primary/20"></div>
-                                    <span className="text-sm text-muted-foreground font-medium">Михаил, март 2024</span>
+                                    <span className="text-sm text-muted-foreground font-medium">Алина, апрель 2024</span>
                                     <div className="h-px flex-1 bg-primary/20"></div>
                                   </div>
                                 </div>
