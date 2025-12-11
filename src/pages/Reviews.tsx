@@ -86,57 +86,57 @@ const Reviews = () => {
       </nav>
 
       {/* Hero */}
-      <section className="pt-32 pb-20 px-4">
+      <section className="pt-16 pb-10 px-4">
         <div className="container mx-auto max-w-6xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-primary via-orange-500 to-red-500 bg-clip-text text-transparent">
+          <h1 className="text-2xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary via-orange-500 to-red-500 bg-clip-text text-transparent">
             Истории путешественников
           </h1>
-          <p className="text-2xl text-muted-foreground max-w-3xl">
+          <p className="text-lg text-muted-foreground max-w-3xl">
             Те, кто уже сказал «ДА!» Японии
           </p>
         </div>
       </section>
 
       {/* Reviews */}
-      <section className="py-12 px-4">
+      <section className="py-6 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4">
             {reviews.map((review, index) => (
-              <Card key={index} className="border-2 hover:border-primary transition-all cursor-pointer" onClick={() => setSelectedReview(index === selectedReview ? null : index)}>
-                <CardContent className="p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center text-2xl font-bold flex-shrink-0">
+              <Card key={index} className="border hover:border-primary transition-all cursor-pointer" onClick={() => setSelectedReview(index === selectedReview ? null : index)}>
+                <CardContent className="p-4">
+                  <div className="flex items-start justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                         {review.avatar}
                       </div>
                       <div>
-                        <div className="font-bold text-lg">{review.name}</div>
-                        <div className="text-sm text-muted-foreground">{review.date}</div>
-                        <div className="text-xs text-muted-foreground italic">{review.tour}</div>
+                        <div className="font-bold text-sm">{review.name}</div>
+                        <div className="text-xs text-muted-foreground">{review.date}</div>
+                        <div className="text-[10px] text-muted-foreground italic">{review.tour}</div>
                       </div>
                     </div>
-                    <div className="flex gap-1">
+                    <div className="flex gap-0.5">
                       {[...Array(review.rating)].map((_, i) => (
-                        <Icon key={i} name="Star" size={16} className="text-primary fill-primary" />
+                        <Icon key={i} name="Star" size={12} className="text-primary fill-primary" />
                       ))}
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground italic mb-4">
+                  <p className="text-muted-foreground italic mb-2 text-sm">
                     "{selectedReview === index ? review.full : review.short}"
                   </p>
 
                   {selectedReview === index && review.images && (
-                    <div className="mt-4 grid grid-cols-2 gap-2">
+                    <div className="mt-2 grid grid-cols-2 gap-1">
                       {review.images.map((img, i) => (
-                        <img key={i} src={img} alt={`${review.name} - фото ${i + 1}`} className="rounded-lg w-full h-48 object-cover" />
+                        <img key={i} src={img} alt={`${review.name} - фото ${i + 1}`} className="rounded-lg w-full h-24 object-cover" />
                       ))}
                     </div>
                   )}
 
-                  <Button variant="ghost" className="mt-4 p-0 h-auto font-normal text-primary hover:text-primary/80">
+                  <Button variant="ghost" className="mt-2 p-0 h-auto font-normal text-primary hover:text-primary/80 text-xs">
                     {selectedReview === index ? 'Свернуть' : 'Читать полностью'}
-                    <Icon name={selectedReview === index ? "ChevronUp" : "ChevronDown"} className="ml-1" size={16} />
+                    <Icon name={selectedReview === index ? "ChevronUp" : "ChevronDown"} className="ml-1" size={12} />
                   </Button>
                 </CardContent>
               </Card>
@@ -146,42 +146,42 @@ const Reviews = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-20 px-4 bg-muted/50">
+      <section className="py-10 px-4 bg-muted/50">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-4 gap-4 text-center">
             <div>
-              <div className="text-5xl font-bold text-primary mb-2">250+</div>
-              <div className="text-muted-foreground">Довольных путешественников</div>
+              <div className="text-2xl font-bold text-primary mb-1">250+</div>
+              <div className="text-muted-foreground text-sm">Довольных путешественников</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-primary mb-2">25</div>
-              <div className="text-muted-foreground">Лет опыта</div>
+              <div className="text-2xl font-bold text-primary mb-1">25</div>
+              <div className="text-muted-foreground text-sm">Лет опыта</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Проведённых туров</div>
+              <div className="text-2xl font-bold text-primary mb-1">50+</div>
+              <div className="text-muted-foreground text-sm">Проведённых туров</div>
             </div>
             <div>
-              <div className="text-5xl font-bold text-primary mb-2">100%</div>
-              <div className="text-muted-foreground">Положительных отзывов</div>
+              <div className="text-2xl font-bold text-primary mb-1">100%</div>
+              <div className="text-muted-foreground text-sm">Положительных отзывов</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4">
+      <section className="py-10 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-2xl font-bold mb-3">
             Станьте частью нашей истории
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-base text-muted-foreground mb-4">
             Следующая история может быть вашей
           </p>
           <Link to="/tours">
-            <Button size="lg" className="text-lg px-8 py-6">
+            <Button size="sm" className="text-sm px-4 py-3">
               Выбрать тур
-              <Icon name="ArrowRight" className="ml-2" size={20} />
+              <Icon name="ArrowRight" className="ml-2" size={16} />
             </Button>
           </Link>
         </div>
