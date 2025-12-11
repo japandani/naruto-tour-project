@@ -95,11 +95,11 @@ const AirportBoard = () => {
             {renderText('14 ДНЕЙ', 5000)}
           </div>
         </div>
-        <a href="#contact" className="bg-[#1a1a1a]/40 rounded p-1 md:p-2 border border-[#333]/40 flex flex-col justify-center hover:bg-[#1a1a1a]/60 hover:border-red-500/50 transition-all duration-300 cursor-pointer">
+        <a href="#contact" className="bg-[#1a1a1a]/40 rounded p-1 md:p-2 border border-[#333]/40 flex flex-col justify-center hover:bg-[#1a1a1a]/60 hover:border-orange-500/50 transition-all duration-300 cursor-pointer">
           <div className="flex items-center justify-center gap-0.5 md:gap-1.5">
-            <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-red-500 rounded-full animate-pulse shadow-lg shadow-red-500/50 flex-shrink-0"></span>
-            <span className="text-[9px] md:text-sm font-bold text-red-500 uppercase tracking-tight whitespace-nowrap">
-              Последние 4 места
+            <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-orange-500 rounded-full animate-pulse shadow-lg shadow-orange-500/50 flex-shrink-0"></span>
+            <span className="text-[9px] md:text-sm font-bold text-orange-500 uppercase tracking-tight whitespace-nowrap">
+              Осталось 4 места
             </span>
           </div>
         </a>
@@ -110,10 +110,10 @@ const AirportBoard = () => {
 
 const ToursBoard = () => {
   const tourDates = [
-    { date: "18 марта - 1 апреля 2026", status: "available", seats: 6, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
-    { date: "1 апреля - 15 апреля 2026", status: "available", seats: 3, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
+    { date: "18 марта - 1 апреля 2026", status: "available", seats: 4, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
+    { date: "1 апреля - 15 апреля 2026", status: "waitlist", seats: 0, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
     { date: "17 апреля - 2 мая 2026", status: "closed", seats: 0, season: "spring" },
-    { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0, season: "spring" },
+    { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0, season: "spring", duration: "11 дней | 10 ночей" },
     { date: "12 мая - 25 мая 2026", status: "closed", seats: 0, season: "spring" },
     { date: "16 октября - 29 октября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
     { date: "1 ноября - 14 ноября 2026", status: "available", seats: 4, season: "autumn", badge: "🍁 Момодзи (красные клёны)" }
@@ -136,7 +136,7 @@ const ToursBoard = () => {
                     </div>
                   )}
                   <div className="text-sm md:text-base font-bold text-foreground">{tour.date}</div>
-                  <div className="text-xs text-muted-foreground">14 дней | 13 ночей</div>
+                  <div className="text-xs text-muted-foreground">{tour.duration || '14 дней | 13 ночей'}</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
