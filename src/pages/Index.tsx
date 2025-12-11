@@ -79,7 +79,7 @@ const AirportBoard = () => {
           {renderText('ТОКИО', 3000)}
         </div>
         <div className="text-[10px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider text-center whitespace-nowrap">
-          {renderText('14.03', 4000)}
+          {renderText('18.03', 4000)}
         </div>
         <div className="text-right">
           <span className="inline-block bg-[#d4af37] text-black px-0.5 md:px-2 py-0.5 rounded text-[8px] md:text-xs font-bold uppercase tracking-tight whitespace-nowrap">
