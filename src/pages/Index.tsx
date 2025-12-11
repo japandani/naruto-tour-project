@@ -291,7 +291,7 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                Ваш Путь
+                Концепт
               </a>
               <a 
                 href="/tour" 
