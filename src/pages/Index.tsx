@@ -298,7 +298,7 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                Описание Пути
+                Программа тура
               </a>
               <a 
                 href="/gallery" 
