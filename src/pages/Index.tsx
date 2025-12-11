@@ -109,146 +109,71 @@ const AirportBoard = () => {
 };
 
 const ToursBoard = () => {
-  const [animate, setAnimate] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  
-  useEffect(() => {
-    const timer = setTimeout(() => setAnimate(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-    
-    const playAirportBeep = () => {
-      const oscillator1 = audioContext.createOscillator();
-      const oscillator2 = audioContext.createOscillator();
-      const gainNode = audioContext.createGain();
-      
-      oscillator1.connect(gainNode);
-      oscillator2.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-      
-      oscillator1.frequency.value = 1000;
-      oscillator2.frequency.value = 1200;
-      oscillator1.type = 'sine';
-      oscillator2.type = 'sine';
-      
-      gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-      gainNode.gain.linearRampToValueAtTime(0.15, audioContext.currentTime + 0.05);
-      gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 0.3);
-      
-      oscillator1.start(audioContext.currentTime);
-      oscillator2.start(audioContext.currentTime);
-      oscillator1.stop(audioContext.currentTime + 0.3);
-      oscillator2.stop(audioContext.currentTime + 0.3);
-    };
-    
-    audioRef.current = { play: playAirportBeep } as any;
-    
-    return () => {
-      audioContext.close();
-    };
-  }, []);
-
-  const renderText = (text: string, baseDelay: number) => {
-    if (!animate) return <span className="opacity-0">{text}</span>;
-    return text.split('').map((char, i) => (
-      <FlipChar key={i} char={char} delay={baseDelay + i * 100} />
-    ));
-  };
-
-  const tours = [
-    { dates: '18.03 - 01.04', seats: 6, status: 'available', season: 'spring', hanami: true },
-    { dates: '03.04 - 15.04', seats: 3, status: 'available', season: 'spring', hanami: true },
-    { dates: '17.04 - 02.05', seats: 0, status: 'sold-out', season: 'spring', hanami: false },
-    { dates: '29.04 - 10.05', seats: 0, status: 'sold-out', season: 'spring', hanami: false },
-    { dates: '12.05 - 25.05', seats: 0, status: 'sold-out', season: 'spring', hanami: false },
-    { dates: '16.10 - 29.10', seats: 6, status: 'available', season: 'autumn' },
-    { dates: '01.11 - 14.11', seats: 4, status: 'available', season: 'autumn' },
+  const tourDates = [
+    { date: "18 марта - 1 апреля 2026", status: "available", seats: 6, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
+    { date: "1 апреля - 15 апреля 2026", status: "available", seats: 3, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
+    { date: "17 апреля - 2 мая 2026", status: "closed", seats: 0, season: "spring" },
+    { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0, season: "spring" },
+    { date: "12 мая - 25 мая 2026", status: "closed", seats: 0, season: "spring" },
+    { date: "16 октября - 29 октября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
+    { date: "1 ноября - 14 ноября 2026", status: "available", seats: 4, season: "autumn", badge: "🍁 Момодзи (красные клёны)" }
   ];
 
   return (
-    <div className="max-w-sm sm:max-w-md md:max-w-3xl lg:max-w-5xl mx-auto bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#0a0a0a] backdrop-blur-xl rounded-lg md:rounded-xl shadow-2xl p-3 sm:p-3 md:p-4 lg:p-5 border-2 border-[#d4af37]/30 animate-fade-in" style={{ 
-      boxShadow: '0 0 40px rgba(212, 175, 55, 0.3), 0 0 80px rgba(212, 175, 55, 0.1), inset 0 0 30px rgba(0,0,0,0.4)',
-    }}>
-      <div className="flex items-center justify-between mb-2 md:mb-3 pb-2 md:pb-2 border-b-2 border-[#d4af37]/50">
-        <div className="flex items-center gap-1.5 md:gap-2">
-          <div className="w-6 h-6 md:w-7 md:h-7 bg-gradient-to-br from-[#d4af37] to-[#f4d03f] rounded-full flex items-center justify-center flex-shrink-0 animate-pulse shadow-lg shadow-[#d4af37]/50">
-            <Icon name="Calendar" size={14} className="text-black md:w-4 md:h-4" />
-          </div>
-          <span className="text-[11px] md:text-sm font-bold tracking-wider md:tracking-widest text-[#d4af37] uppercase whitespace-nowrap drop-shadow-[0_0_10px_rgba(212,175,55,0.5)]">Даты туров 2026</span>
-        </div>
-        <span className="text-[9px] md:text-[11px] text-[#999] font-mono whitespace-nowrap bg-[#0a0a0a]/60 px-1.5 py-0.5 rounded border border-[#333]/50">{new Date().toLocaleDateString('ru-RU')}</span>
-      </div>
-
-      <div className="space-y-1.5 md:space-y-2">
-        {tours.map((tour, index) => {
-          const isAvailable = tour.status === 'available';
-          const TourRow = isAvailable ? 'a' : 'div';
-          
-          return (
-            <TourRow
-              key={index}
-              {...(isAvailable ? { href: '#contact' } : {})}
-              className={`grid grid-cols-[1fr_auto] gap-2 md:gap-3 items-center bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] rounded-md p-2 md:p-2.5 border-2 transition-all duration-300 ${
-                isAvailable 
-                  ? 'border-[#00ff88]/40 hover:border-[#d4af37] hover:from-[#1a1a1a] hover:to-[#1a1a1a] hover:shadow-xl hover:shadow-[#d4af37]/40 hover:scale-[1.03] cursor-pointer' 
-                  : 'border-[#333]/40 opacity-50'
-              }`}
-              onMouseEnter={() => {
-                setHoveredIndex(index);
-                if (isAvailable && audioRef.current) {
-                  audioRef.current.play();
-                }
-              }}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <div className="flex flex-col gap-0.5 md:gap-1">
-                {tour.season === 'spring' && tour.hanami && (
-                  <div className="flex items-center gap-1 md:gap-1.5 animate-fade-in">
-                    <span className="text-xs md:text-sm animate-bounce" style={{ animationDuration: '2s' }}>🌸</span>
-                    <span className="text-[8px] md:text-[10px] text-pink-400 font-semibold uppercase tracking-wide">Ханами (цветение сакуры)</span>
-                  </div>
-                )}
-                {tour.season === 'autumn' && (
-                  <div className="flex items-center gap-1 md:gap-1.5 animate-fade-in">
-                    <span className="text-xs md:text-sm animate-bounce" style={{ animationDuration: '2s' }}>🍁</span>
-                    <span className="text-[8px] md:text-[10px] text-orange-400 font-semibold uppercase tracking-wide">Момодзи (красные клёны)</span>
-                  </div>
-                )}
-                <div className={`text-sm md:text-lg lg:text-xl font-bold font-mono tracking-tight transition-all duration-300 ${
-                  isAvailable 
-                    ? hoveredIndex === index ? 'text-[#d4af37] drop-shadow-[0_0_15px_rgba(212,175,55,0.8)]' : 'text-[#00ff88] drop-shadow-[0_0_10px_rgba(0,255,136,0.5)]'
-                    : 'text-[#555]'
-                }`}>
-                  {renderText(tour.dates, 1000 + index * 500)}
+    <div className="grid gap-3">
+      {tourDates.map((tour, index) => (
+        <Card key={index} className="group hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border-accent/20">
+          <CardContent className="p-3 md:p-4">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 bg-primary/10 rounded-full flex items-center justify-center">
+                  <Icon name="Calendar" size={16} className="text-primary" />
+                </div>
+                <div>
+                  {tour.badge && (
+                    <div className={`text-[10px] md:text-xs font-semibold mb-0.5 ${tour.season === 'spring' ? 'text-pink-400' : 'text-orange-400'}`}>
+                      {tour.badge}
+                    </div>
+                  )}
+                  <div className="text-sm md:text-base font-bold text-foreground">{tour.date}</div>
+                  <div className="text-xs text-muted-foreground">14 дней | 13 ночей</div>
                 </div>
               </div>
-              <div className="text-right">
-                {isAvailable ? (
-                  <div className="flex items-center gap-1.5 md:gap-2 justify-end">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/70 flex-shrink-0"></span>
-                    <span className={`text-[11px] md:text-sm lg:text-base font-bold uppercase tracking-tight whitespace-nowrap transition-all duration-300 ${
-                      hoveredIndex === index ? 'text-[#d4af37] scale-110 drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]' : 'text-green-500 drop-shadow-[0_0_8px_rgba(34,197,94,0.6)]'
-                    }`}>
-                      {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
+              <div className="flex items-center gap-2">
+                {tour.status === 'available' ? (
+                  <>
+                    <a href="/#contact" className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/70"></span>
+                      <span className="text-xs md:text-sm font-semibold text-green-600 hover:text-green-700 transition-colors">
+                        {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
+                      </span>
+                    </a>
+                    <a href="#contact" onClick={(e) => { e.preventDefault(); const contactSection = document.getElementById('contact'); if (contactSection) { contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }}>
+                      <Button className="bg-primary hover:bg-primary/90 text-white px-3 py-1.5 text-xs md:text-sm font-semibold">
+                        Забронировать
+                      </Button>
+                    </a>
+                  </>
+                ) : tour.status === 'waitlist' ? (
+                  <a href="/#contact" className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full shadow-lg shadow-orange-500/70"></span>
+                    <span className="inline-block bg-orange-500/20 text-orange-600 px-2 py-1 rounded text-xs font-bold uppercase border border-orange-500/30 hover:bg-orange-500/30 transition-colors">
+                      Лист ожидания
                     </span>
-                  </div>
+                  </a>
                 ) : (
-                  <div className="flex items-center gap-1.5 md:gap-2 justify-end">
-                    <span className="w-2 h-2 md:w-2.5 md:h-2.5 bg-red-600 rounded-full shadow-lg shadow-red-600/70 flex-shrink-0"></span>
-                    <span className="inline-block bg-red-600/30 text-red-400 px-2 md:px-3 py-0.5 md:py-1 rounded text-[11px] md:text-sm font-bold uppercase tracking-tight whitespace-nowrap border-2 border-red-600/50">
-                      Мест нет
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 bg-red-600 rounded-full shadow-lg shadow-red-600/70"></span>
+                    <span className="inline-block bg-red-600/20 text-red-600 px-2 py-1 rounded text-xs font-bold uppercase border border-red-600/30">
+                      Группа закрыта
                     </span>
                   </div>
                 )}
               </div>
-            </TourRow>
-          );
-        })}
-      </div>
+            </div>
+          </CardContent>
+        </Card>
+      ))}
     </div>
   );
 };
