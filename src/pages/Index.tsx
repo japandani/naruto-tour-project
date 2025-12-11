@@ -416,6 +416,16 @@ const Index = () => {
             Наше путешествие — это и есть ваш личный Мити. Путь, состоящий из четырёх свитков, где вы не просто увидите Японию, а пройдете через её сердце, стихии и дух, чтобы обрести новый взгляд на мир и на себя.
           </p>
 
+          <div className="text-center mb-8 md:mb-12">
+            <a 
+              href="/tour"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-base md:text-lg"
+            >
+              <Icon name="FileText" size={20} />
+              Программа тура и цена
+            </a>
+          </div>
+
           <div className="space-y-8 md:space-y-12 max-w-6xl mx-auto">
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl transform group-hover:scale-105 transition-transform duration-500"></div>
@@ -557,10 +567,13 @@ const Index = () => {
                 
                 <a 
                   href="/tour"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-secondary text-foreground border-2 border-primary/30 rounded-lg hover:bg-secondary/80 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-lg"
+                  className="inline-flex flex-col items-center gap-1 px-8 py-4 bg-secondary text-foreground border-2 border-primary/30 rounded-lg hover:bg-secondary/80 hover:border-primary/50 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-lg"
                 >
-                  <Icon name="ScrollText" size={20} />
-                  Прочесть полный свиток
+                  <div className="flex items-center gap-2">
+                    <Icon name="ScrollText" size={20} />
+                    Прочесть полный свиток
+                  </div>
+                  <span className="text-sm text-muted-foreground font-normal">(программа тура и цена)</span>
                 </a>
               </div>
             </div>
