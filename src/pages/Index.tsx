@@ -358,7 +358,7 @@ const Index = () => {
             className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg mb-8 md:mb-10"
             onClick={() => document.getElementById('scrolls')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Сделать первый шаг по Пути
+            Сделать первый шаг
             <Icon name="ArrowRight" size={20} className="ml-2" />
           </Button>
 
