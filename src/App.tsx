@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import TourDetails from "./pages/TourDetails";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 import TelegramButton from "./components/TelegramButton";
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/tour" element={<TourDetails />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/faq" element={<FAQ />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
