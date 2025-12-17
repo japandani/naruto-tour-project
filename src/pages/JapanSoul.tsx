@@ -490,6 +490,57 @@ function JapanSoul() {
                 </div>
               </div>
 
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="TreePine" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Нара и Коясан: Уединение и святыня</h3>
+                      <span className="text-emerald-600 font-semibold">23 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Squirrel" size={20} className="text-amber-700 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Нара: Олени в национальном парке</p>
+                          <p className="text-gray-700">Более 1200 священных оленей свободно гуляют по парку Нары — посланники богов в синтоизме. Уединение с природой, кормление оленей специальными крекерами (сэмбэй).</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Church" size={20} className="text-orange-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Храмы Нары</p>
+                          <p className="text-gray-700">Тодай-дзи с Великим Буддой (15 метров), Касуга-тайся — синтоистское святилище с тысячами каменных фонарей. Погружение в древнюю столицу VIII века.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Mountain" size={20} className="text-purple-700 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">После обеда: Гора Коясан</p>
+                          <p className="text-gray-700">Подъём на священную гору Коясан — центр буддизма сингон и одно из самых святых мест Японии. 117 храмов среди гор и облаков.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Moon" size={20} className="text-slate-700 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Кладбище Окуноин: Святыня святых</p>
+                          <p className="text-gray-700">Одно из самых священных кладбищ Японии с 200 000 могил среди величественных криптомерий возрастом до 600 лет. Мистическая атмосфера, покрытые мхом надгробия, разговоры по душам в тишине леса.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="ArrowLeft" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">К вечеру возвращение в Осаку</p>
+                          <p className="text-gray-700">После духовного дня среди святынь возвращаемся в Осаку на ночлег.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-amber-50 border-2 border-orange-200 rounded-xl p-6 md:p-8 text-center">
                 <Icon name="Clock" size={48} className="text-orange-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
