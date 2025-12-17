@@ -640,35 +640,39 @@ function JapanSoul() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Проживание в традиционных рёканах и храмах</span>
+                    <span>Проживание в отелях 4* с завтраками</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Все завтраки и ужины (включая монастырскую кухню)</span>
+                    <span>Прощальный гала-ужин на крыше небоскрёба Осаки</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Сопровождение русскоговорящего гида-практика</span>
+                    <span>Входные билеты во все храмы, музеи и достопримечательности</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Все мастер-классы и духовные практики</span>
+                    <span>Поезд Синкансен по маршруту Одавара → Осака</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Входные билеты в храмы и святилища</span>
+                    <span>Все духовные практики с опытным практиком</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Трансферы между городами</span>
+                    <span>Русскоговорящий гид-сопровождающий на весь маршрут</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>eSIM-карта для каждого участника с интернетом</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>Комфортабельный автобус для групповых переездов</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
                     <span>Методические материалы для продолжения практик дома</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                    <span>Сертификат участника программы</span>
                   </li>
                 </ul>
               </div>
