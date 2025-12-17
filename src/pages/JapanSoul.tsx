@@ -206,7 +206,14 @@ function JapanSoul() {
                         <Icon name="Moon" size={20} className="text-purple-600 flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-semibold text-gray-800">Возвращение в Токио</p>
-                          <p className="text-gray-700">Вечер свободный для личных прогулок по ночному Токио — возможность интегрировать впечатления дня в тишине мегаполиса.</p>
+                          <p className="text-gray-700">Возвращение после дня на природе.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Lightbulb" size={20} className="text-yellow-500 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Вечер: Кабукитё в Синдзюку</p>
+                          <p className="text-gray-700">Погружение в эйфорию ночной жизни Токио — район Кабукитё, неоновые огни, рестораны и бары. Контраст дневной тишины гор с энергией мегаполиса.</p>
                         </div>
                       </div>
                     </div>
