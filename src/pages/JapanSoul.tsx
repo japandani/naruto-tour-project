@@ -541,15 +541,34 @@ function JapanSoul() {
                 </div>
               </div>
 
-              <div className="bg-amber-50 border-2 border-orange-200 rounded-xl p-6 md:p-8 text-center">
-                <Icon name="Clock" size={48} className="text-orange-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-800 mb-3">
-                  Программа формируется
-                </h3>
-                <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
-                  Полная программа тура по дням будет опубликована в ближайшее время. 
-                  Свяжитесь с нами, чтобы узнать актуальную информацию и забронировать место.
-                </p>
+              <div className="bg-gradient-to-br from-orange-100 via-rose-100 to-purple-100 rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-rose-500 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Heart" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Прощание с Японией</h3>
+                      <span className="text-rose-600 font-semibold">25 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Plane" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">День отъезда</p>
+                          <p className="text-gray-700">Трансфер в аэропорт Кансай (Осака). Прощание с Японией после 10 дней духовного путешествия.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Sparkles" size={20} className="text-amber-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Обещание вернуться</p>
+                          <p className="text-gray-700 italic">Вы увезёте с собой не только фотографии, но и частичку японской души. И, как говорят в Японии: «また会いましょう» (мата аимасё) — до новой встречи.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
