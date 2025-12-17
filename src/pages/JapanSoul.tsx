@@ -59,7 +59,7 @@ function JapanSoul() {
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Users" size={20} />
-                <span>До 8 участников</span>
+                <span>До 30 участников</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Heart" size={20} />
