@@ -214,6 +214,64 @@ function JapanSoul() {
                 </div>
               </div>
 
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="UtensilsCrossed" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Токио: День третий — Гастрономия и культура</h3>
+                      <span className="text-red-600 font-semibold">18 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Fish" size={20} className="text-blue-700 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Утренний гастротур: Рынок Цукидзи</p>
+                          <p className="text-gray-700">Фудстрит внешнего рынка Цукидзи — гастрономическое паломничество. Свежайшие морепродукты, уличная еда, атмосфера токийского утра и японская кухня в её лучшем проявлении.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Trees" size={20} className="text-pink-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Парк Уэно: Искусство и сакура</p>
+                          <p className="text-gray-700">Скульптуры Родена и закат сезона цветения сакуры. Созерцание красоты мимолётности (моно-но аварэ) — ключевая концепция японской эстетики.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Gem" size={20} className="text-amber-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Гинза: Элегантность мегаполиса</p>
+                          <p className="text-gray-700">Прогулка по самому престижному району Токио — витрины мировых брендов, традиционные магазины и архитектура роскоши.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Castle" size={20} className="text-green-700 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Императорский дворец</p>
+                          <p className="text-gray-700">Взгляд на резиденцию императора со стороны моста Нидзюбаси. Символ непрерывности японской истории и традиций длиной в 2600 лет.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Sparkles" size={20} className="text-purple-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Асакуса: Тишина в популярном месте</p>
+                          <p className="text-gray-700">Древний район Токио и храм Сэнсо-дзи в вечерние часы, когда туристы уходят. Принятие тишины в самом популярном старинном районе — практика присутствия.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Wine" size={20} className="text-rose-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Вечер (по желанию): Роппонги</p>
+                          <p className="text-gray-700">Ресторанчики района Роппонги и Tokyo Tower (японская «Эйфелева башня») — ночная панорама города с высоты птичьего полёта.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-amber-50 border-2 border-orange-200 rounded-xl p-6 md:p-8 text-center">
                 <Icon name="Clock" size={48} className="text-orange-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
