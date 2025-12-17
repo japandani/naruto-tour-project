@@ -337,6 +337,50 @@ function JapanSoul() {
                 </div>
               </div>
 
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Flame" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Хаконе: Искусство и дрожь земли</h3>
+                      <span className="text-purple-600 font-semibold">20 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Waves" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Озеро Аси и тории на воде</p>
+                          <p className="text-gray-700">Легендарное озеро Аси (Асиноко) с видом на Фудзи. Красные ворота-тории святилища Хаконе-дзиндзя, стоящие прямо в воде — один из самых узнаваемых видов Японии.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Flame" size={20} className="text-orange-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Овакудани: Долина гейзеров</p>
+                          <p className="text-gray-700">Активная вулканическая долина с серными источниками и паром, вырывающимся из земли. Дрожь земли и сила стихии. Легендарные «чёрные яйца», сваренные в горячих источниках.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Palette" size={20} className="text-green-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Музей под открытым небом в Хаконе</p>
+                          <p className="text-gray-700">Уникальный музей современного искусства среди природы. Скульптуры мировых мастеров в гармонии с горным ландшафтом. Искусство и созерцание.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Droplets" size={20} className="text-cyan-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Вечер: Онсэн в отеле</p>
+                          <p className="text-gray-700">Знакомство с ритуалом омывания души и тела в японских горячих источниках (онсэн). Глубокое расслабление после дня, проведённого среди вулканических стихий.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-amber-50 border-2 border-orange-200 rounded-xl p-6 md:p-8 text-center">
                 <Icon name="Clock" size={48} className="text-orange-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
