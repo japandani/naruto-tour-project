@@ -432,6 +432,64 @@ function JapanSoul() {
                 </div>
               </div>
 
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Sparkles" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Киото: Святая святых</h3>
+                      <span className="text-amber-600 font-semibold">22 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Sunrise" size={20} className="text-orange-500 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Утро: Киёмидзу-дэра</p>
+                          <p className="text-gray-700">Храм Чистой Воды (Киёмидзу-дэра) — один из самых известных храмов Японии. Деревянная терраса на сваях над обрывом, священный источник и захватывающий вид на Киото.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Trees" size={20} className="text-green-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Арасияма: Бамбуковый лес</p>
+                          <p className="text-gray-700">Прогулка сквозь знаменитую бамбуковую рощу Арасиямы. Шелест стволов на ветру как медитация. Мост Тогэцукё и храм Тэнрю-дзи (объект ЮНЕСКО).</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Gem" size={20} className="text-yellow-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Кинкаку-дзи: Золотой павильон</p>
+                          <p className="text-gray-700">Храм, покрытый сусальным золотом, отражающийся в зеркальной глади пруда. Символ киотской красоты и гармонии. Каждый угол — идеальный кадр.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="CircleDot" size={20} className="text-gray-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Сад 15 камней: Ловим дзен</p>
+                          <p className="text-gray-700">Рёан-дзи — самый известный каменный сад дзен в мире. 15 камней на белом гравии. Созерцание перед закрытием храма, когда туристов почти нет. Что вы увидите?</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Building2" size={20} className="text-slate-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">ЖД вокзал Киото: Футуризм</p>
+                          <p className="text-gray-700">Архитектурное чудо — один из самых впечатляющих вокзалов мира. Стекло, металл, эскалаторы в небо. Немного шопинга в торговом центре вокзала.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="ArrowLeft" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Возвращение в Осаку</p>
+                          <p className="text-gray-700">Вечером возвращаемся в Осаку на ночлег после насыщенного дня в древней столице.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-amber-50 border-2 border-orange-200 rounded-xl p-6 md:p-8 text-center">
                 <Icon name="Clock" size={48} className="text-orange-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
