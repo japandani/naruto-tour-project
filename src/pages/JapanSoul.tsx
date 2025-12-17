@@ -381,6 +381,57 @@ function JapanSoul() {
                 </div>
               </div>
 
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Mountain" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Прощание с Фудзи и путь в Осаку</h3>
+                      <span className="text-rose-600 font-semibold">21 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Sunrise" size={20} className="text-amber-500 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Рассвет: Пагода Чурейто</p>
+                          <p className="text-gray-700">Ранний подъём, пока все спят. Восхождение на пагоду Чурейто с надеждой проснуться вместе с Фудзиямой. Классический вид — красная пагода на фоне священной горы.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Waves" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Пять озёр Фудзи</p>
+                          <p className="text-gray-700">Экскурсия по озёрной системе у подножия Фудзи. Зеркальные отражения священной горы в водах озёр — медитативное созерцание природной гармонии.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Flower2" size={20} className="text-pink-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Парк сибазакура</p>
+                          <p className="text-gray-700">Парк цветения флоксов (сибазакура) — розовый ковёр из 800 тысяч цветов на фоне Фудзи. Невероятное зрелище весенней Японии.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Train" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">После обеда: Синкансэн в Осаку</p>
+                          <p className="text-gray-700">Скоростной поезд-пуля синкансэн. Путешествие со скоростью 285 км/ч — японское чудо технологий и пунктуальности. Прибытие в Осаку, размещение в отеле.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Moon" size={20} className="text-violet-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Вечер: Район Синсайбаси</p>
+                          <p className="text-gray-700">Пешая прогулка по одному из главных развлекательных районов Осаки — Синсайбаси. Неоновые огни, шопинг, уличная еда и энергия второго по величине города Японии.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-amber-50 border-2 border-orange-200 rounded-xl p-6 md:p-8 text-center">
                 <Icon name="Clock" size={48} className="text-orange-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">
