@@ -1,34 +1,15 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
 
 function JapanSoul() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50">
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-3 flex justify-center items-center">
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-2xl">🇯🇵</span>
             <span className="font-bold text-orange-600">JAPAN: ДА!</span>
           </Link>
-
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2"
-            aria-label="Toggle menu"
-          >
-            <Icon name={isMenuOpen ? "X" : "Menu"} size={24} />
-          </button>
-
-          <nav className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex absolute md:relative top-full left-0 right-0 md:top-0 bg-white md:bg-transparent flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 p-4 md:p-0 shadow-lg md:shadow-none`}>
-            <Link to="/" className="text-gray-700 hover:text-orange-600 transition">Главная</Link>
-            <Link to="/tours" className="text-gray-700 hover:text-orange-600 transition">Туры</Link>
-            <Link to="/blog" className="text-gray-700 hover:text-orange-600 transition">Блог</Link>
-            <Link to="/about" className="text-gray-700 hover:text-orange-600 transition">О нас</Link>
-            <Link to="/contact" className="text-orange-600 font-semibold hover:text-orange-700 transition">Связаться</Link>
-          </nav>
         </div>
       </header>
 
