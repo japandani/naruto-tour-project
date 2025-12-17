@@ -51,7 +51,11 @@ function JapanSoul() {
             <div className="flex flex-wrap gap-4 justify-center text-sm md:text-base">
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Calendar" size={20} />
-                <span>10 дней / 9 ночей</span>
+                <span>9 ночей + транзит</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                <Icon name="MapPin" size={20} />
+                <span>15-25 апреля 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Users" size={20} />
@@ -89,89 +93,54 @@ function JapanSoul() {
             </h2>
             
             <div className="space-y-6">
-              {[
-                {
-                  day: "День 1-2",
-                  title: "Киото: Врата духовности",
-                  activities: [
-                    "Прибытие в Киото — древнюю столицу",
-                    "Посещение храма Рёан-дзи и медитация у каменного сада",
-                    "Знакомство с дзен-философией",
-                    "Вечерняя прогулка по философской тропе"
-                  ],
-                  icon: "Mountain"
-                },
-                {
-                  day: "День 3-4",
-                  title: "Коя-сан: Жизнь в монастыре",
-                  activities: [
-                    "Переезд на священную гору Коя-сан",
-                    "Проживание в храмовом комплексе (shukubo)",
-                    "Утренняя молитва с монахами (5:30 утра)",
-                    "Вегетарианская монастырская кухня (shojin ryori)",
-                    "Медитация дзадзэн под руководством настоятеля",
-                    "Ночная прогулка по кладбищу Окуноин при свете фонарей"
-                  ],
-                  icon: "Church"
-                },
-                {
-                  day: "День 5-6",
-                  title: "Исэ: Святилище богини солнца",
-                  activities: [
-                    "Паломничество в главное святилище Японии — Исэ-дзингу",
-                    "Ритуал очищения мисоги у священной реки",
-                    "Изучение синтоизма и понимание ками (духов природы)",
-                    "Прогулка по священному лесу возрастом 2000 лет"
-                  ],
-                  icon: "TreePine"
-                },
-                {
-                  day: "День 7-8",
-                  title: "Нара: Практики осознанности",
-                  activities: [
-                    "Храм Тодай-дзи и Великий Будда",
-                    "Практика ходячей медитации (кинхин) в парке с оленями",
-                    "Чайная церемония (садо) с мастером",
-                    "Каллиграфия (сёдо) как медитативная практика",
-                    "Вечернее пение сутр"
-                  ],
-                  icon: "Brush"
-                },
-                {
-                  day: "День 9-10",
-                  title: "Киото: Интеграция опыта",
-                  activities: [
-                    "Утренняя медитация в храме Нандзэн-дзи",
-                    "Создание личного алтаря (буцудан)",
-                    "Церемония прощания и обмен впечатлениями",
-                    "Выдача сертификата участника",
-                    "Свободное время для личной практики"
-                  ],
-                  icon: "BookOpen"
-                }
-              ].map((day, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white">
-                      <Icon name={day.icon} size={24} />
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Plane" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Прилёт в Нариту</h3>
+                      <span className="text-orange-600 font-semibold">15 апреля</span>
                     </div>
-                    <div className="flex-1">
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                        <h3 className="text-2xl font-bold text-gray-800">{day.title}</h3>
-                        <span className="text-orange-600 font-semibold">{day.day}</span>
-                      </div>
-                      <ul className="space-y-2">
-                        {day.activities.map((activity, i) => (
-                          <li key={i} className="flex items-start gap-2 text-gray-700">
-                            <Icon name="Check" size={20} className="text-green-600 flex-shrink-0 mt-0.5" />
-                            <span>{activity}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Участники прилетают разными рейсами в международный аэропорт Нарита. 
+                      Встреча в аэропорту и трансфер в отель для ночлега. 
+                      Это транзитная ночь перед началом основной программы.
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Building2" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Токио: Начало пути</h3>
+                      <span className="text-orange-600 font-semibold">16-18 апреля (3 ночи)</span>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Переезд в Токио и размещение в отеле на три ночи. 
+                      Начало духовного путешествия с погружением в японскую культуру и традиции. 
+                      Детальная программа будет объявлена дополнительно.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-amber-50 border-2 border-orange-200 rounded-xl p-6 md:p-8 text-center">
+                <Icon name="Clock" size={48} className="text-orange-600 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-gray-800 mb-3">
+                  Программа формируется
+                </h3>
+                <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                  Полная программа тура по дням будет опубликована в ближайшее время. 
+                  Свяжитесь с нами, чтобы узнать актуальную информацию и забронировать место.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -250,10 +219,11 @@ function JapanSoul() {
 
                 <div className="mt-8 pt-8 border-t border-gray-200">
                   <div className="text-center">
-                    <p className="text-gray-600 mb-2">Стоимость тура</p>
-                    <p className="text-4xl font-bold text-orange-600 mb-4">€2,850</p>
-                    <p className="text-sm text-gray-500">На человека при двухместном размещении</p>
-                    <p className="text-sm text-gray-500 mt-2">Доплата за одноместное: €450</p>
+                    <div className="bg-orange-50 rounded-lg p-6">
+                      <Icon name="Info" size={32} className="text-orange-600 mx-auto mb-3" />
+                      <p className="text-lg font-semibold text-gray-800 mb-2">Стоимость уточняется</p>
+                      <p className="text-sm text-gray-600">Свяжитесь с нами для получения актуальной информации о цене тура</p>
+                    </div>
                   </div>
                 </div>
               </div>
