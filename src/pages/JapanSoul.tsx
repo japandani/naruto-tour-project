@@ -541,6 +541,57 @@ function JapanSoul() {
                 </div>
               </div>
 
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Flower2" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Осака: Практики, ханами и прощальный вечер</h3>
+                      <span className="text-pink-600 font-semibold">24 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Sunrise" size={20} className="text-orange-500 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Утренние практики и ханами</p>
+                          <p className="text-gray-700">Парк замка Осака — утренняя медитация и духовные практики среди цветущей сакуры. Ханами (любование цветами) как завершающая церемония. Розовые лепестки падают на татами жизни.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Building2" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Умеда Скай Билдинг</p>
+                          <p className="text-gray-700">Подъём на "Плавающую обсерваторию" — футуристический небоскрёб высотой 173 метра. Панорама 360° на всю Осаку. Взгляд на город с высоты птичьего полёта — метафора пути, который мы прошли.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Waves" size={20} className="text-cyan-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Прогулка по каналам Дотонбори</p>
+                          <p className="text-gray-700">Знаменитый район с неоновыми вывесками, мостами над каналами и атмосферой вечной молодости. Гигантский краб, бегущий человек Гурико, сотни огней — сердце ночной Осаки.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="ShoppingBag" size={20} className="text-purple-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Шопинг в Дотонбори и Синсайбаси</p>
+                          <p className="text-gray-700">Последняя возможность купить сувениры, косметику, традиционные товары. Улица Синсайбаси-судзи — торговая артерия длиной 600 метров под крышей.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Wine" size={20} className="text-rose-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Прощальный гала-ужин на высоте</p>
+                          <p className="text-gray-700">Ресторан на верхнем этаже небоскрёба Осаки. Панорамный вид на ночной город, японская кухня высокого класса, тосты за путешествие и найденных друзей. Кульминация всего тура — благодарность за пройденный путь.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-gradient-to-br from-orange-100 via-rose-100 to-purple-100 rounded-xl shadow-lg p-6 md:p-8">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-rose-500 rounded-full flex items-center justify-center text-white">
