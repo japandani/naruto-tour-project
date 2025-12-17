@@ -115,18 +115,50 @@ function JapanSoul() {
               <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white">
-                    <Icon name="Building2" size={24} />
+                    <Icon name="Torii" size={24} />
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-gray-800">Токио: Начало пути</h3>
-                      <span className="text-orange-600 font-semibold">16-18 апреля (3 ночи)</span>
+                      <h3 className="text-2xl font-bold text-gray-800">Токио: День первый</h3>
+                      <span className="text-orange-600 font-semibold">16 апреля</span>
                     </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      Переезд в Токио и размещение в отеле на три ночи. 
-                      Начало духовного путешествия с погружением в японскую культуру и традиции. 
-                      Детальная программа будет объявлена дополнительно.
-                    </p>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Sunrise" size={20} className="text-amber-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Утро: Знакомство с синто</p>
+                          <p className="text-gray-700">Храм Мэйдзи-дзингу — главное синтоистское святилище Токио, посвящённое императору Мэйдзи. Погружение в атмосферу священного леса и понимание основ синтоизма.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Building2" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">День: Панорама мегаполиса</p>
+                          <p className="text-gray-700">Подъём на здание столичной мэрии Токио (Tokyo Metropolitan Government Building) — бесплатная смотровая площадка с потрясающим видом на город и, при удаче, на Фудзи.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Sparkles" size={20} className="text-pink-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Харадзюку: В гущу событий</p>
+                          <p className="text-gray-700">Погружение в молодёжную культуру Японии — улица Такэсита, креативная мода, кавайные магазины и уличная еда. Контраст традиций и современности.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Waves" size={20} className="text-teal-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">После обеда: Одайба</p>
+                          <p className="text-gray-700">Футуристический остров в Токийском заливе, Статуя Свободы (японская копия), Rainbow Bridge и потрясающие виды на залив.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Moon" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Вечер: Сибуя и легенда Хатико</p>
+                          <p className="text-gray-700">Метро-экскурсия в Сибую — знаменитый скрэмбл-перекрёсток (самый загруженный в мире) и памятник верному псу Хатико, символу преданности.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
