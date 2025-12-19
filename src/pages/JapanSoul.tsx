@@ -32,11 +32,11 @@ function JapanSoul() {
             <div className="flex flex-wrap gap-4 justify-center text-sm md:text-base">
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Calendar" size={20} />
-                <span>9 ночей + транзит</span>
+                <span>10 ночей + транзит</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="MapPin" size={20} />
-                <span>15-25 апреля 2025</span>
+                <span>15-26 апреля 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Users" size={20} />
@@ -459,13 +459,64 @@ function JapanSoul() {
 
               <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Sparkles" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Киото: Храмы и кимоно</h3>
+                      <span className="text-purple-600 font-semibold">23 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Trees" size={20} className="text-green-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Утро: Арасияма</p>
+                          <p className="text-gray-700">Прогулка сквозь знаменитую бамбуковую рощу Арасиямы. Шелест стволов на ветру как медитация. Возможность аренды кимоно для фотосессии среди бамбука и традиционных улочек.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Building2" size={20} className="text-red-700 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Сандзюсангэн-до: Тысяча Каннон</p>
+                          <p className="text-gray-700">Храм тысячи статуй богини милосердия Каннон. 1001 золотая фигура в едином зале — невероятное зрелище и духовная мощь. Одно из самых впечатляющих мест Киото.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Gem" size={20} className="text-yellow-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Кинкаку-дзи: Золотой павильон</p>
+                          <p className="text-gray-700">Храм, покрытый сусальным золотом, отражающийся в зеркальной глади пруда. Символ киотской красоты и гармонии. Каждый угол — идеальный кадр.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="CircleDot" size={20} className="text-gray-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Рёан-дзи: Сад 15 камней</p>
+                          <p className="text-gray-700">Самый известный каменный сад дзен в мире. 15 камней на белом гравии — загадка, которую каждый решает по-своему. Созерцание и поиск внутренней тишины.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Moon" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Ночь в Киото</p>
+                          <p className="text-gray-700">Вторая ночь в Киото. Вечер свободного времени для прогулок по древней столице или отдыха в отеле.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white">
                     <Icon name="TreePine" size={24} />
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Нара и Коясан: Уединение и святыня</h3>
-                      <span className="text-emerald-600 font-semibold">23 апреля</span>
+                      <span className="text-emerald-600 font-semibold">24 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -516,7 +567,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Осака: Практики, ханами и прощальный вечер</h3>
-                      <span className="text-pink-600 font-semibold">24 апреля</span>
+                      <span className="text-pink-600 font-semibold">25 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -567,7 +618,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Прощание с Японией</h3>
-                      <span className="text-rose-600 font-semibold">25 апреля</span>
+                      <span className="text-rose-600 font-semibold">26 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
