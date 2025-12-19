@@ -32,11 +32,11 @@ function JapanSoul() {
             <div className="flex flex-wrap gap-4 justify-center text-sm md:text-base">
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Calendar" size={20} />
-                <span>10 ночей + транзит</span>
+                <span>11 ночей + транзит</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="MapPin" size={20} />
-                <span>15-26 апреля 2025</span>
+                <span>15-27 апреля 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Users" size={20} />
@@ -561,13 +561,71 @@ function JapanSoul() {
 
               <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Squirrel" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Нара: Олени и древние храмы</h3>
+                      <span className="text-amber-600 font-semibold">25 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="Train" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Утро: Поезд в Осаку и далее в Нару</p>
+                          <p className="text-gray-700">Утренний поезд из Хиросимы в Осаку, затем местный поезд в древнюю столицу Нару (45 минут). Начало последнего дня духовных открытий.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Trees" size={20} className="text-green-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Национальный парк Нары</p>
+                          <p className="text-gray-700">Более 1200 священных оленей свободно гуляют по парку — посланники богов в синтоизме. Кормление оленей специальными крекерами (сэмбэй), уединение с природой.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Church" size={20} className="text-orange-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Храм Тодай-дзи</p>
+                          <p className="text-gray-700">Великий Будда (Дайбуцу) высотой 15 метров — одна из крупнейших бронзовых статуй в мире. Деревянный зал храма VIII века поражает масштабом и величием.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Sparkles" size={20} className="text-pink-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Касуга-тайся</p>
+                          <p className="text-gray-700">Синтоистское святилище с тысячами каменных и бронзовых фонарей. Прогулка по священным тропам среди древних криптомерий.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="ArrowLeft" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Возвращение в Осаку</p>
+                          <p className="text-gray-700">После обеда возвращаемся в Осаку. Размещение в отеле.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Moon" size={20} className="text-violet-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Вечер: Район Синсайбаси</p>
+                          <p className="text-gray-700">Вечерняя прогулка по главному развлекательному району Осаки — Синсайбаси. Неоновые огни, шопинг, уличная еда и энергия второго по величине города Японии.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white">
                     <Icon name="Flower2" size={24} />
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Осака: Практики, ханами и прощальный вечер</h3>
-                      <span className="text-pink-600 font-semibold">25 апреля</span>
+                      <span className="text-pink-600 font-semibold">26 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -618,7 +676,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Прощание с Японией</h3>
-                      <span className="text-rose-600 font-semibold">26 апреля</span>
+                      <span className="text-rose-600 font-semibold">27 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
