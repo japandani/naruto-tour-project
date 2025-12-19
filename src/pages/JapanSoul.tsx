@@ -311,7 +311,7 @@ function JapanSoul() {
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-gray-800">Прощание с Фудзи и путь в Осаку</h3>
+                      <h3 className="text-2xl font-bold text-gray-800">Прощание с Фудзи и путь в Такаяму</h3>
                       <span className="text-rose-600 font-semibold">20 апреля</span>
                     </div>
                     <div className="space-y-3">
@@ -337,17 +337,17 @@ function JapanSoul() {
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="Train" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <Icon name="Mountain" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">После обеда: Синкансэн в Осаку</p>
-                          <p className="text-gray-700">Скоростной поезд-пуля синкансэн. Путешествие со скоростью 285 км/ч — японское чудо технологий и пунктуальности. Прибытие в Осаку, размещение в отеле.</p>
+                          <p className="font-semibold text-gray-800">После обеда: Дорога в Японские Альпы</p>
+                          <p className="text-gray-700">Переезд в горный город Такаяму — сердце Японских Альп. Живописный путь через горные перевалы и традиционные деревни.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="Moon" size={20} className="text-violet-600 flex-shrink-0 mt-1" />
+                        <Icon name="Waves" size={20} className="text-violet-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">Вечер: Район Синсайбаси</p>
-                          <p className="text-gray-700">Пешая прогулка по одному из главных развлекательных районов Осаки — Синсайбаси. Неоновые огни, шопинг, уличная еда и энергия второго по величине города Японии.</p>
+                          <p className="font-semibold text-gray-800">Вечер: Онсен и традиционный рёкан</p>
+                          <p className="text-gray-700">Размещение в традиционной гостинице рёкан с горячими источниками онсен. Погружение в целебные воды с видом на горы — очищение тела и духа через стихию воды.</p>
                         </div>
                       </div>
                     </div>
