@@ -413,50 +413,43 @@ function JapanSoul() {
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-gray-800">Киото: Святая святых</h3>
+                      <h3 className="text-2xl font-bold text-gray-800">Каназава — Киото: Путь в Святую столицу</h3>
                       <span className="text-amber-600 font-semibold">22 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
-                        <Icon name="Sunrise" size={20} className="text-orange-500 flex-shrink-0 mt-1" />
+                        <Icon name="Flower2" size={20} className="text-green-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">Утро: Киёмидзу-дэра</p>
-                          <p className="text-gray-700">Храм Чистой Воды (Киёмидзу-дэра) — один из самых известных храмов Японии. Деревянная терраса на сваях над обрывом, священный источник и захватывающий вид на Киото.</p>
+                          <p className="font-semibold text-gray-800">Утро: Сад Кэнроку-эн</p>
+                          <p className="text-gray-700">Один из трёх великих садов Японии — шедевр ландшафтного искусства. Пруды, мосты, фонари, цветущие азалии и ирисы. Воплощение идеальной красоты природы.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="Trees" size={20} className="text-green-600 flex-shrink-0 mt-1" />
+                        <Icon name="Mountain" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">Арасияма: Бамбуковый лес</p>
-                          <p className="text-gray-700">Прогулка сквозь знаменитую бамбуковую рощу Арасиямы. Шелест стволов на ветру как медитация. Мост Тогэцукё и храм Тэнрю-дзи (объект ЮНЕСКО).</p>
+                          <p className="font-semibold text-gray-800">По дороге: Скалы Тодзинбо</p>
+                          <p className="text-gray-700">Остановка у драматических базальтовых скал на берегу Японского моря. Вертикальные столбы застывшей лавы высотой до 25 метров — геологическое чудо и мощь природы.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="Gem" size={20} className="text-yellow-600 flex-shrink-0 mt-1" />
+                        <Icon name="Sparkles" size={20} className="text-pink-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">Кинкаку-дзи: Золотой павильон</p>
-                          <p className="text-gray-700">Храм, покрытый сусальным золотом, отражающийся в зеркальной глади пруда. Символ киотской красоты и гармонии. Каждый угол — идеальный кадр.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Icon name="CircleDot" size={20} className="text-gray-600 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-gray-800">Сад 15 камней: Ловим дзен</p>
-                          <p className="text-gray-700">Рёан-дзи — самый известный каменный сад дзен в мире. 15 камней на белом гравии. Созерцание перед закрытием храма, когда туристов почти нет. Что вы увидите?</p>
+                          <p className="font-semibold text-gray-800">Вечер: Район Гион</p>
+                          <p className="text-gray-700">Прибытие в Киото. Прогулка по знаменитому кварталу гейш Гион — деревянные дома тяя, фонари, узкие улочки. С удачей можете встретить настоящую гейшу или майко.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
                         <Icon name="Building2" size={20} className="text-slate-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">ЖД вокзал Киото: Футуризм</p>
-                          <p className="text-gray-700">Архитектурное чудо — один из самых впечатляющих вокзалов мира. Стекло, металл, эскалаторы в небо. Немного шопинга в торговом центре вокзала.</p>
+                          <p className="font-semibold text-gray-800">ЖД вокзал Киото: Футуристические врата</p>
+                          <p className="text-gray-700">Архитектурное чудо — один из самых впечатляющих вокзалов мира. Стекло, металл, эскалаторы в небо. Контраст древности и будущего в сердце Святой столицы.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="ArrowLeft" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <Icon name="Moon" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">Возвращение в Осаку</p>
-                          <p className="text-gray-700">Вечером возвращаемся в Осаку на ночлег после насыщенного дня в древней столице.</p>
+                          <p className="font-semibold text-gray-800">Ночь в Киото</p>
+                          <p className="text-gray-700">Размещение в отеле Киото. Ночлег в древней столице, где каждый камень хранит историю.</p>
                         </div>
                       </div>
                     </div>
