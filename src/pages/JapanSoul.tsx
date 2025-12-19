@@ -32,11 +32,11 @@ function JapanSoul() {
             <div className="flex flex-wrap gap-4 justify-center text-sm md:text-base">
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Calendar" size={20} />
-                <span>8 ночей + транзит</span>
+                <span>9 ночей + транзит</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="MapPin" size={20} />
-                <span>15-24 апреля 2025</span>
+                <span>15-25 апреля 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Users" size={20} />
@@ -357,13 +357,64 @@ function JapanSoul() {
 
               <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Mountain" size={24} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <h3 className="text-2xl font-bold text-gray-800">Японские Альпы: От Такаямы до Каназавы</h3>
+                      <span className="text-teal-600 font-semibold">21 апреля</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <Icon name="ShoppingBasket" size={20} className="text-orange-500 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Утро: Утренний рынок Такаямы</p>
+                          <p className="text-gray-700">Традиционный рынок Асаичи — местные фермеры, свежие овощи, фрукты и уличная еда. Атмосфера настоящей японской провинции и гостеприимство горожан.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Wine" size={20} className="text-amber-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Санмачи-дори: Старый квартал</p>
+                          <p className="text-gray-700">Прогулка по историческому кварталу Санмачи — деревянные дома эпохи Эдо, саке-пивоварни, мисо-лавки и магазины местных ремёсел. Дегустация сакэ и покупка сувениров.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Home" size={20} className="text-green-700 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Сиракава-го: Деревня гассё-дзукури</p>
+                          <p className="text-gray-700">Объект всемирного наследия ЮНЕСКО — деревня с уникальными соломенными домами «молящихся рук». Путешествие в прошлое Японии, горные пейзажи и традиционная архитектура.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="MapPin" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Каназава: Обзорная экскурсия</p>
+                          <p className="text-gray-700">Прибытие в Каназаву — город искусств и традиций. Сад Кэнроку-эн (один из трёх великих садов Японии), замок Каназавы и район гейш Хигаси Тяя.</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <Icon name="Moon" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-semibold text-gray-800">Вечер: Квартал самураев Нагамати</p>
+                          <p className="text-gray-700">Вечерняя прогулка по старинному кварталу самураев с глиняными стенами и узкими каналами. Атмосфера феодальной Японии под вечерними фонарями. Ночь в отеле Каназавы.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white">
                     <Icon name="Sparkles" size={24} />
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Киото: Святая святых</h3>
-                      <span className="text-amber-600 font-semibold">21 апреля</span>
+                      <span className="text-amber-600 font-semibold">22 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -421,7 +472,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Нара и Коясан: Уединение и святыня</h3>
-                      <span className="text-emerald-600 font-semibold">22 апреля</span>
+                      <span className="text-emerald-600 font-semibold">23 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -472,7 +523,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Осака: Практики, ханами и прощальный вечер</h3>
-                      <span className="text-pink-600 font-semibold">23 апреля</span>
+                      <span className="text-pink-600 font-semibold">24 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -523,7 +574,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Прощание с Японией</h3>
-                      <span className="text-rose-600 font-semibold">24 апреля</span>
+                      <span className="text-rose-600 font-semibold">25 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
