@@ -18,7 +18,7 @@ function JapanSoul() {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
-              backgroundImage: `url('https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/9daba90c-b350-494f-a153-9052da64d46f.jpg')`,
+              backgroundImage: `url('https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/5e30102c-08ef-4d25-b006-e6d129d00c5b.jpg')`,
               filter: 'brightness(0.7)'
             }}
           />
