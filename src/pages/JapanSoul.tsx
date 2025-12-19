@@ -151,7 +151,7 @@ function JapanSoul() {
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-gray-800">Токио: День третий — Гастрономия и культура</h3>
+                      <h3 className="text-2xl font-bold text-gray-800">Токио: День второй — Гастрономия и культура</h3>
                       <span className="text-red-600 font-semibold">17 апреля</span>
                     </div>
                     <div className="space-y-3">
