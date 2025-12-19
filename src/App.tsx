@@ -9,6 +9,7 @@ import TourDetails from "./pages/TourDetails";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import JapanSoul from "./pages/JapanSoul";
+import SAKURA2026 from "./pages/SAKURA2026";
 import NotFound from "./pages/NotFound";
 import TelegramButton from "./components/TelegramButton";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/JapanSoul" element={<JapanSoul />} />
+          <Route path="/SAKURA2026" element={<SAKURA2026 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
