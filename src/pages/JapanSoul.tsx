@@ -510,48 +510,48 @@ function JapanSoul() {
 
               <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white">
-                    <Icon name="TreePine" size={24} />
+                  <div className="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white">
+                    <Icon name="Heart" size={24} />
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-gray-800">Нара и Коясан: Уединение и святыня</h3>
-                      <span className="text-emerald-600 font-semibold">24 апреля</span>
+                      <h3 className="text-2xl font-bold text-gray-800">Хиросима: Память и святыня на воде</h3>
+                      <span className="text-red-600 font-semibold">24 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
-                        <Icon name="Squirrel" size={20} className="text-amber-700 flex-shrink-0 mt-1" />
+                        <Icon name="Train" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">Нара: Олени в национальном парке</p>
-                          <p className="text-gray-700">Более 1200 священных оленей свободно гуляют по парку Нары — посланники богов в синтоизме. Уединение с природой, кормление оленей специальными крекерами (сэмбэй).</p>
+                          <p className="font-semibold text-gray-800">Утро: Синкансэн в Хиросиму</p>
+                          <p className="text-gray-700">Утренний скоростной поезд из Киото в Хиросиму. Путешествие на поезде-пуле через западную Японию.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="Church" size={20} className="text-orange-600 flex-shrink-0 mt-1" />
+                        <Icon name="Flame" size={20} className="text-orange-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">Храмы Нары</p>
-                          <p className="text-gray-700">Тодай-дзи с Великим Буддой (15 метров), Касуга-тайся — синтоистское святилище с тысячами каменных фонарей. Погружение в древнюю столицу VIII века.</p>
+                          <p className="font-semibold text-gray-800">Мемориальный парк мира</p>
+                          <p className="text-gray-700">Парк памяти жертв атомной бомбардировки 1945 года. Купол Гэнбаку (объект ЮНЕСКО), Вечный огонь мира, Детский мемориал с тысячами бумажных журавликов. Место для размышлений о ценности мира.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="Mountain" size={20} className="text-purple-700 flex-shrink-0 mt-1" />
+                        <Icon name="Building2" size={20} className="text-gray-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">После обеда: Гора Коясан</p>
-                          <p className="text-gray-700">Подъём на священную гору Коясан — центр буддизма сингон и одно из самых святых мест Японии. 117 храмов среди гор и облаков.</p>
+                          <p className="font-semibold text-gray-800">Музей мира</p>
+                          <p className="text-gray-700">Мемориальный музей мира в Хиросиме — свидетельства выживших, артефакты, история трагедии и послание миру о важности мира.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="Moon" size={20} className="text-slate-700 flex-shrink-0 mt-1" />
+                        <Icon name="Waves" size={20} className="text-cyan-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">Кладбище Окуноин: Святыня святых</p>
-                          <p className="text-gray-700">Одно из самых священных кладбищ Японии с 200 000 могил среди величественных криптомерий возрастом до 600 лет. Мистическая атмосфера, покрытые мхом надгробия, разговоры по душам в тишине леса.</p>
+                          <p className="font-semibold text-gray-800">После обеда: Остров Миядзима</p>
+                          <p className="text-gray-700">Паром на священный остров Ицукусима (Миядзима). Знаменитые красные ворота тории в воде, храм Ицукусима-дзиндзя (объект ЮНЕСКО), ручные олени и древние леса.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
-                        <Icon name="ArrowLeft" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
+                        <Icon name="Moon" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
                         <div>
-                          <p className="font-semibold text-gray-800">К вечеру возвращение в Осаку</p>
-                          <p className="text-gray-700">После духовного дня среди святынь возвращаемся в Осаку на ночлег.</p>
+                          <p className="font-semibold text-gray-800">Ночь в Хиросиме</p>
+                          <p className="text-gray-700">Возвращение с острова, размещение в отеле Хиросимы. Вечер для осмысления впечатлений этого важного дня.</p>
                         </div>
                       </div>
                     </div>
