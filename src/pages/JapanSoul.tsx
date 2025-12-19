@@ -32,11 +32,11 @@ function JapanSoul() {
             <div className="flex flex-wrap gap-4 justify-center text-sm md:text-base">
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Calendar" size={20} />
-                <span>9 ночей + транзит</span>
+                <span>8 ночей + транзит</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="MapPin" size={20} />
-                <span>15-25 апреля 2025</span>
+                <span>15-24 апреля 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Users" size={20} />
@@ -146,71 +146,13 @@ function JapanSoul() {
 
               <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white">
-                    <Icon name="Mountain" size={24} />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                      <h3 className="text-2xl font-bold text-gray-800">Никко: Отступление в горы</h3>
-                      <span className="text-green-600 font-semibold">17 апреля</span>
-                    </div>
-                    <div className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <Icon name="TreePine" size={20} className="text-green-700 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-gray-800">Углубление в природу синто</p>
-                          <p className="text-gray-700">Поездка в горный Никко — священные горы и леса, где природа и духовность сплетаются воедино. Понимание синтоизма через величие природы.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Icon name="Church" size={20} className="text-amber-700 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-gray-800">Храмовый комплекс Тосёгу</p>
-                          <p className="text-gray-700">Прикосновение к буддизму в роскошном мавзолее сёгуна Токугавы Иэясу — объект ЮНЕСКО с легендарными «тремя обезьянами» и невероятной резьбой по дереву.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Icon name="Waves" size={20} className="text-blue-600 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-gray-800">Практика на озере Тюдзэндзи</p>
-                          <p className="text-gray-700">Медитативная практика у горного озера Тюдзэндзи в окружении гор. Созерцание воды как духовная практика в японской традиции.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Icon name="Droplets" size={20} className="text-cyan-600 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-gray-800">Водопад Кэгон</p>
-                          <p className="text-gray-700">Один из трёх самых красивых водопадов Японии высотой 97 метров. Созерцание силы природы и её очищающей энергии.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Icon name="Moon" size={20} className="text-purple-600 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-gray-800">Возвращение в Токио</p>
-                          <p className="text-gray-700">Возвращение после дня на природе.</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <Icon name="Lightbulb" size={20} className="text-yellow-500 flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-semibold text-gray-800">Вечер: Кабукитё в Синдзюку</p>
-                          <p className="text-gray-700">Погружение в эйфорию ночной жизни Токио — район Кабукитё, неоновые огни, рестораны и бары. Контраст дневной тишины гор с энергией мегаполиса.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white">
                     <Icon name="UtensilsCrossed" size={24} />
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Токио: День третий — Гастрономия и культура</h3>
-                      <span className="text-red-600 font-semibold">18 апреля</span>
+                      <span className="text-red-600 font-semibold">17 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -268,7 +210,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Камакура и стихия океана</h3>
-                      <span className="text-blue-600 font-semibold">19 апреля</span>
+                      <span className="text-blue-600 font-semibold">18 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -326,7 +268,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Хаконе: Искусство и дрожь земли</h3>
-                      <span className="text-purple-600 font-semibold">20 апреля</span>
+                      <span className="text-purple-600 font-semibold">19 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -370,7 +312,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Прощание с Фудзи и путь в Осаку</h3>
-                      <span className="text-rose-600 font-semibold">21 апреля</span>
+                      <span className="text-rose-600 font-semibold">20 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -421,7 +363,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Киото: Святая святых</h3>
-                      <span className="text-amber-600 font-semibold">22 апреля</span>
+                      <span className="text-amber-600 font-semibold">21 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -479,7 +421,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Нара и Коясан: Уединение и святыня</h3>
-                      <span className="text-emerald-600 font-semibold">23 апреля</span>
+                      <span className="text-emerald-600 font-semibold">22 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -530,7 +472,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Осака: Практики, ханами и прощальный вечер</h3>
-                      <span className="text-pink-600 font-semibold">24 апреля</span>
+                      <span className="text-pink-600 font-semibold">23 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -581,14 +523,14 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Прощание с Японией</h3>
-                      <span className="text-rose-600 font-semibold">25 апреля</span>
+                      <span className="text-rose-600 font-semibold">24 апреля</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
                         <Icon name="Plane" size={20} className="text-indigo-600 flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-semibold text-gray-800">День отъезда</p>
-                          <p className="text-gray-700">Трансфер в аэропорт Кансай (Осака). Прощание с Японией после 10 дней духовного путешествия.</p>
+                          <p className="text-gray-700">Трансфер в аэропорт Кансай (Осака). Прощание с Японией после 9 дней духовного путешествия.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
