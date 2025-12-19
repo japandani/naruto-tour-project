@@ -36,7 +36,7 @@ function JapanSoul() {
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="MapPin" size={20} />
-                <span>15-27 апреля 2025</span>
+                <span>12-24 мая 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Icon name="Users" size={20} />
@@ -82,7 +82,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Прилёт в Нариту</h3>
-                      <span className="text-orange-600 font-semibold">15 апреля</span>
+                      <span className="text-orange-600 font-semibold">12 мая</span>
                     </div>
                     <p className="text-gray-700 leading-relaxed">
                       Участники прилетают разными рейсами в международный аэропорт Нарита. 
@@ -101,7 +101,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Токио: День первый</h3>
-                      <span className="text-orange-600 font-semibold">16 апреля</span>
+                      <span className="text-orange-600 font-semibold">13 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -152,7 +152,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Токио: День второй — Гастрономия и культура</h3>
-                      <span className="text-red-600 font-semibold">17 апреля</span>
+                      <span className="text-red-600 font-semibold">14 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -210,7 +210,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Камакура и стихия океана</h3>
-                      <span className="text-blue-600 font-semibold">18 апреля</span>
+                      <span className="text-blue-600 font-semibold">15 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -268,7 +268,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Хаконе: Искусство и дрожь земли</h3>
-                      <span className="text-purple-600 font-semibold">19 апреля</span>
+                      <span className="text-purple-600 font-semibold">16 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -312,7 +312,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Прощание с Фудзи и путь в Такаяму</h3>
-                      <span className="text-rose-600 font-semibold">20 апреля</span>
+                      <span className="text-rose-600 font-semibold">17 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -363,7 +363,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Японские Альпы: От Такаямы до Каназавы</h3>
-                      <span className="text-teal-600 font-semibold">21 апреля</span>
+                      <span className="text-teal-600 font-semibold">18 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -414,7 +414,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Каназава — Киото: Путь в Святую столицу</h3>
-                      <span className="text-amber-600 font-semibold">22 апреля</span>
+                      <span className="text-amber-600 font-semibold">19 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -465,7 +465,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Киото: Храмы и кимоно</h3>
-                      <span className="text-purple-600 font-semibold">23 апреля</span>
+                      <span className="text-purple-600 font-semibold">20 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -516,7 +516,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Хиросима: Память и святыня на воде</h3>
-                      <span className="text-red-600 font-semibold">24 апреля</span>
+                      <span className="text-red-600 font-semibold">24 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -567,7 +567,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Нара: Олени и древние храмы</h3>
-                      <span className="text-amber-600 font-semibold">25 апреля</span>
+                      <span className="text-amber-600 font-semibold">22 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -625,7 +625,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Осака: Практики, ханами и прощальный вечер</h3>
-                      <span className="text-pink-600 font-semibold">26 апреля</span>
+                      <span className="text-pink-600 font-semibold">23 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -676,7 +676,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Прощание с Японией</h3>
-                      <span className="text-rose-600 font-semibold">27 апреля</span>
+                      <span className="text-rose-600 font-semibold">24 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
