@@ -201,6 +201,98 @@ const JPKosher = () => {
                   </div>
                 </div>
 
+                {/* Day 3 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      3
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 3: רביעי, 18.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        טכנולוגיה, שווקים ונוף פנורמי
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        יום של חוויות מגוונות מגבהים שונים
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Morning - Akihabara */}
+                    <div className="bg-gradient-to-l from-cyan-50 to-transparent p-6 rounded-lg border-r-4 border-cyan-400">
+                      <h4 className="font-bold text-lg text-cyan-900 mb-3">⚡ בוקר</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/5489b641-39c0-4a90-b41e-6dbf9ba6b03c.jpg"
+                          alt="Akihabara Electric Town"
+                          className="w-40 h-32 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">ביקור באקיהברה (Akihabara)</p>
+                          <p className="text-slate-700 leading-relaxed">
+                            "עיר החשמל והתת-תרבות" – טכנולוגיה חדישה לצד עולם האנימה, המנגה והמשחקים. 🎮
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Ueno Market */}
+                    <div className="bg-gradient-to-l from-orange-50 to-transparent p-6 rounded-lg border-r-4 border-orange-400">
+                      <h4 className="font-bold text-lg text-orange-900 mb-3">🏪 משם</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/695e6a59-762f-4281-bef7-912b36519022.jpg"
+                          alt="Ameyoko Market Ueno"
+                          className="w-40 h-32 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">אוּאֵנוֹ (Ueno) - שוק אמייזה-יוקוצ'ו</p>
+                          <p className="text-slate-700 leading-relaxed">
+                            נסיעה קצרה לאוּאֵנוֹ. בקרו בשוק אמייזה-יוקוצ'ו (Ameya-Yokocho) השוקק – שוק פתוח עם אווירה נוסטלגית, דוכני אוכל, פירות ים טריים, ומזכרות. מקום מעולה לאווירה ולצילומים. 📸
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Afternoon - Observatory */}
+                    <div className="bg-gradient-to-l from-sky-50 to-transparent p-6 rounded-lg border-r-4 border-sky-400">
+                      <h4 className="font-bold text-lg text-sky-900 mb-3">🏙️ צהריים</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/8f5270df-1445-499a-80e2-4403d9e2663f.jpg"
+                          alt="Tokyo Metropolitan Government Building"
+                          className="w-40 h-32 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">תצפית הגג של בניין הממשל המטרופוליני</p>
+                          <p className="text-slate-700 leading-relaxed">
+                            נסיעה לרובע שינג'וקו. עלו לתצפית הגג של בניין הממשל המטרופוליני של טוקיו (Tokyo Metropolitan Government Building). הכניסה <span className="font-bold text-green-600">חינם</span>, והנוף מהקומה ה-45 הוא אחד היפים בעיר (ובמזל טוב – גם הר פוג'י). 🗻
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Afternoon - Shinjuku */}
+                    <div className="bg-gradient-to-l from-violet-50 to-transparent p-6 rounded-lg border-r-4 border-violet-400">
+                      <h4 className="font-bold text-lg text-violet-900 mb-3">🌺 אחר הצהריים</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        <span className="font-semibold">סיור ברובע שינג'וקו עצמו</span> – עיר בתוך עיר עם גורדי שחקים, חנויות כלבו ענקיות (כמו Isetan), ואתרים כמו גני שינג'וקו גְיוֹאֵן (יפים במיוחד אם הסאקורה פורחת מוקדם השנה). 🌸
+                      </p>
+                    </div>
+
+                    {/* Evening */}
+                    <div className="bg-gradient-to-l from-amber-50 to-transparent p-6 rounded-lg border-r-4 border-amber-400">
+                      <h4 className="font-bold text-lg text-amber-900 mb-3">🍷 ערב</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        ארוחת ערב כשרה אחרונה בבית חב"ד טוקיו, לסיכום החוויה הטוקיואית. 🙏
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
