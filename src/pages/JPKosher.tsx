@@ -106,6 +106,101 @@ const JPKosher = () => {
                   </div>
                 </div>
 
+                {/* Day 2 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      2
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 2: שלישי, 17.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        מסורת, קיסר ואופנה
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        יום מלא בניגודים יפניים אופייניים
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Morning */}
+                    <div className="bg-gradient-to-l from-red-50 to-transparent p-6 rounded-lg border-r-4 border-red-400">
+                      <h4 className="font-bold text-lg text-red-900 mb-3">🏮 בוקר</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/d96faee2-4171-466b-bec2-0c73a405d983.jpg"
+                          alt="Senso-ji Temple Asakusa"
+                          className="w-40 h-32 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">התחלה עתיקה ברובע אסאקוּסה (Asakusa)</p>
+                          <p className="text-slate-700 leading-relaxed mb-3">
+                            היכנסו דרך "שער הרעם" (קמינארימון) עם הפנס האדום הענק, ושוטטו ברחוב נאקמיסה-דורי השוקק דוכני מזכרות מסורתיות וחטיפים. בסופו, הגיעו למקדש סנסו-ג'י, מקדש הבודהה העתיק והחשוב בטוקיו.
+                          </p>
+                          <p className="text-slate-700 leading-relaxed text-sm">
+                            <span className="font-semibold">מאסאקוסה:</span> צאו לכיוון הנהר וצפו בקו הרקיע המודרני של רובע סומידה עם מגדל Tokyo Skytree ברקע (מראה מדהים לצילום).
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Afternoon - Imperial Palace */}
+                    <div className="bg-gradient-to-l from-green-50 to-transparent p-6 rounded-lg border-r-4 border-green-400">
+                      <h4 className="font-bold text-lg text-green-900 mb-3">🏯 צהריים</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/8635449a-d2f1-46fd-94c7-7faf4acb7f26.jpg"
+                          alt="Imperial Palace Tokyo"
+                          className="w-40 h-32 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">הארמון הקיסרי טוקיו</p>
+                          <p className="text-slate-700 leading-relaxed">
+                            נסיעה להארמון הקיסרי טוקיו. התהלכו בגנים החיצוניים היפהפיים ותצפו על גשר ניז'ובאשי המפורסם – סמל של טוקיו והכניסה הראשית לארמון.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Afternoon - Harajuku */}
+                    <div className="bg-gradient-to-l from-pink-50 to-transparent p-6 rounded-lg border-r-4 border-pink-400">
+                      <h4 className="font-bold text-lg text-pink-900 mb-3">🌸 אחר הצהריים</h4>
+                      <div className="flex gap-4 items-start mb-4">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/13f2c866-0fae-4c6a-9502-8c854e211250.jpg"
+                          alt="Meiji Shrine"
+                          className="w-40 h-32 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">אזור האראג'וקו (Harajuku)</p>
+                          <p className="text-slate-700 leading-relaxed">
+                            נסיעה לאזור האראג'וקו. התחילו במקדש מייג'י (Meiji Jingu) – נווה מדבר ירוק ושקט המוקדש לנשמות הקיסר מייג'י.
+                          </p>
+                        </div>
+                      </div>
+                      <p className="text-slate-700 leading-relaxed">
+                        <span className="font-semibold">אח"כ:</span> צללו לתוך ההמולה הצבעונית של רחוב טייקשיטה (Takeshita Street) – מקדש האופנה הצעירה, המתוקה והקיצונית. 🎀
+                      </p>
+                    </div>
+
+                    {/* Evening */}
+                    <div className="bg-gradient-to-l from-indigo-50 to-transparent p-6 rounded-lg border-r-4 border-indigo-400">
+                      <h4 className="font-bold text-lg text-indigo-900 mb-3">🌆 ערב</h4>
+                      <div className="space-y-3">
+                        <p className="text-slate-700 leading-relaxed">
+                          <span className="font-semibold">ארוחת ערב:</span> נסיעה לבית חב"ד טוקיו לארוחת ערב כשרה.
+                        </p>
+                        <p className="text-slate-700 leading-relaxed">
+                          <span className="font-semibold">אחרי הארוחה:</span> אם יש כוחות, בקרו באזור שינג'וקו להצצה אל חיי הלילה התוססים או חזרו לשיבויה. 🌃
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
