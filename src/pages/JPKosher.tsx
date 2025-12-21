@@ -564,6 +564,343 @@ const JPKosher = () => {
                   </div>
                 </div>
 
+                {/* Day 7 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      7
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 7: ראשון, 22.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        מסע מפוג'י לקיוטו, דרך נגויה ובמבוק
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        נסיעה ארוכה עם שתי עצירות מרתקות
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Morning - Departure */}
+                    <div className="bg-gradient-to-l from-sky-50 to-transparent p-6 rounded-lg border-r-4 border-sky-400">
+                      <h4 className="font-bold text-lg text-sky-900 mb-3">🚄 בוקר</h4>
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        יציאה מוקדמת מהווילה בקאוואגוצ'יקו. החזרת הרכב בתחנת הרכבת המרכזית באזור (למשל, תחנת Fujisan או Mishima).
+                      </p>
+                      <p className="text-sm text-amber-700 bg-amber-50 p-2 rounded mb-3">
+                        ⚠️ נקודה קריטית: וודאו שהשכרת הרכב מאפשרת החזרה בתחנה אחרת, רצוי ליד תחנת שינקנסן.
+                      </p>
+                      <p className="text-slate-700 leading-relaxed">
+                        <span className="font-semibold">נסיעה בשינקנסן:</span> עלייה על רכבת השינקנסן (קו טוקאידו) לכיוון קיוטו.
+                      </p>
+                    </div>
+
+                    {/* Nagoya Stop */}
+                    <div className="bg-gradient-to-l from-red-50 to-transparent p-6 rounded-lg border-r-4 border-red-400">
+                      <h4 className="font-bold text-lg text-red-900 mb-3">🏭 עצירה ראשונה: נגויה</h4>
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        <span className="font-semibold">מוזיאון טויוטה</span> (Toyota Commemorative Museum of Industry and Technology). יורדים בתחנת נגויה (Nagoya). 
+                      </p>
+                      <p className="text-slate-700 leading-relaxed mb-2">
+                        המוזיאון הזה מרתק גם אם אתם לא חובבי מכוניות. הוא מציג את ההיסטוריה של החברה מהמצאת הנולים ועד לרובוטיקה מתקדמת. תצוגה מעולה ואינטראקטיבית. 🤖
+                      </p>
+                      <p className="text-sm text-slate-600">
+                        💡 חשבו זמן: 2-3 שעות מספיקות. אחסנו את המזוודות בתאי הנעילה בתחנה.
+                      </p>
+                    </div>
+
+                    {/* Arashiyama */}
+                    <div className="bg-gradient-to-l from-green-50 to-transparent p-6 rounded-lg border-r-4 border-green-400">
+                      <h4 className="font-bold text-lg text-green-900 mb-3">🎋 עצירה שנייה: ארָשיָאמָה</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/b7fe50ba-3d3b-4465-ad36-e006ab6c6d26.jpg"
+                          alt="Arashiyama Bamboo Grove"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            המשך נסיעה: עלייה על השינקנסן להמשך הדרך לקיוטו. יורדים בתחנת קיוטו, מניחים את המזוודות במלון (או בתאי אחסון), ונוסעים בקו רכבת מקומי לאראסיאמה.
+                          </p>
+                          <p className="font-semibold text-slate-900 mb-2">המטרה: חורשת הבמבוק המפורסמת</p>
+                          <p className="text-slate-700 text-sm">
+                            💡 לבקרו בשעות אחר הצהריים המאוחרות יכול להיות פחות עמוס.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Evening */}
+                    <div className="bg-gradient-to-l from-purple-50 to-transparent p-6 rounded-lg border-r-4 border-purple-400">
+                      <h4 className="font-bold text-lg text-purple-900 mb-3">🌆 ערב</h4>
+                      <p className="text-slate-700 leading-relaxed mb-2">
+                        הגעה למלון בקיוטו, התארגנות.
+                      </p>
+                      <p className="text-slate-700 leading-relaxed">
+                        <span className="font-semibold">ארוחת ערב:</span> ארוחה כשרה שמספק בית חב"ד קיוטו. חשוב לתאם מראש את כל הארוחות איתם. 🍽️
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 8 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      8
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 8: שני, 23.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        קיוטו הקלאסית: זהב, אבנים ושווקים
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        סיור באתרי החובה המרכזיים של קיוטו
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Golden Pavilion */}
+                    <div className="bg-gradient-to-l from-yellow-50 to-transparent p-6 rounded-lg border-r-4 border-yellow-400">
+                      <h4 className="font-bold text-lg text-yellow-900 mb-3">✨ בוקר</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/f773b676-9575-4435-bbc4-a64a420f43b7.jpg"
+                          alt="Kinkaku-ji Golden Pavilion"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">קינקקוּ-ג'י (Kinkaku-ji) – הביתן המוזהב</p>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            המקדש המצופה זהב טהור המשתקף באגם – מראה מהפנט.
+                          </p>
+                          <p className="text-sm text-green-700 bg-green-50 p-2 rounded">
+                            💡 מומלץ להגיע עם פתיחה כדי להקדים את ההמונים
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Ryoan-ji */}
+                    <div className="bg-gradient-to-l from-stone-50 to-transparent p-6 rounded-lg border-r-4 border-slate-400">
+                      <h4 className="font-bold text-lg text-slate-900 mb-3">🪨 משם</h4>
+                      <p className="font-semibold text-slate-900 mb-2">רְיואָן-ג'י (Ryoan-ji) – גן הסלעים היבש</p>
+                      <p className="text-slate-700 leading-relaxed">
+                        המפורסם בעולם. שבו בהתבוננות מול 15 הסלעים המונחים על חצץ מגורפת – סמל לצמצום ושלווה באסתטיקה היפנית. 🧘
+                      </p>
+                    </div>
+
+                    {/* Nishiki Market */}
+                    <div className="bg-gradient-to-l from-orange-50 to-transparent p-6 rounded-lg border-r-4 border-orange-400">
+                      <h4 className="font-bold text-lg text-orange-900 mb-3">🏪 צהריים</h4>
+                      <p className="font-semibold text-slate-900 mb-2">שוק נישיקי (Nishiki Ichiba) – "המטבח של קיוטו"</p>
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        חזרה למרכז קיוטו. רחוב צר ומכוסה עם מאות דוכנים של מטעמים מקומיים, חטיפים, ירקות כבושים, דגים טריים ומזכרות אוכל.
+                      </p>
+                      <p className="text-sm text-slate-600">
+                        💡 טיפ: ניתן לטעום דברים שאינם דורשים בישול (כמו מוצ'י, ירקות כבושים), אך הארוחה העיקרית תהיה מהמצרכים הכשרים שלכם או מבית חב"ד.
+                      </p>
+                    </div>
+
+                    {/* Kyoto Station */}
+                    <div className="bg-gradient-to-l from-blue-50 to-transparent p-6 rounded-lg border-r-4 border-blue-400">
+                      <h4 className="font-bold text-lg text-blue-900 mb-3">🏗️ אחר הצהריים</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        ביקור בתחנת הרכבת קיוטו. המבנה האדריכלי המודרני והיפה itself הוא אטרקציה. עלו למרפסת התצפית או פשוט התרשמו מהעיצוב. 🏛️
+                      </p>
+                    </div>
+
+                    {/* Evening - Gion */}
+                    <div className="bg-gradient-to-l from-pink-50 to-transparent p-6 rounded-lg border-r-4 border-pink-400">
+                      <h4 className="font-bold text-lg text-pink-900 mb-3">🌸 ערב</h4>
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        <span className="font-semibold">ארוחת ערב:</span> ארוחת ערב כשרה מבית חב"ד קיוטו.
+                      </p>
+                      <p className="font-semibold text-slate-900 mb-2">אחרי הארוחה: רובע גיון (Gion)</p>
+                      <p className="text-slate-700 leading-relaxed">
+                        טיול ערב ברובע הגיישות המפורסם. סיכוי לראות גיישה או מייקו (גיישה מתלמדת) ממהרת בין הביתנים. הרחובות המוארים במנורות מסורתיות הם קסומים. בקרו בחצר המקדש יאסקה (Yasaka Jinja) המואר. 🏮
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 9 */}
+                <div className="relative animate-fade-in bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-2xl border-2 border-red-200">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-red-500 to-orange-600 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      9
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 9: שלישי, 24.03.2026
+                      </h3>
+                      <p className="text-lg text-red-700 font-semibold">
+                        יום הירושימה ומיאג'ימה (אינטנסיבי מאוד!) ⚠️
+                      </p>
+                      <div className="bg-red-100 p-3 rounded-lg mt-2">
+                        <p className="text-red-900 text-sm font-semibold">
+                          🚨 הערה לוגיסטית קריטית: זהו יום ארוך מאוד (כ-3.5 שעות נסיעה בכיוון אחד). חייבים לצאת מוקדם מאוד!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Early Morning */}
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-amber-300">
+                      <h4 className="font-bold text-lg text-amber-900 mb-3">⏰ בוקר מוקדם (6:00-7:00)</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        עלייה על שינקנסן סאניו (Sanyo Shinkansen) מקיוטו לכיוון הירושימה (Hiroshima). 🚄
+                      </p>
+                    </div>
+
+                    {/* Hiroshima Peace Memorial */}
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-slate-400">
+                      <h4 className="font-bold text-lg text-slate-900 mb-3">☮️ בוקר בהירושימה</h4>
+                      <div className="flex gap-4 items-start mb-4">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/bee391c6-6272-4387-9464-4865412c7aef.jpg"
+                          alt="Hiroshima Peace Memorial"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            הגעה להירושימה. נסיעה ברכבת מקומית (או חשמלית נוסטלגית) לפארק השלום (Heiwa Koen).
+                          </p>
+                          <p className="font-semibold text-slate-900 mb-2">כיפת הגנבּאקו (Atomic Bomb Dome)</p>
+                          <p className="text-slate-700 text-sm">
+                            השלד של המבנה ששרד את הפיצוץ, אתר מורשת עולמית מטריד וחזק.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="bg-slate-100 p-3 rounded-lg">
+                        <p className="font-semibold text-slate-900 mb-1">מוזיאון השלום של הירושימה</p>
+                        <p className="text-slate-700 text-sm">
+                          חובה מבחינה היסטורית ורגשית. תכננו לפחות שעתיים. 🕊️
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Miyajima */}
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-red-300">
+                      <h4 className="font-bold text-lg text-red-900 mb-3">⛩️ אחר הצהריים: מיאג'ימה</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/92cbd690-ecfb-4cb1-a7bc-0bf504f94bd6.jpg"
+                          alt="Miyajima Floating Torii"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            נסיעה ברכבת מהירה (JR) ותחבורת מעבורת למיאג'ימה (Miyajima) – האי הקדוש.
+                          </p>
+                          <p className="font-semibold text-slate-900 mb-2">שער הטוריי הצף של אִיצוּקוּשימה</p>
+                          <p className="text-slate-700 text-sm leading-relaxed">
+                            צפו בשער הטוריי האדום הענקי הנראה כאילו צף על המים בזמן הגאות (תלוי בשעה). שוטטו ברחוב הראשי עם האיילים הרבים והחנויות. 🦌
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Return */}
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-blue-300">
+                      <h4 className="font-bold text-lg text-blue-900 mb-3">🌙 ערב</h4>
+                      <p className="text-slate-700 leading-relaxed mb-2">
+                        חזרה ברכבת מהירה (שינקנסן) לקיוטו. זו נסיעה ארוכה. הגעה מאוחרת.
+                      </p>
+                      <p className="text-slate-700 leading-relaxed text-sm">
+                        <span className="font-semibold">ארוחת ערב:</span> אם תיאומתם מראש, ארוחה כשרה שהזמנתם מבית חב"ד קיוטו תהיה מחכה לכם (וודאו איתם על האפשרות לארוחה מאוחרת).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 10 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      10
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 10: רביעי, 25.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        שערים אדומים ואיילים קדושים
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        שניים מהאתרים הסמליים ביותר באזור קנסאי
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Fushimi Inari */}
+                    <div className="bg-gradient-to-l from-red-50 to-transparent p-6 rounded-lg border-r-4 border-red-500">
+                      <h4 className="font-bold text-lg text-red-900 mb-3">⛩️ בוקר</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/b05decab-5bc9-4e14-be38-6103f0b0ba68.jpg"
+                          alt="Fushimi Inari Torii Gates"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">פוּשִימִי אִינָארִי (Fushimi Inari Taisha)</p>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            מקדש השינטו המפורסם עם אלפי שערי הטוריי האדומים (Senbon Torii) היוצרים שבילים על ההר.
+                          </p>
+                          <p className="text-sm text-green-700 bg-green-50 p-2 rounded">
+                            💡 מומלץ להגיע מוקדם מאוד (לפני 8:00) כדי להמנע מההמונים. הליכה של כשעה בשביל הראשי תספיק לחוויה מלאה.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Nara */}
+                    <div className="bg-gradient-to-l from-amber-50 to-transparent p-6 rounded-lg border-r-4 border-amber-400">
+                      <h4 className="font-bold text-lg text-amber-900 mb-3">🦌 צהריים בנארה</h4>
+                      <div className="flex gap-4 items-start mb-4">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/ffbf2147-b8ef-4ee6-8a35-e3be3430aad7.jpg"
+                          alt="Nara Deer Park"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            נסיעה ברכבת לנארה (Nara).
+                          </p>
+                          <p className="font-semibold text-slate-900 mb-2">טוֹדָאִי-ג'י (Todai-ji)</p>
+                          <p className="text-slate-700 text-sm mb-3">
+                            אולם העץ הגדול בעולם, ובו פסל הבודהה הענק (דָאיבּוּטסוּ). 🛕
+                          </p>
+                          <p className="text-slate-700 text-sm">
+                            בפארק נארה תפגשו אלפי איילים חופשיים ונחמדים שנחשבים לקדושים. ניתן לקנות עבורם קרקרים מיוחדים להאכלה.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="bg-white p-3 rounded-lg shadow-sm">
+                        <p className="text-slate-700 text-sm">
+                          <span className="font-semibold">ביקור נוסף אפשרי:</span> מקדש קאסוּגָה טאישה (Kasuga Taisha) עם מאות מנורות האבן. 🏮
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Evening */}
+                    <div className="bg-gradient-to-l from-indigo-50 to-transparent p-6 rounded-lg border-r-4 border-indigo-400">
+                      <h4 className="font-bold text-lg text-indigo-900 mb-3">🌆 ערב</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        חזרה לקיוטו.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
