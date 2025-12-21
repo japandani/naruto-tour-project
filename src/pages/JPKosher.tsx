@@ -901,6 +901,407 @@ const JPKosher = () => {
                   </div>
                 </div>
 
+                {/* Day 11 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      11
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 11: חמישי, 26.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        מאוסקה הקלאסית למרפסת השמיים
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        מעבר מקיוטו לקובה דרך אוסקה התוססת
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Osaka Castle */}
+                    <div className="bg-gradient-to-l from-orange-50 to-transparent p-6 rounded-lg border-r-4 border-orange-400">
+                      <h4 className="font-bold text-lg text-orange-900 mb-3">🏯 בוקר</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/ba8396d8-2f99-403a-995b-069949db747f.jpg"
+                          alt="Osaka Castle"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            אריזת מזוודות ונסיעה ברכבת מהירה (שינקנסן) מתחנת קיוטו לתחנת שין-אוסקה (Shin-Osaka). הפקדת המזוודות בתאי אחסון.
+                          </p>
+                          <p className="font-semibold text-slate-900 mb-2">טירת אוסקה (Osaka Castle)</p>
+                          <p className="text-slate-700 text-sm">
+                            הטירה המפוארת. ניתן להיכנס למוזיאון המודרני שבתוכה (העליות לתצפית נהדרות) או להסתפק בצילום החיצוני והליכה בגנים היפים.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Umeda Sky Building */}
+                    <div className="bg-gradient-to-l from-sky-50 to-transparent p-6 rounded-lg border-r-4 border-sky-400">
+                      <h4 className="font-bold text-lg text-sky-900 mb-3">🏙️ צהריים</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/fb03e58d-25f1-49a3-9f66-615dd36f68b4.jpg"
+                          alt="Umeda Sky Building"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">אומדה סקי בילדינג (Umeda Sky Building)</p>
+                          <p className="text-slate-700 text-sm">
+                            מעבר לאזור אומדה (Umeda). עלייה לתצפית הפנורמית המרהיבה מגגו הצף ("הגן השמימי"). 🌤️
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Dotonbori */}
+                    <div className="bg-gradient-to-l from-yellow-50 to-transparent p-6 rounded-lg border-r-4 border-yellow-400">
+                      <h4 className="font-bold text-lg text-yellow-900 mb-3">🎭 אחר הצהריים</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/e4d440e9-2c95-49c3-9f73-ce0b732fb91a.jpg"
+                          alt="Dotonbori"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">דוטונבורי (Dotonbori)</p>
+                          <p className="text-slate-700 text-sm">
+                            טבילה באווירה השוקקת, הצבעונית והקולינרית של אוסקה. ראו את השלטים המכניים הענקיים (הליצן של גליקו, התמנון של קוני-דוראקו), את תעלת המים, וספגו את האנרגיה. ✨
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Evening - Kobe */}
+                    <div className="bg-gradient-to-l from-purple-50 to-transparent p-6 rounded-lg border-r-4 border-purple-400">
+                      <h4 className="font-bold text-lg text-purple-900 mb-3">🌆 ערב</h4>
+                      <p className="text-slate-700 leading-relaxed mb-2">
+                        נסיעה קצרה ברכבת מהירה (שינקנסן) מתחנת שין-אוסקה לקובה (Kobe). התמקמות במלון.
+                      </p>
+                      <p className="text-slate-700 leading-relaxed">
+                        <span className="font-semibold">ארוחת ערב:</span> ארוחה כשרה בבית חב"ד קובה. חשוב לתאם מראש את כל הארוחות (כולל שבת). 🍽️
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 12 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      12
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 12: שישי, 27.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        יוקרה, גשרים ומקדשי מים באי אַוָואגִ'י
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        טיול יום מרתק לאי המפורסם בגשר הענק שלו
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Akashi Bridge */}
+                    <div className="bg-gradient-to-l from-blue-50 to-transparent p-6 rounded-lg border-r-4 border-blue-400">
+                      <h4 className="font-bold text-lg text-blue-900 mb-3">🌉 בוקר</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/244161ed-a16d-49c4-83ef-e8f5ca9093f1.jpg"
+                          alt="Akashi Kaikyo Bridge"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">גשר עַקַאשִי-קַאִיקְיוֹ (Akashi-Kaikyo Bridge)</p>
+                          <p className="text-slate-700 text-sm leading-relaxed mb-2">
+                            נסיעה לחציית הגשר התלוי הארוך בעולם בעת בנייתו. ניתן לחצות באוטובוס תיירים מיוחד או להשקיף עליו ממוזיאון הגשר.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Awaji Island */}
+                    <div className="bg-gradient-to-l from-teal-50 to-transparent p-6 rounded-lg border-r-4 border-teal-400">
+                      <h4 className="font-bold text-lg text-teal-900 mb-3">🏝️ באי אַוָואגִ'י</h4>
+                      <div className="space-y-3">
+                        <div className="bg-white p-3 rounded-lg shadow-sm">
+                          <p className="font-semibold text-slate-900 text-sm mb-1">פארק הנוף של גשר הענק עַקַאשִי</p>
+                          <p className="text-slate-700 text-sm">
+                            נקודות תצפית מרהיבות על הגשר ועל הים הפנימי סטו. 🌊
+                          </p>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg shadow-sm">
+                          <p className="font-semibold text-slate-900 text-sm mb-1">מקדש מים ייחודי</p>
+                          <p className="text-slate-700 text-sm">
+                            מקדש אִיזוּמוֹ נוֹ אוֹקוּנִי – פסלי אבן עומדים בתוך בריכה רדודה. 💧
+                          </p>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg shadow-sm">
+                          <p className="font-semibold text-slate-900 text-sm mb-1">מקדש אונאקומי (Onokorojima)</p>
+                          <p className="text-slate-700 text-sm">
+                            המקדש היפני העתיק ביותר – לפי המיתולוגיה, זהו האי הראשון שנוצר ביפן. ⛩️
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Return for Shabbat */}
+                    <div className="bg-gradient-to-l from-indigo-50 to-transparent p-6 rounded-lg border-r-4 border-indigo-400">
+                      <h4 className="font-bold text-lg text-indigo-900 mb-3">🕯️ אחר הצהריים</h4>
+                      <p className="text-slate-700 leading-relaxed mb-2">
+                        חזרה לקובה <span className="font-bold">לפני כניסת השבת</span>. הכנות לשבת.
+                      </p>
+                      <p className="text-slate-700 leading-relaxed">
+                        <span className="font-semibold">ערב:</span> קבלת שבת בקובה (בבית חב"ד או במלון, בהתאם לתיאום). ✨
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 13 - Shabbat in Kobe */}
+                <div className="relative animate-fade-in bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl border-2 border-blue-200">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      13
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 13: שבת, 28.03.2026
+                      </h3>
+                      <p className="text-lg text-indigo-700 font-semibold">
+                        שבת שלווה בקובה ⭐
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        מנוחה והליכות נינוחות בעיר ההררית והיפה
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-blue-300">
+                      <h4 className="font-bold text-lg text-blue-900 mb-3">🌄 בוקר וצהריים שבת</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        מנוחה, תפילה (אם יש מניין), ארוחות שבת. 📖
+                      </p>
+                    </div>
+
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-green-300">
+                      <h4 className="font-bold text-lg text-green-900 mb-3">🚶 אחר הצהריים</h4>
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        הליכה שבתית רגועה באזור המלון או באחד מהרבעים היפים של קובה. אפשרויות נעימות:
+                      </p>
+                      <div className="space-y-2">
+                        <p className="text-slate-700 text-sm">🏘️ רובע קיטַאנוֹ (Kitano) עם ה"איז'ינקאן" – הבתים המערביים הישנים של סוחרים זרים</p>
+                        <p className="text-slate-700 text-sm">⚓ הטיילת של נמל קובה (Kobe Harborland) עם אווירה מרווחת וימית</p>
+                        <p className="text-slate-700 text-sm">🌳 פארק סוריקוגוצ'ן (Sorakuen Garden) – גן יפני מסורתי ויפה</p>
+                      </div>
+                    </div>
+
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-purple-300">
+                      <h4 className="font-bold text-lg text-purple-900 mb-3">🌙 ערב</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        הבדלה וארוחת ערב קלה.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 14 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      14
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 14: ראשון, 29.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        טירות לבנות ועיירות תעלות
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        מעבר לקוראשיקי עם ביקור באחד מסמלי יפן
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Himeji Castle */}
+                    <div className="bg-gradient-to-l from-slate-50 to-transparent p-6 rounded-lg border-r-4 border-slate-400">
+                      <h4 className="font-bold text-lg text-slate-900 mb-3">🏯 בוקר</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/cb0c078a-3fa0-46b7-9f22-bcc40cdd3d0f.jpg"
+                          alt="Himeji Castle"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            אריזת מזוודות ונסיעה ברכבת מהירה (שינקנסן) מקובה לתחנת הִימֵגִ'י (Himeji). הפקדת מזוודות.
+                          </p>
+                          <p className="font-semibold text-slate-900 mb-2">טירת הימג'י (Himeji Castle) – "טירת הלובן"</p>
+                          <p className="text-slate-700 text-sm">
+                            הטירה היפהפייה והשמורה ביותר ביפן, אתר מורשת עולמית. הביקור (כולל עלייה למגדל הראשי) אורך 2-3 שעות. חובה! ⭐
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Kurashiki */}
+                    <div className="bg-gradient-to-l from-cyan-50 to-transparent p-6 rounded-lg border-r-4 border-cyan-400">
+                      <h4 className="font-bold text-lg text-cyan-900 mb-3">🏘️ צהריים ואחר הצהריים</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/07fa0e52-92d8-4d91-8b19-242daeee2f29.jpg"
+                          alt="Kurashiki Bikan Quarter"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            נסיעה ברכבת מהירה מהימג'י לקוּרָאשִיקִי (Kurashiki). הגעה לוילה והתמקמות.
+                          </p>
+                          <p className="font-semibold text-slate-900 mb-2">רובע בִּיקָאן (Bikan) ההיסטורי</p>
+                          <p className="text-slate-700 text-sm">
+                            אם נשאר זמן, צאו לסיור ראשון – תעלות מים שקטות, עצי ערבה, ומחסנים לבנים מימי הסמוראים. אווירה פיוטית במיוחד. 🌸
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-l from-green-50 to-transparent p-6 rounded-lg border-r-4 border-green-400">
+                      <h4 className="font-bold text-lg text-green-900 mb-3">🍽️ ערב</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        ארוחת ערב ביתית ראשונה בווילה מהמצרכים הכשרים שלכם (אולי קניות שהוזמנו מראש או שהבאתם מקובה).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 15 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      15
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 15: שני, 30.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        יום אמנות ואיים בים הפנימי
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        חוויה אמנותית עכשווית ייחודית באי נָאוֹשִימָה – "אי האמנות"
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Naoshima Art Island */}
+                    <div className="bg-gradient-to-l from-yellow-50 to-transparent p-6 rounded-lg border-r-4 border-yellow-400">
+                      <h4 className="font-bold text-lg text-yellow-900 mb-3">🎨 בוקר מוקדם</h4>
+                      <div className="flex gap-4 items-start mb-4">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/dfd18685-0ad8-4c5b-897d-439a2ac42ea3.jpg"
+                          alt="Naoshima Art Island"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            נסיעה מתחנת קוראשיקי לאונן (Uno) (כ-30 דקות ברכבת). מעבורת קצרה מ-Uno לנאושימה.
+                          </p>
+                          <p className="font-semibold text-slate-900 mb-1">באי נאושימה:</p>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        <div className="bg-white p-3 rounded-lg shadow-sm">
+                          <p className="font-semibold text-slate-900 text-sm mb-1">🏛️ מוזיאון צ'יצ'ו (Chichu Art Museum)</p>
+                          <p className="text-slate-700 text-sm mb-2">
+                            מוזיאון תת-קרקעי שתוכנן על ידי טאדאו אנדו ומציג יצירות של מונה וג'יימס טורל.
+                          </p>
+                          <p className="text-sm text-red-700 bg-red-50 p-2 rounded">
+                            ⚠️ חובה להזמין כרטיסים מראש באינטרנט!
+                          </p>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg shadow-sm">
+                          <p className="font-semibold text-slate-900 text-sm mb-1">🖼️ בית בנוסה (Benesse House Museum)</p>
+                          <p className="text-slate-700 text-sm">מוזיאון ואתר אמנות נוסף</p>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg shadow-sm">
+                          <p className="font-semibold text-slate-900 text-sm mb-1">🎃 הדלעת הצהובה של יאיואי קוסאמה</p>
+                          <p className="text-slate-700 text-sm">על הרציף – אייקון של האי</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Return */}
+                    <div className="bg-gradient-to-l from-blue-50 to-transparent p-6 rounded-lg border-r-4 border-blue-400">
+                      <h4 className="font-bold text-lg text-blue-900 mb-3">🌅 אחר הצהריים</h4>
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        חזרה מהאי. אם יש זמן, ניתן לנסוע לגני רִיצוּרִין (Ritsurin Garden) בטַאקָאמַאצוּ (Takamatsu) – אחד הגנים היפנים היפים ביותר, אך זה יאריך את היום משמעותית (כשעה נסיעה מקוראשיקי).
+                      </p>
+                      <p className="text-slate-700 text-sm">
+                        💡 <span className="font-semibold">אלטרנטיבה נינוחה יותר:</span> חזרה לקוראשיקי וטיול ברובע ביקאן.
+                      </p>
+                    </div>
+
+                    <div className="bg-gradient-to-l from-purple-50 to-transparent p-6 rounded-lg border-r-4 border-purple-400">
+                      <h4 className="font-bold text-lg text-purple-900 mb-3">🌙 ערב</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        ארוחת ערב שניה בווילה בקוראשיקי.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 16 - Final Day */}
+                <div className="relative animate-fade-in bg-gradient-to-br from-amber-50 to-rose-50 p-6 rounded-2xl border-2 border-amber-200">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-amber-500 to-rose-600 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      16
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 16: שלישי, 31.03.2026
+                      </h3>
+                      <p className="text-lg text-amber-700 font-semibold">
+                        מסע חזרה והמראה לישראל ✈️
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4 mr-20">
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg">
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        <span className="font-semibold text-slate-900">בוקר:</span> אריזת מזוודות ויציאה מהווילה בקוראשיקי.
+                      </p>
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        <span className="font-semibold text-slate-900">נסיעה:</span> רכבת מהירה (שינקנסן) או רכבת מקומית לכיוון נמל התעופה קנסאי (Kansai International Airport - KIX).
+                      </p>
+                      <p className="text-slate-700 leading-relaxed mb-4">
+                        <span className="font-semibold text-slate-900">המראה:</span> טיסה חזרה לישראל עם זיכרונות בלתי נשכחים מארץ השמש העולה. 🌅
+                      </p>
+                      
+                      <div className="bg-gradient-to-r from-blue-100 to-purple-100 p-4 rounded-lg text-center">
+                        <p className="text-lg font-bold text-slate-900 mb-2">🎌 סוף מסע מופלא! 🎌</p>
+                        <p className="text-slate-700 text-sm">
+                          מאחלים לכם נסיעה בטוחה ושמירה על כל החוויות המיוחדות שצברתם ביפן
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
