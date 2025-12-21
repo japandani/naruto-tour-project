@@ -293,6 +293,277 @@ const JPKosher = () => {
                   </div>
                 </div>
 
+                {/* Day 4 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      4
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 4: חמישי, 19.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        מהעיר להר: דרכים גיאותרמיות ונופים
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        המסע מטוקיו להר פוג'י דרך חצי האי האקון-הָאְקוֹנֶה המפורסם
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Early Morning */}
+                    <div className="bg-gradient-to-l from-green-50 to-transparent p-6 rounded-lg border-r-4 border-green-400">
+                      <h4 className="font-bold text-lg text-green-900 mb-3">🛒 בוקר מוקדם</h4>
+                      <p className="text-slate-700 leading-relaxed mb-2">
+                        <span className="font-semibold">איסוף מצרכים כשרים</span> מבית חב"ד טוקיו או מהסופרמרקט הכשר לארוחות שלושת הימים הבאים (ארוחות בוקר, צהריים וערב).
+                      </p>
+                      <p className="text-sm text-amber-700 bg-amber-50 p-2 rounded">
+                        ⚠️ חשוב לתאם את הקנייה מראש עם בית חב"ד
+                      </p>
+                    </div>
+
+                    {/* Departure */}
+                    <div className="bg-gradient-to-l from-blue-50 to-transparent p-6 rounded-lg border-r-4 border-blue-400">
+                      <h4 className="font-bold text-lg text-blue-900 mb-3">🚗 יציאה מטוקיו</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        השכרת רכב או נסיעה ברכבת שינקנסן מהירה לכיוון סטיישן אודווארה (Odawara). מהתחנה, השכרת רכב היא האפשרות הנוחה ביותר לאזור פוג'י-הָקוֹנֶה ולסופש ללא תחבורה ציבורית. קחו את הדרך הנופית. 🛣️
+                      </p>
+                    </div>
+
+                    {/* Lake Ashi */}
+                    <div className="bg-gradient-to-l from-teal-50 to-transparent p-6 rounded-lg border-r-4 border-teal-400">
+                      <h4 className="font-bold text-lg text-teal-900 mb-3">🏞️ הפסקה ראשונה</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/22b904d4-7899-45a3-b6aa-85034fe76beb.jpg"
+                          alt="Lake Ashi with Mount Fuji"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">אגם אשי (Lake Ashi) בהאקונה</p>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            נסיעה לאורך האגם היפהפה. אם מזג האוויר בהיר, תוכלו לראות את הר פוג'י משתקף במים – אחת התמונות האיקוניות של יפן.
+                          </p>
+                          <p className="text-slate-600 text-sm">
+                            ניתן לעלות על אחת הספינות המעטרות כמו פיראטיות לשייט קצר. 🏴‍☠️
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Owakudani */}
+                    <div className="bg-gradient-to-l from-orange-50 to-transparent p-6 rounded-lg border-r-4 border-orange-400">
+                      <h4 className="font-bold text-lg text-orange-900 mb-3">🌋 הפסקה שנייה</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/f7681140-b8b3-475d-9497-b761a5294655.jpg"
+                          alt="Owakudani Volcanic Valley"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="font-semibold text-slate-900 mb-2">עמק האוואקודני (Owakudani) - "עמק התה הגדול"</p>
+                          <p className="text-slate-700 leading-relaxed mb-3">
+                            שדה גיאותרמי פעיל עם סירחון של גופרית, קיטור העולה מהאדמה ומראות מרהיבים.
+                          </p>
+                          <div className="bg-slate-100 p-3 rounded-lg">
+                            <p className="text-slate-800 text-sm font-semibold mb-1">🥚 חוויה מומלצת:</p>
+                            <p className="text-slate-700 text-sm leading-relaxed">
+                              קנו "ביצה שחורה" (Kuro-tamago) – ביצה שבושלה במי המעיינות החמים והפכה לשחורה. האמונה אומרת שהיא מאריכה את החיים ב-7 שנים!
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Continue Journey */}
+                    <div className="bg-gradient-to-l from-purple-50 to-transparent p-6 rounded-lg border-r-4 border-purple-400">
+                      <h4 className="font-bold text-lg text-purple-900 mb-3">🗻 המשך נסיעה</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        נסיעה נופית נוספת לכיוון חצי האי אִידְזוּ (Izu Peninsula) ולאזור קאוואגוצ'יקו (Kawaguchiko) – המקום האולטימטיבי לצפייה בפוג'י.
+                      </p>
+                    </div>
+
+                    {/* Evening */}
+                    <div className="bg-gradient-to-l from-rose-50 to-transparent p-6 rounded-lg border-r-4 border-rose-400">
+                      <h4 className="font-bold text-lg text-rose-900 mb-3">♨️ ערב</h4>
+                      <div className="flex gap-4 items-start">
+                        <img 
+                          src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/9aa4e32c-adf9-4560-8579-ecf759dc45d4.jpg"
+                          alt="Villa with Mount Fuji view"
+                          className="w-48 h-36 object-cover rounded-lg shadow-md flex-shrink-0"
+                        />
+                        <div>
+                          <p className="text-slate-700 leading-relaxed mb-2">
+                            הגעה לוילה המפנקת שלכם עם הנוף להר פוג'י. התמקמות, הכנת ארוחת ערב מהמצרכים שהבאתם, והנאה מג'קוזי או אונסן (מעיין חם) פרטי עם הנוף הבלתי נתפס.
+                          </p>
+                          <p className="text-sm text-amber-700 bg-amber-50 p-2 rounded">
+                            💡 שימו לב: ודאו שהמעיינות החמים בוילה הם מעורבים או שיש לכם הזמנה לזמן פרטי אם אתם שומרים על צניעות.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 5 */}
+                <div className="relative animate-fade-in">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      5
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 5: שישי, 20.03.2026
+                      </h3>
+                      <p className="text-lg text-primary font-semibold">
+                        חצי האי אִידְזוּ: קפיברות, הרים געשיים ונופי פוג'י
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        טבע געשי, חופים, וחוויות מיוחדות, עם חזרה להכנות לשבת
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Morning */}
+                    <div className="bg-gradient-to-l from-emerald-50 to-transparent p-6 rounded-lg border-r-4 border-emerald-400">
+                      <h4 className="font-bold text-lg text-emerald-900 mb-3">🌅 בוקר</h4>
+                      <p className="text-slate-700 leading-relaxed mb-4">
+                        יציאה לטיול בחצי האי אִידְזוּ (אם הווילה שלכם באזור זה או בקאוואגוצ'יקו).
+                      </p>
+                      
+                      <p className="font-semibold text-slate-900 mb-3">אתרים מומלצים:</p>
+                      
+                      <div className="space-y-4">
+                        <div className="bg-white p-4 rounded-lg shadow-sm">
+                          <p className="font-semibold text-slate-900 mb-2">🏔️ הר אומורוֹיָאמָה (Mt. Omuroyama) – "ההר הקירח"</p>
+                          <p className="text-slate-700 leading-relaxed text-sm">
+                            לוע געשי כבוי בצורת חרוט מושלם. עולים לראשו ברכבל ומקבלים תצפית פנורמית של 360 מעלות על כל חצי האי אידזו והאוקיינוס. מראה עוצר נשימה.
+                          </p>
+                        </div>
+
+                        <div className="bg-white p-4 rounded-lg shadow-sm">
+                          <div className="flex gap-3 items-start">
+                            <img 
+                              src="https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/bf96d06a-f3a9-457f-82e2-67db082cae32.jpg"
+                              alt="Capybaras in Onsen"
+                              className="w-32 h-24 object-cover rounded-lg shadow-md flex-shrink-0"
+                            />
+                            <div>
+                              <p className="font-semibold text-slate-900 mb-2">🦫 גני הספא איזוּ (Izu Shaboten Zoo) – בית הקפיברות!</p>
+                              <p className="text-slate-700 leading-relaxed text-sm mb-2">
+                                גן חיות קטן וחביב שבו ניתן לראות קפיברות – החיה החמודה להפליא.
+                              </p>
+                              <p className="text-slate-700 text-sm">
+                                <span className="font-semibold">החוויה המפורסמת:</span> "אונסן הקפיברות" – בריכת מעיינות חמים שבה הקפיברות נחות בנינוחות. צילום חובה! 📸
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="bg-white p-4 rounded-lg shadow-sm">
+                          <p className="font-semibold text-slate-900 mb-2">🗻 תצפיות פוג'י</p>
+                          <p className="text-slate-700 leading-relaxed text-sm">
+                            לאורך כל הדרכים בחצי האי, חפשו נקודות תצפית על הר פוג'י מעל מפרצים וים – נוף ייחודי ושונה מזה של האגמים.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Afternoon */}
+                    <div className="bg-gradient-to-l from-yellow-50 to-transparent p-6 rounded-lg border-r-4 border-yellow-400">
+                      <h4 className="font-bold text-lg text-yellow-900 mb-3">☀️ צהריים</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        ארוחת פיקניק מהמצרכים שהבאתם באחת מתצפות הנוף. 🧺
+                      </p>
+                    </div>
+
+                    {/* Shabbat Prep */}
+                    <div className="bg-gradient-to-l from-purple-50 to-transparent p-6 rounded-lg border-r-4 border-purple-400">
+                      <h4 className="font-bold text-lg text-purple-900 mb-3">🕯️ אחר הצהריים</h4>
+                      <p className="text-slate-700 leading-relaxed mb-3">
+                        חזרה לווילה בקאוואגוצ'יקו <span className="font-bold">לפני כניסת השבת</span>. זמן להכנות לשבת, הכנת הארוחות ובישולים לקראת שבת שלווה.
+                      </p>
+                      <p className="text-slate-700 leading-relaxed">
+                        <span className="font-semibold">לפני שקיעה:</span> צאו להליכה קצרה בנחת כדי לספוג את האווירה השקטה ואת הנוף המהפנט של פוג'י לקראת כניסת השבת.
+                      </p>
+                    </div>
+
+                    {/* Shabbat Evening */}
+                    <div className="bg-gradient-to-l from-indigo-50 to-transparent p-6 rounded-lg border-r-4 border-indigo-400">
+                      <h4 className="font-bold text-lg text-indigo-900 mb-3">✨ ערב</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        קבלת שבת שלווה ומיוחדת במיוחד בווילה שלכם, עם נוף להר פוג'י. חוויה בלתי נשכחת. 🙏
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Day 6 - Shabbat */}
+                <div className="relative animate-fade-in bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl border-2 border-blue-200">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-xl flex-shrink-0 shadow-lg">
+                      6
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                        יום 6: שבת, 21.03.2026
+                      </h3>
+                      <p className="text-lg text-indigo-700 font-semibold">
+                        שבת שלווה על שפת האגם ⭐
+                      </p>
+                      <p className="text-slate-600 text-sm mt-1">
+                        מנוחה, הליכה נינוחה והתבוננות בנוף המופלא
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 mr-20">
+                    {/* Shabbat Morning */}
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-blue-300">
+                      <h4 className="font-bold text-lg text-blue-900 mb-3">🌄 בוקר שבת</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        ארוחת בוקר שבת שלווה בווילה. קריאה, מנוחה, תפילה (אם יש לכם מניין קטן) – בהנאה מהשקט והנוף. 📖
+                      </p>
+                    </div>
+
+                    {/* Afternoon */}
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-green-300">
+                      <h4 className="font-bold text-lg text-green-900 mb-3">☀️ צהריים</h4>
+                      <p className="text-slate-700 leading-relaxed">
+                        ארוחת צהריים שבת. 🍽️
+                      </p>
+                    </div>
+
+                    {/* Shabbat Walk */}
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-teal-300">
+                      <h4 className="font-bold text-lg text-teal-900 mb-3">🚶 אחר הצהריים</h4>
+                      <div className="bg-teal-50 p-4 rounded-lg mb-3">
+                        <p className="text-teal-900 font-semibold mb-2">💎 חוויה מיוחדת</p>
+                        <p className="text-slate-700 leading-relaxed text-sm">
+                          הליכה שבתית רגועה לאורך אגם קאוואגוצ'יקו. זו תהיה אחת החוויות השובות והפיוטיות ביותר בטיול.
+                        </p>
+                      </div>
+                      <p className="text-slate-700 leading-relaxed">
+                        אווירת האגם שקטה, הנוף אל פוג'י (אם לא מעונן) מרהיב. ניתן ללכת בשבילים המסודרים לאורך הגדה, לשבת על ספסל ולהתבונן. זו הדרך המושלמת לחוות את הטבע היפני בשלווה. 🌅
+                      </p>
+                    </div>
+
+                    {/* Evening */}
+                    <div className="bg-white/80 backdrop-blur p-6 rounded-lg border-r-4 border-purple-300">
+                      <h4 className="font-bold text-lg text-purple-900 mb-3">🌙 מנחה/ערב</h4>
+                      <p className="text-slate-700 leading-relaxed mb-2">
+                        עם צאת השבת, תוכלו להכין ארוחת ערב קלה, אולי אפילו לצאת שוב לטיול קצר לראות את פוג'י באור הכוכבים (אם האזור מואר מספיק). ⭐
+                      </p>
+                      <p className="text-slate-700 leading-relaxed">
+                        <span className="font-semibold">לילה:</span> עוד ערב של נופש בווילה.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
