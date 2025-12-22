@@ -519,7 +519,7 @@ function JapanSoul() {
                   <div className="flex-1">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <h3 className="text-2xl font-bold text-gray-800">Хиросима: Память и святыня на воде</h3>
-                      <span className="text-red-600 font-semibold">24 мая</span>
+                      <span className="text-red-600 font-semibold">21 мая</span>
                     </div>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
