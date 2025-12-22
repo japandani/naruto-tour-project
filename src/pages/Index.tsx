@@ -6,6 +6,7 @@ import Icon from "@/components/ui/icon";
 import WaveDivider from "@/components/WaveDivider";
 import ContactSection from "@/components/ContactSection";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { useState, useEffect, useRef } from "react";
 
 const FlipChar = ({ char, delay }: { char: string; delay: number }) => {
@@ -206,6 +207,7 @@ const DecorativeBackground = () => (
 );
 
 const Index = () => {
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formName, setFormName] = useState('');
   const [formPhone, setFormPhone] = useState('');
@@ -246,19 +248,19 @@ const Index = () => {
             </div>
           </div>
           <div className="hidden lg:flex gap-6 xl:gap-10">
-            <a href="#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Главная</a>
-            <a href="#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">О нас</a>
-            <a href="#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Ваш Путь</a>
-            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Описание Пути</a>
-            <a href="/gallery" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Галерея</a>
+            <a href="#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.home}</a>
+            <a href="#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.about}</a>
+            <a href="#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.path}</a>
+            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.tour}</a>
+            <a href="/gallery" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.gallery}</a>
             <a href="/blog" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Блог</a>
-            <a href="#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
+            <a href="#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.contacts}</a>
           </div>
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
             <a href="#contact">
               <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
-                Связаться с нами
+                {t.contact.title}
               </Button>
             </a>
             <button
@@ -279,35 +281,35 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                Главная
+                {t.nav.home}
               </a>
               <a 
                 href="#about" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                О нас
+                {t.nav.about}
               </a>
               <a 
                 href="#path" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                Концепт
+                {t.nav.path}
               </a>
               <a 
                 href="/tour" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                Программа тура
+                {t.nav.tour}
               </a>
               <a 
                 href="/gallery" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                Галерея
+                {t.nav.gallery}
               </a>
               <a 
                 href="/blog" 
@@ -321,7 +323,7 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                Контакты
+                {t.nav.contacts}
               </a>
               <Button 
                 variant="default" 
