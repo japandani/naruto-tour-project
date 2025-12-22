@@ -2,6 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { useState } from 'react';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export default function Blog() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -614,6 +615,7 @@ export default function Blog() {
             <a href="/#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
           </div>
           <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             <a href="/#contact">
               <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
                 Связаться с нами

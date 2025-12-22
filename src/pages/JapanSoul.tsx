@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
 import Icon from '@/components/ui/icon';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 function JapanSoul() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-orange-50 to-amber-50">
       <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-center items-center">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-2xl">🇯🇵</span>
             <span className="font-bold text-orange-600">JAPAN: ДА!</span>
           </Link>
+          <LanguageSwitcher />
         </div>
       </header>
 

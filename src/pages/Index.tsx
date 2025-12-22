@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
 import WaveDivider from "@/components/WaveDivider";
 import ContactSection from "@/components/ContactSection";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useState, useEffect, useRef } from "react";
 
 const FlipChar = ({ char, delay }: { char: string; delay: number }) => {
@@ -254,6 +255,7 @@ const Index = () => {
             <a href="#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
           </div>
           <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             <a href="#contact">
               <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
                 Связаться с нами

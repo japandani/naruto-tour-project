@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Reviews = () => {
   const [selectedReview, setSelectedReview] = useState<number | null>(null);
@@ -76,11 +77,12 @@ const Reviews = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="text-2xl font-bold text-primary">JAPAN: ДА!</Link>
-          <div className="flex gap-6">
+          <div className="flex gap-6 items-center">
             <Link to="/about" className="text-foreground hover:text-primary transition-colors">О нас</Link>
             <Link to="/tours" className="text-foreground hover:text-primary transition-colors">Туры</Link>
             <Link to="/gallery" className="text-foreground hover:text-primary transition-colors">Галерея</Link>
             <Link to="/reviews" className="text-primary font-semibold">Отзывы</Link>
+            <LanguageSwitcher />
           </div>
         </div>
       </nav>
