@@ -33,13 +33,19 @@ export const translations = {
       bookNow: "ЗАБРОНИРОВАТЬ"
     },
     hero: {
-      title: "Путешествие в страну восходящего солнца",
-      subtitle: "Откройте для себя настоящую Японию: от древних храмов до современных мегаполисов",
+      title: "Япония. Выше шума, глубже традиций.",
+      subtitle: "Наше авторское путешествие — это ключ к пониманию Японии. Мы покажем вам не просто места, а смыслы. Услышать шёпот бамбуковой рощи и расшифровать код мегаполиса. Понять душу самурая в замке Химэдзи и ощутить дыхание будущего в Одайбе. Это погружение, после которого мир уже не будет прежним.",
+      button: "Сделать первый шаг",
       bookNow: "Забронировать тур",
       learnMore: "Узнать больше"
     },
     about: {
-      title: "Почему выбирают нас",
+      title: "Japan: ДА — это не только путешествие. Это ответ.",
+      p1: "Ответ на зов безмолвных садов камней и шумных неоновых перекрёстков. На вопрос, который ваше сердце задавало Японии всю жизнь.",
+      p2: "За этим ответом стоим Мы , команда ДА , во главе с руководителем проекта , Даниэлем А.",
+      p3: "25 лет — это не просто стаж. Это целая жизнь, прожитая в ритме Японии. Это тысячи улочек, пройденных не как турист, а как искатель. Это сотни встреч, десятки тысяч историй, вплетённых в одно грандиозное полотно под названием «Путь». Путь, который начинается с простого слова — «ДА».",
+      p4: "Слово «ДА» стало нашим ключом. Ключом к потаённым дверям, за которыми скрывается подлинная Япония. К тем местам, куда не ступает нога обычного туриста. К тем людям, чьи руки хранят многовековые традиции гончарного искусства, каллиграфии и чайной церемонии. К тем моментам тишины и понимания, которые меняют тебя навсегда.",
+      p5: "Наш проект давно перестал быть просто «бюро». Для наших друзей из Европы и Азии он стал проводником в мир, где прошлое и будущее говорят на одном языке. А в последние годы мы стали живым мостом — тонким и прочным, как шёлковая нить — который связывает сердца путешественников из России с загадочной душой Японии.",
       experience: "Опыт",
       experienceDesc: "Более 10 лет организуем туры в Японию",
       comfort: "Комфорт",
@@ -48,6 +54,28 @@ export const translations = {
       guideDesc: "Русскоязычные гиды-эксперты по Японии",
       safety: "Безопасность",
       safetyDesc: "Полное сопровождение и страховка"
+    },
+    path: {
+      title: "Мити",
+      kanji: "道",
+      subtitle: "— это Путь",
+      description: "Но не как дорога на карте, а как философия жизни. Это бесконечное совершенствование, следование традиции и полное погружение в настоящее мгновение. Сакральный смысл этого понятия раскрывается в самых разных японских искусствах — от Пути чая (Садо) до Пути меча (Кэндо).",
+      tourButton: "Программа тура и цена",
+      scroll1Title: "Свиток Первый",
+      scroll1Name: "ЭНЕРГИЯ",
+      scroll1Subtitle: "Лабиринты, где рождается завтра",
+      scroll1Location: "(Токио & Осака)",
+      scroll1Text: "Первый ключ — это смелость принять будущее. Вы не просто увидите неоновые каньоны Токио и бьющую через край жизненную силу Осаки — вы научитесь слышать их ритм и находить тишину в самом сердце этого гула. Мы проведём вас по следам создателей современной Японии: от секретных баров в небоскребах, где заключаются многомиллионные сделки, до аутентичных закусочных в подворотнях Дотонбори, где рождаются новые гастрономические тренды. Это посвящение в дерзость и искусство понимать страну через пульс её самых динамичных городов.",
+      scroll2Title: "Свиток Второй",
+      scroll2Name: "СЕРДЦЕ",
+      scroll2Subtitle: "Шёпот храмов и безмолвный поклон оленей",
+      scroll2Location: "(Киото & Нара)",
+      scroll2Text: "Второй ключ — это встреча с душой древней Японии. В Киото, за высокими стенами, тень от сосны на стене чайного домика расскажет вам больше, чем целая книга. Вы станете гостем на частной церемонии у мастера, чья семья хранит это искусство веками. А в Наре вас ждёт диалог с самим временем — в парке Касуга, где священные олени, словно хранители этого места, почтительно склоняют головы в немом поклоне, принимая угощение. Это посвящение в благоговение, где вы поймёте, что истинная красота — в безмолвном диалоге между человеком, природой и вечностью.",
+      scroll3Title: "Свиток Третий",
+      scroll3Name: "СТИХИЯ",
+      scroll3Subtitle: "Шепот сада, вкус моря и душа саке",
+      scroll3Location: "(Альпийские деревушки, Каназава, побережье Японского моря)",
+      scroll3Text: "Третий ключ — это погружение в стихию японской гармонии, где природа, искусство и человек становятся единым целым. В Каназаве вы войдете в сад Кэнроку-эн на рассвете, когда его туманные пейзажи принадлежат только вам. Здесь игра света сквозь клены становится разговором с вечностью. Вы спуститесь в каменные погреба, где в тишине рождается сакэ, и вкусите дух этой земли — терруар горных источников и рисовых полей. А уснете под шум Японского моря — древнюю колыбельную для рыбаков, чей улов на рассвете еще пахнет океанской свежестью. Это посвящение в вечную мудрость, где простота оказывается самой большой глубиной."
     },
     tourCard: {
       title: "Ваш незабываемый путь",
@@ -213,13 +241,19 @@ export const translations = {
       bookNow: "BOOK NOW"
     },
     hero: {
-      title: "Journey to the Land of the Rising Sun",
-      subtitle: "Discover the real Japan: from ancient temples to modern metropolises",
+      title: "Japan. Above the noise, deeper than traditions.",
+      subtitle: "Our signature journey is the key to understanding Japan. We will show you not just places, but meanings. Hear the whisper of bamboo groves and decode the metropolis. Understand the soul of a samurai at Himeji Castle and feel the breath of the future in Odaiba. This is an immersion after which the world will never be the same.",
+      button: "Take the First Step",
       bookNow: "Book Now",
       learnMore: "Learn More"
     },
     about: {
-      title: "Why Choose Us",
+      title: "Japan: YES — it's not just a journey. It's an answer.",
+      p1: "An answer to the call of silent stone gardens and noisy neon intersections. To the question your heart has been asking Japan all your life.",
+      p2: "Behind this answer stands Us, the YES team, led by project director Daniel A.",
+      p3: "25 years is not just experience. It's a whole life lived in the rhythm of Japan. It's thousands of streets walked not as a tourist, but as a seeker. It's hundreds of meetings, tens of thousands of stories woven into one grand tapestry called \"The Way\". A path that begins with a simple word — \"YES\".",
+      p4: "The word \"YES\" became our key. A key to hidden doors behind which the authentic Japan is concealed. To places where ordinary tourists never tread. To people whose hands preserve centuries-old traditions of pottery, calligraphy, and tea ceremony. To those moments of silence and understanding that change you forever.",
+      p5: "Our project has long ceased to be just an \"agency\". For our friends from Europe and Asia, it has become a guide to a world where past and future speak the same language. And in recent years, we have become a living bridge — thin and strong, like a silk thread — connecting the hearts of travelers from Russia with the mysterious soul of Japan.",
       experience: "Experience",
       experienceDesc: "Over 10 years organizing tours to Japan",
       comfort: "Comfort",
@@ -228,6 +262,28 @@ export const translations = {
       guideDesc: "Russian-speaking expert guides on Japan",
       safety: "Safety",
       safetyDesc: "Full support and insurance"
+    },
+    path: {
+      title: "Michi",
+      kanji: "道",
+      subtitle: "— is the Way",
+      description: "But not as a road on a map, but as a philosophy of life. It is endless perfection, following tradition, and complete immersion in the present moment. The sacred meaning of this concept is revealed in various Japanese arts — from the Way of Tea (Sado) to the Way of the Sword (Kendo).",
+      tourButton: "Tour Program and Price",
+      scroll1Title: "First Scroll",
+      scroll1Name: "ENERGY",
+      scroll1Subtitle: "Labyrinths where tomorrow is born",
+      scroll1Location: "(Tokyo & Osaka)",
+      scroll1Text: "The first key is the courage to embrace the future. You won't just see Tokyo's neon canyons and Osaka's overflowing vitality — you'll learn to hear their rhythm and find silence in the heart of this roar. We'll guide you through the footsteps of modern Japan's creators: from secret bars in skyscrapers where multimillion-dollar deals are made, to authentic eateries in Dotonbori alleys where new gastronomic trends are born. This is an initiation into boldness and the art of understanding a country through the pulse of its most dynamic cities.",
+      scroll2Title: "Second Scroll",
+      scroll2Name: "HEART",
+      scroll2Subtitle: "Whisper of temples and silent bow of deer",
+      scroll2Location: "(Kyoto & Nara)",
+      scroll2Text: "The second key is an encounter with the soul of ancient Japan. In Kyoto, behind high walls, the shadow of a pine tree on a tea house wall will tell you more than an entire book. You'll be a guest at a private ceremony with a master whose family has preserved this art for centuries. And in Nara, a dialogue with time itself awaits — in Kasuga Park, where sacred deer, like guardians of this place, respectfully bow their heads in silent greeting while accepting treats. This is an initiation into reverence, where you'll understand that true beauty lies in the silent dialogue between human, nature, and eternity.",
+      scroll3Title: "Third Scroll",
+      scroll3Name: "ELEMENT",
+      scroll3Subtitle: "Garden whisper, taste of the sea, and soul of sake",
+      scroll3Location: "(Alpine villages, Kanazawa, Sea of Japan coast)",
+      scroll3Text: "The third key is immersion into the element of Japanese harmony, where nature, art, and human become one. In Kanazawa, you'll enter Kenrokuen Garden at dawn, when its misty landscapes belong only to you. Here, the play of light through maples becomes a conversation with eternity. You'll descend into stone cellars where sake is born in silence, and taste the spirit of this land — the terroir of mountain springs and rice fields. And you'll fall asleep to the sound of the Sea of Japan — an ancient lullaby for fishermen whose catch at dawn still smells of ocean freshness. This is an initiation into eternal wisdom, where simplicity turns out to be the greatest depth."
     },
     tourCard: {
       title: "Your Unforgettable Journey",

@@ -349,20 +349,16 @@ const Index = () => {
 
 
         <div className="relative z-10 text-center text-white px-4 animate-fade-in max-w-5xl mx-auto mt-12 md:mt-20">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg">Япония. Выше шума, глубже традиций.</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg">{t.hero.title}</h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-4xl mx-auto drop-shadow-md leading-relaxed">
-            Наше авторское путешествие — это ключ к пониманию Японии.<br className="hidden sm:block"/>
-            Мы покажем вам не просто места, а смыслы.<br className="hidden sm:block"/>
-            Услышать шёпот бамбуковой рощи и расшифровать код мегаполиса.<br className="hidden sm:block"/>
-            Понять душу самурая в замке Химэдзи и ощутить дыхание будущего в Одайбе.<br className="hidden sm:block"/>
-            Это погружение, после которого мир уже не будет прежним.
+            {t.hero.subtitle}
           </p>
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg mb-8 md:mb-10"
             onClick={() => document.getElementById('scrolls')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Сделать первый шаг
+            {t.hero.button}
             <Icon name="ArrowRight" size={20} className="ml-2" />
           </Button>
 
@@ -383,23 +379,23 @@ const Index = () => {
               <br />
               <br />
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-foreground leading-tight text-center">
-                Japan: ДА — это не только путешествие. Это ответ.
+                {t.about.title}
               </h2>
               <br />
               <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                Ответ на зов безмолвных садов камней и шумных неоновых перекрёстков. На вопрос, который ваше сердце задавало Японии всю жизнь.
+                {t.about.p1}
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                <strong className="text-foreground">За этим ответом стоим Мы , команда ДА , во главе с руководителем проекта , Даниэлем А.</strong>
+                <strong className="text-foreground">{t.about.p2}</strong>
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                25 лет — это не просто стаж. Это целая жизнь, прожитая в ритме Японии. Это тысячи улочек, пройденных не как турист, а как искатель. Это сотни встреч, десятки тысяч историй, вплетённых в одно грандиозное полотно под названием «Путь». Путь, который начинается с простого слова — «ДА».
+                {t.about.p3}
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                Слово «ДА» стало нашим ключом. Ключом к потаённым дверям, за которыми скрывается подлинная Япония. К тем местам, куда не ступает нога обычного туриста. К тем людям, чьи руки хранят многовековые традиции гончарного искусства, каллиграфии и чайной церемонии. К тем моментам тишины и понимания, которые меняют тебя навсегда.
+                {t.about.p4}
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed">
-                Наш проект давно перестал быть просто «бюро». Для наших друзей из Европы и Азии он стал проводником в мир, где прошлое и будущее говорят на одном языке. А в последние годы мы стали живым мостом — тонким и прочным, как шёлковая нить — который связывает сердца путешественников из России с загадочной душой Японии.
+                {t.about.p5}
               </p>
             </div>
           </div>
@@ -412,11 +408,10 @@ const Index = () => {
         
         <div className="container mx-auto max-w-7xl relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-foreground mt-16 md:mt-20">
-            <span style={{ fontFamily: 'Cormorant, serif' }}>Мити</span> <span className="text-5xl md:text-6xl lg:text-7xl" style={{ fontFamily: 'serif' }}>道</span> — это Путь
+            <span style={{ fontFamily: 'Cormorant, serif' }}>{t.path.title}</span> <span className="text-5xl md:text-6xl lg:text-7xl" style={{ fontFamily: 'serif' }}>{t.path.kanji}</span> {t.path.subtitle}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-8 md:mb-12 max-w-6xl mx-auto leading-relaxed px-4">
-            Но не как дорога на карте, а как философия жизни. Это бесконечное совершенствование, следование традиции и полное погружение в настоящее мгновение.<br className="hidden sm:block"/>
-            Сакральный смысл этого понятия раскрывается в самых разных японских искусствах — от Пути чая (Садо) до Пути меча (Кэндо).<br className="hidden sm:block"/>
+            {t.path.description}<br className="hidden sm:block"/>
             Наше путешествие — это и есть ваш личный Мити. Путь, состоящий из четырёх свитков, где вы не просто увидите Японию, а пройдете через её сердце, стихии и дух, чтобы обрести новый взгляд на мир и на себя.
           </p>
 
@@ -426,7 +421,7 @@ const Index = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-base md:text-lg"
             >
               <Icon name="FileText" size={20} />
-              Программа тура и цена
+              {t.path.tourButton}
             </a>
           </div>
 
@@ -441,12 +436,12 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Первый</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">ЭНЕРГИЯ</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Лабиринты, где рождается завтра</p>
-                    <p className="text-sm text-primary/80 mb-4">(Токио & Осака)</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>{t.path.scroll1Title}</h3>
+                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">{t.path.scroll1Name}</div>
+                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">{t.path.scroll1Subtitle}</p>
+                    <p className="text-sm text-primary/80 mb-4">{t.path.scroll1Location}</p>
                     <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      Первый ключ — это смелость принять будущее. Вы не просто увидите неоновые каньоны Токио и бьющую через край жизненную силу Осаки — вы научитесь слышать их ритм и находить тишину в самом сердце этого гула. Мы проведём вас по следам создателей современной Японии: от секретных баров в небоскребах, где заключаются многомиллионные сделки, до аутентичных закусочных в подворотнях Дотонбори, где рождаются новые гастрономические тренды. Это посвящение в дерзость и искусство понимать страну через пульс её самых динамичных городов.
+                      {t.path.scroll1Text}
                     </p>
                   </div>
                 </div>
@@ -472,12 +467,12 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Второй</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">СЕРДЦЕ</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Шёпот храмов и безмолвный поклон оленей</p>
-                    <p className="text-sm text-primary/80 mb-4">(Киото & Нара)</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>{t.path.scroll2Title}</h3>
+                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">{t.path.scroll2Name}</div>
+                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">{t.path.scroll2Subtitle}</p>
+                    <p className="text-sm text-primary/80 mb-4">{t.path.scroll2Location}</p>
                     <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      Второй ключ — это встреча с душой древней Японии. В Киото, за высокими стенами, тень от сосны на стене чайного домика расскажет вам больше, чем целая книга. Вы станете гостем на частной церемонии у мастера, чья семья хранит это искусство веками. А в Наре вас ждёт диалог с самим временем — в парке Касуга, где священные олени, словно хранители этого места, почтительно склоняют головы в немом поклоне, принимая угощение. Это посвящение в благоговение, где вы поймёте, что истинная красота — в безмолвном диалоге между человеком, природой и вечностью.
+                      {t.path.scroll2Text}
                     </p>
                   </div>
                 </div>
@@ -503,12 +498,12 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Третий</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">СТИХИЯ</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Шепот сада, вкус моря и душа саке</p>
-                    <p className="text-sm text-primary/80 mb-4">(Альпийские деревушки, Каназава, побережье Японского моря)</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>{t.path.scroll3Title}</h3>
+                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">{t.path.scroll3Name}</div>
+                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">{t.path.scroll3Subtitle}</p>
+                    <p className="text-sm text-primary/80 mb-4">{t.path.scroll3Location}</p>
                     <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      Третий ключ — это погружение в стихию японской гармонии, где природа, искусство и человек становятся единым целым. В Каназаве вы войдете в сад Кэнроку-эн на рассвете, когда его туманные пейзажи принадлежат только вам. Здесь игра света сквозь клены становится разговором с вечностью. Вы спуститесь в каменные погреба, где в тишине рождается сакэ, и вкусите дух этой земли — терруар горных источников и рисовых полей. А уснете под шум Японского моря — древнюю колыбельную для рыбаков, чей улов на рассвете еще пахнет океанской свежестью. Это посвящение в вечную мудрость, где простота оказывается самой большой глубиной.
+                      {t.path.scroll3Text}
                     </p>
                   </div>
                 </div>
