@@ -3,10 +3,12 @@ import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { useState } from 'react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Blog() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedArticle, setSelectedArticle] = useState<number | null>(null);
+  const { t, language } = useLanguage();
   
   const articles = [
     {
@@ -659,12 +661,11 @@ export default function Blog() {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
-            Блог путешественника
+            {t.blog.title}
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Личные истории, полезные советы и подробные гиды по Японии. 
-            Всё, что нужно знать перед поездкой в Страну восходящего солнца
+            {t.blog.subtitle}
           </p>
         </div>
 
