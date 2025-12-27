@@ -3,9 +3,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
 import ContactSection from "@/components/ContactSection";
+import { PaymentButton } from "@/components/extensions/robokassa/PaymentButton";
+import func2url from "../../backend/func2url.json";
 
 const TourDetails = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bookingForm, setBookingForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    tourDate: '',
+    participants: '1',
+    comment: ''
+  });
 
   const tourParts = [
     {
@@ -827,6 +837,164 @@ const TourDetails = () => {
               Остались вопросы? Свяжитесь с нами — мы всё подробно расскажем!
             </p>
           </div>
+        </div>
+      </section>
+
+      <section id="booking" className="py-16 md:py-24 px-4 bg-gradient-to-b from-background to-accent/5">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
+              Забронировать тур
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">
+              Заполните форму и оплатите бронь онлайн
+            </p>
+          </div>
+
+          <Card className="border-primary/20">
+            <CardContent className="p-8 md:p-10">
+              <div className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Ваше имя <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      value={bookingForm.name}
+                      onChange={(e) => setBookingForm({...bookingForm, name: e.target.value})}
+                      className="w-full px-4 py-3 border border-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                      placeholder="Иван Иванов"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Email <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      value={bookingForm.email}
+                      onChange={(e) => setBookingForm({...bookingForm, email: e.target.value})}
+                      className="w-full px-4 py-3 border border-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                      placeholder="ivan@example.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Телефон <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      value={bookingForm.phone}
+                      onChange={(e) => setBookingForm({...bookingForm, phone: e.target.value})}
+                      className="w-full px-4 py-3 border border-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                      placeholder="+7 999 123-45-67"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold text-foreground mb-2">
+                      Дата тура <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      value={bookingForm.tourDate}
+                      onChange={(e) => setBookingForm({...bookingForm, tourDate: e.target.value})}
+                      className="w-full px-4 py-3 border border-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                      required
+                    >
+                      <option value="">Выберите дату</option>
+                      <option value="5-18 марта 2026">🌸 5-18 марта 2026 (Сакура)</option>
+                      <option value="9-22 апреля 2026">🌸 9-22 апреля 2026 (Сакура)</option>
+                      <option value="14-27 октября 2026">🍁 14-27 октября 2026 (Момидзи)</option>
+                      <option value="28 октября - 10 ноября 2026">🍁 28 окт - 10 ноя 2026 (Момидзи)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-foreground mb-2">
+                    Количество участников
+                  </label>
+                  <select
+                    value={bookingForm.participants}
+                    onChange={(e) => setBookingForm({...bookingForm, participants: e.target.value})}
+                    className="w-full px-4 py-3 border border-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground"
+                  >
+                    <option value="1">1 человек</option>
+                    <option value="2">2 человека</option>
+                    <option value="3">3 человека</option>
+                    <option value="4">4 человека</option>
+                    <option value="5">5 человек</option>
+                    <option value="6">6 человек</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-foreground mb-2">
+                    Комментарий к заказу
+                  </label>
+                  <textarea
+                    value={bookingForm.comment}
+                    onChange={(e) => setBookingForm({...bookingForm, comment: e.target.value})}
+                    className="w-full px-4 py-3 border border-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary bg-background text-foreground h-24 resize-none"
+                    placeholder="Дополнительные пожелания или вопросы..."
+                  />
+                </div>
+
+                <div className="border-t border-accent pt-6">
+                  <div className="flex items-center justify-between mb-6">
+                    <div>
+                      <div className="text-sm text-muted-foreground">Сумма к оплате:</div>
+                      <div className="text-3xl font-bold text-primary" style={{ fontFamily: 'Cormorant, serif' }}>
+                        {(249000 * parseInt(bookingForm.participants || '1')).toLocaleString('ru-RU')} ₽
+                      </div>
+                    </div>
+                  </div>
+
+                  <PaymentButton
+                    apiUrl={func2url["robokassa-robokassa"]}
+                    amount={249000 * parseInt(bookingForm.participants || '1')}
+                    userName={bookingForm.name}
+                    userEmail={bookingForm.email}
+                    userPhone={bookingForm.phone}
+                    orderComment={`Тур: ${bookingForm.tourDate}, Участников: ${bookingForm.participants}. ${bookingForm.comment}`}
+                    cartItems={[
+                      {
+                        id: "tour-japan",
+                        name: `Тур "Япония: Да!" (${bookingForm.tourDate})`,
+                        price: 249000,
+                        quantity: parseInt(bookingForm.participants || '1')
+                      }
+                    ]}
+                    successUrl={window.location.origin + "/tour?payment=success"}
+                    failUrl={window.location.origin + "/tour?payment=failed"}
+                    onSuccess={(orderNumber) => {
+                      console.log("Оплата успешна:", orderNumber);
+                      alert("Спасибо за бронирование! Мы свяжемся с вами в ближайшее время.");
+                    }}
+                    onError={(error) => {
+                      console.error("Ошибка оплаты:", error);
+                      alert("Произошла ошибка при оплате. Попробуйте еще раз.");
+                    }}
+                    buttonText="Оплатить бронь"
+                    className="w-full bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-xl transition-all duration-300 disabled:opacity-50"
+                    disabled={!bookingForm.name || !bookingForm.email || !bookingForm.phone || !bookingForm.tourDate}
+                  />
+
+                  <p className="mt-4 text-xs text-center text-muted-foreground">
+                    Нажимая "Оплатить бронь", вы соглашаетесь с условиями бронирования и участия в туре
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
