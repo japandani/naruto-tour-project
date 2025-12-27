@@ -129,7 +129,7 @@ const TourDetails = () => {
   ];
 
   const tourDates = [
-    { date: "18 марта - 1 апреля 2026", status: "available", seats: 6, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
+    { date: "18 марта - 1 апреля 2026", status: "closed", seats: 0, season: "spring" },
     { date: "1 апреля - 15 апреля 2026", status: "available", seats: 3, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
     { date: "17 апреля - 2 мая 2026", status: "closed", seats: 0, season: "spring" },
     { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0, season: "spring" },
