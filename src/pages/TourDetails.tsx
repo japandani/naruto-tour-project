@@ -496,12 +496,6 @@ const TourDetails = () => {
                     <div className="flex items-center gap-2">
                       {tour.status === 'available' ? (
                         <>
-                          <a href="/#contact" className="flex items-center gap-1.5">
-                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/70"></span>
-                            <span className="text-xs md:text-sm font-semibold text-green-600 hover:text-green-700 transition-colors">
-                              {tour.seats} {tour.seats === 1 ? 'место' : tour.seats < 5 ? 'места' : 'мест'}
-                            </span>
-                          </a>
                           <a href="#contact" onClick={(e) => { e.preventDefault(); const contactSection = document.getElementById('contact'); if (contactSection) { contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }}>
                             <Button className="bg-primary hover:bg-primary/90 text-white px-3 py-1.5 text-xs md:text-sm font-semibold">
                               Забронировать
