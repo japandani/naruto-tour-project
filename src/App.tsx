@@ -9,7 +9,6 @@ import TourDetails from "./pages/TourDetails";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
 import JapanSoul from "./pages/JapanSoul";
-import JPKosher from "./pages/JPKosher";
 import NotFound from "./pages/NotFound";
 import TelegramButton from "./components/TelegramButton";
 
@@ -27,7 +26,6 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/JapanSoul" element={<JapanSoul />} />
-          <Route path="/JPKOSHER" element={<JPKosher />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
