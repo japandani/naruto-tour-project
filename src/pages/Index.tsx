@@ -5,8 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import Icon from "@/components/ui/icon";
 import WaveDivider from "@/components/WaveDivider";
 import ContactSection from "@/components/ContactSection";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage } from "@/contexts/LanguageContext";
 import { useState, useEffect, useRef } from "react";
 
 const FlipChar = ({ char, delay }: { char: string; delay: number }) => {
@@ -207,7 +205,6 @@ const DecorativeBackground = () => (
 );
 
 const Index = () => {
-  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formName, setFormName] = useState('');
   const [formPhone, setFormPhone] = useState('');
@@ -248,19 +245,18 @@ const Index = () => {
             </div>
           </div>
           <div className="hidden lg:flex gap-6 xl:gap-10">
-            <a href="#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.home}</a>
-            <a href="#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.about}</a>
-            <a href="#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.path}</a>
-            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.tour}</a>
-            <a href="/gallery" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.gallery}</a>
+            <a href="#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Главная</a>
+            <a href="#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">О нас</a>
+            <a href="#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Ваш Путь</a>
+            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Описание Пути</a>
+            <a href="/gallery" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Галерея</a>
             <a href="/blog" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Блог</a>
-            <a href="#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.contacts}</a>
+            <a href="#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
           </div>
           <div className="flex items-center gap-3">
-            <LanguageSwitcher />
             <a href="#contact">
               <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
-                {t.contact.title}
+                Связаться с нами
               </Button>
             </a>
             <button
@@ -281,35 +277,35 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                {t.nav.home}
+                Главная
               </a>
               <a 
                 href="#about" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                {t.nav.about}
+                О нас
               </a>
               <a 
                 href="#path" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                {t.nav.path}
+                Концепт
               </a>
               <a 
                 href="/tour" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                {t.nav.tour}
+                Программа тура
               </a>
               <a 
                 href="/gallery" 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                {t.nav.gallery}
+                Галерея
               </a>
               <a 
                 href="/blog" 
@@ -323,7 +319,7 @@ const Index = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-background hover:text-primary transition-colors font-medium text-lg py-2"
               >
-                {t.nav.contacts}
+                Контакты
               </a>
               <Button 
                 variant="default" 
@@ -349,16 +345,20 @@ const Index = () => {
 
 
         <div className="relative z-10 text-center text-white px-4 animate-fade-in max-w-5xl mx-auto mt-12 md:mt-20">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg">{t.hero.title}</h1>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg">Япония. Выше шума, глубже традиций.</h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-4xl mx-auto drop-shadow-md leading-relaxed">
-            {t.hero.subtitle}
+            Наше авторское путешествие — это ключ к пониманию Японии.<br className="hidden sm:block"/>
+            Мы покажем вам не просто места, а смыслы.<br className="hidden sm:block"/>
+            Услышать шёпот бамбуковой рощи и расшифровать код мегаполиса.<br className="hidden sm:block"/>
+            Понять душу самурая в замке Химэдзи и ощутить дыхание будущего в Одайбе.<br className="hidden sm:block"/>
+            Это погружение, после которого мир уже не будет прежним.
           </p>
           <Button 
             size="lg" 
             className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-4 md:py-6 text-base md:text-lg mb-8 md:mb-10"
             onClick={() => document.getElementById('scrolls')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            {t.hero.button}
+            Сделать первый шаг
             <Icon name="ArrowRight" size={20} className="ml-2" />
           </Button>
 
@@ -379,23 +379,23 @@ const Index = () => {
               <br />
               <br />
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-foreground leading-tight text-center">
-                {t.about.title}
+                Japan: ДА — это не только путешествие. Это ответ.
               </h2>
               <br />
               <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                {t.about.p1}
+                Ответ на зов безмолвных садов камней и шумных неоновых перекрёстков. На вопрос, который ваше сердце задавало Японии всю жизнь.
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                <strong className="text-foreground">{t.about.p2}</strong>
+                <strong className="text-foreground">За этим ответом стоим Мы , команда ДА , во главе с руководителем проекта , Даниэлем А.</strong>
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                {t.about.p3}
+                25 лет — это не просто стаж. Это целая жизнь, прожитая в ритме Японии. Это тысячи улочек, пройденных не как турист, а как искатель. Это сотни встреч, десятки тысяч историй, вплетённых в одно грандиозное полотно под названием «Путь». Путь, который начинается с простого слова — «ДА».
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-3 md:mb-4 leading-relaxed">
-                {t.about.p4}
+                Слово «ДА» стало нашим ключом. Ключом к потаённым дверям, за которыми скрывается подлинная Япония. К тем местам, куда не ступает нога обычного туриста. К тем людям, чьи руки хранят многовековые традиции гончарного искусства, каллиграфии и чайной церемонии. К тем моментам тишины и понимания, которые меняют тебя навсегда.
               </p>
               <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6 leading-relaxed">
-                {t.about.p5}
+                Наш проект давно перестал быть просто «бюро». Для наших друзей из Европы и Азии он стал проводником в мир, где прошлое и будущее говорят на одном языке. А в последние годы мы стали живым мостом — тонким и прочным, как шёлковая нить — который связывает сердца путешественников из России с загадочной душой Японии.
               </p>
             </div>
           </div>
@@ -408,10 +408,11 @@ const Index = () => {
         
         <div className="container mx-auto max-w-7xl relative z-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 md:mb-6 text-foreground mt-16 md:mt-20">
-            <span style={{ fontFamily: 'Cormorant, serif' }}>{t.path.title}</span> <span className="text-5xl md:text-6xl lg:text-7xl" style={{ fontFamily: 'serif' }}>{t.path.kanji}</span> {t.path.subtitle}
+            <span style={{ fontFamily: 'Cormorant, serif' }}>Мити</span> <span className="text-5xl md:text-6xl lg:text-7xl" style={{ fontFamily: 'serif' }}>道</span> — это Путь
           </h2>
           <p className="text-base md:text-lg text-muted-foreground mb-8 md:mb-12 max-w-6xl mx-auto leading-relaxed px-4">
-            {t.path.description}<br className="hidden sm:block"/>
+            Но не как дорога на карте, а как философия жизни. Это бесконечное совершенствование, следование традиции и полное погружение в настоящее мгновение.<br className="hidden sm:block"/>
+            Сакральный смысл этого понятия раскрывается в самых разных японских искусствах — от Пути чая (Садо) до Пути меча (Кэндо).<br className="hidden sm:block"/>
             Наше путешествие — это и есть ваш личный Мити. Путь, состоящий из четырёх свитков, где вы не просто увидите Японию, а пройдете через её сердце, стихии и дух, чтобы обрести новый взгляд на мир и на себя.
           </p>
 
@@ -421,7 +422,7 @@ const Index = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-base md:text-lg"
             >
               <Icon name="FileText" size={20} />
-              {t.path.tourButton}
+              Программа тура и цена
             </a>
           </div>
 
@@ -436,12 +437,12 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>{t.path.scroll1Title}</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">{t.path.scroll1Name}</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">{t.path.scroll1Subtitle}</p>
-                    <p className="text-sm text-primary/80 mb-4">{t.path.scroll1Location}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Первый</h3>
+                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">ЭНЕРГИЯ</div>
+                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Лабиринты, где рождается завтра</p>
+                    <p className="text-sm text-primary/80 mb-4">(Токио & Осака)</p>
                     <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      {t.path.scroll1Text}
+                      Первый ключ — это смелость принять будущее. Вы не просто увидите неоновые каньоны Токио и бьющую через край жизненную силу Осаки — вы научитесь слышать их ритм и находить тишину в самом сердце этого гула. Мы проведём вас по следам создателей современной Японии: от секретных баров в небоскребах, где заключаются многомиллионные сделки, до аутентичных закусочных в подворотнях Дотонбори, где рождаются новые гастрономические тренды. Это посвящение в дерзость и искусство понимать страну через пульс её самых динамичных городов.
                     </p>
                   </div>
                 </div>
@@ -467,12 +468,12 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>{t.path.scroll2Title}</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">{t.path.scroll2Name}</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">{t.path.scroll2Subtitle}</p>
-                    <p className="text-sm text-primary/80 mb-4">{t.path.scroll2Location}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Второй</h3>
+                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">СЕРДЦЕ</div>
+                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Шёпот храмов и безмолвный поклон оленей</p>
+                    <p className="text-sm text-primary/80 mb-4">(Киото & Нара)</p>
                     <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      {t.path.scroll2Text}
+                      Второй ключ — это встреча с душой древней Японии. В Киото, за высокими стенами, тень от сосны на стене чайного домика расскажет вам больше, чем целая книга. Вы станете гостем на частной церемонии у мастера, чья семья хранит это искусство веками. А в Наре вас ждёт диалог с самим временем — в парке Касуга, где священные олени, словно хранители этого места, почтительно склоняют головы в немом поклоне, принимая угощение. Это посвящение в благоговение, где вы поймёте, что истинная красота — в безмолвном диалоге между человеком, природой и вечностью.
                     </p>
                   </div>
                 </div>
@@ -498,12 +499,12 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="flex-1 pt-1">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>{t.path.scroll3Title}</h3>
-                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">{t.path.scroll3Name}</div>
-                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">{t.path.scroll3Subtitle}</p>
-                    <p className="text-sm text-primary/80 mb-4">{t.path.scroll3Location}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2 text-primary" style={{ fontFamily: 'Cormorant, serif' }}>Свиток Третий</h3>
+                    <div className="text-xl md:text-2xl font-semibold mb-1 text-foreground tracking-wide">СТИХИЯ</div>
+                    <p className="text-base md:text-lg font-medium mb-3 text-muted-foreground italic">Шепот сада, вкус моря и душа саке</p>
+                    <p className="text-sm text-primary/80 mb-4">(Альпийские деревушки, Каназава, побережье Японского моря)</p>
                     <p className="text-sm md:text-base text-muted-foreground/90 leading-relaxed">
-                      {t.path.scroll3Text}
+                      Третий ключ — это погружение в стихию японской гармонии, где природа, искусство и человек становятся единым целым. В Каназаве вы войдете в сад Кэнроку-эн на рассвете, когда его туманные пейзажи принадлежат только вам. Здесь игра света сквозь клены становится разговором с вечностью. Вы спуститесь в каменные погреба, где в тишине рождается сакэ, и вкусите дух этой земли — терруар горных источников и рисовых полей. А уснете под шум Японского моря — древнюю колыбельную для рыбаков, чей улов на рассвете еще пахнет океанской свежестью. Это посвящение в вечную мудрость, где простота оказывается самой большой глубиной.
                     </p>
                   </div>
                 </div>

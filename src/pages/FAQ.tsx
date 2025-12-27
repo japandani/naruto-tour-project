@@ -3,7 +3,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const FAQ = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -190,7 +189,6 @@ const FAQ = () => {
             </button>
 
             <div className="hidden md:flex items-center gap-6">
-              <LanguageSwitcher />
               <Link to="/" className="hover:text-primary transition-colors">Главная</Link>
               <Link to="/tour" className="hover:text-primary transition-colors">Программа тура</Link>
               <Link to="/gallery" className="hover:text-primary transition-colors">Галерея</Link>

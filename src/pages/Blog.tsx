@@ -2,13 +2,10 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 import { useState } from 'react';
-import LanguageSwitcher from '@/components/LanguageSwitcher';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Blog() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedArticle, setSelectedArticle] = useState<number | null>(null);
-  const { t, language } = useLanguage();
   
   const articles = [
     {
@@ -617,7 +614,6 @@ export default function Blog() {
             <a href="/#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
           </div>
           <div className="flex items-center gap-3">
-            <LanguageSwitcher />
             <a href="/#contact">
               <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
                 Связаться с нами
@@ -661,11 +657,12 @@ export default function Blog() {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Cormorant, serif' }}>
-            {t.blog.title}
+            Блог путешественника
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t.blog.subtitle}
+            Личные истории, полезные советы и подробные гиды по Японии. 
+            Всё, что нужно знать перед поездкой в Страну восходящего солнца
           </p>
         </div>
 

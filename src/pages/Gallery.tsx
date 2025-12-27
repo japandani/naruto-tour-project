@@ -2,16 +2,89 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
 import ContactSection from "@/components/ContactSection";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLanguage } from "@/contexts/LanguageContext";
 
 const Gallery = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [imageLoading, setImageLoading] = useState<{ [key: number]: boolean }>({});
-  const { t } = useLanguage();
 
-  const galleryImages = t.galleryPage.images;
+  const galleryImages = [
+    {
+      url: "https://cdn.poehali.dev/files/0340155d-4625-40f2-9d1e-b0e7062b54fa.jpeg",
+      title: "Морские острова",
+      description: "Семейные моменты у побережья"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/354621e4-6dd1-4a34-90d2-3c08c1dca019.jpeg",
+      title: "Вечерний стадион",
+      description: "Незабываемые эмоции под открытым небом"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/d16f7162-159b-4da6-af3a-dd6767d336f3.jpeg",
+      title: "Традиционные игры",
+      description: "Мастер-класс в японском парке"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/63a5411c-4bf7-4d7a-b081-d988a2020bb6.jpeg",
+      title: "Чайная церемония",
+      description: "Погружение в традиции Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/f9e53de1-59a4-4d82-9edc-a3a86b58922e.jpeg",
+      title: "Деревня Сиракава-го",
+      description: "Среди рисовых полей и традиционных домов"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/c4fa33a7-df05-4792-bcdf-a872d31fc27d.jpeg",
+      title: "За рулём приключений",
+      description: "Путешествие по японским дорогам"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/b9c020f7-a8ee-4854-ad4c-812198638a29.jpeg",
+      title: "Наш гид",
+      description: "Комфортный трансфер по Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/a5ecbc18-7d24-4808-a2af-78b8cda22299.jpeg",
+      title: "Местные жители",
+      description: "Встречи с гостеприимными японцами"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/d23c3a64-d493-4a96-920d-befa1219a8d9.jpeg",
+      title: "Цветущие холмы",
+      description: "Весенние краски Японии"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/8c1f7682-c884-4298-a7f2-c9f070190311.jpeg",
+      title: "Традиционный рёкан",
+      description: "Ночь в японском стиле"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/543f946f-97a7-4d57-aee6-f284cd474bb1.jpeg",
+      title: "Уличная кофейня",
+      description: "Аутентичный японский кофе"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/dfd6e2ea-c159-4663-b868-525d05a2609b.jpeg",
+      title: "Кошачье кафе",
+      description: "Встреча с пушистыми друзьями"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/b34c93a1-8994-41fd-aee1-4e4ca54bbede.jpeg",
+      title: "Японский интерьер",
+      description: "Традиционный дизайн с теплым освещением"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/e94fc926-fd25-4e3b-b610-e27b23010483.jpeg",
+      title: "Аниме-культура",
+      description: "Знакомство с японской поп-культурой"
+    },
+    {
+      url: "https://cdn.poehali.dev/files/4a9535ec-6d0a-491b-837c-cc6027622277.jpeg",
+      title: "Уличные детали",
+      description: "Милые находки на улицах Японии"
+    },
+  ];
 
   const openImage = (index: number) => {
     setSelectedImage(index);
@@ -59,25 +132,24 @@ const Gallery = () => {
             </div>
           </a>
           <div className="hidden lg:flex gap-6 xl:gap-10">
-            <a href="/#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.home}</a>
-            <a href="/#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.about}</a>
-            <a href="/#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.path}</a>
-            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.tour}</a>
-            <a href="/gallery" className="text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.gallery}</a>
-            <a href="/blog" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.galleryPage.blog}</a>
-            <a href="/#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">{t.nav.contacts}</a>
+            <a href="/#home" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Главная</a>
+            <a href="/#about" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">О нас</a>
+            <a href="/#path" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Ваш Путь</a>
+            <a href="/tour" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Описание Пути</a>
+            <a href="/gallery" className="text-primary transition-colors font-medium text-base xl:text-lg">Галерея</a>
+            <a href="/blog" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Блог</a>
+            <a href="/#contact" className="text-background hover:text-primary transition-colors font-medium text-base xl:text-lg">Контакты</a>
           </div>
           <div className="flex items-center gap-3">
-            <LanguageSwitcher />
             <a href="/">
               <Button variant="default" className="hidden sm:block bg-primary hover:bg-primary/90 text-white px-3 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold shadow-lg">
-                {t.galleryPage.toHome}
+                На главную
               </Button>
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden text-background p-2 hover:text-primary transition-colors"
-              aria-label={t.galleryPage.menu}
+              aria-label="Меню"
             >
               <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
             </button>
@@ -87,16 +159,16 @@ const Gallery = () => {
         {mobileMenuOpen && (
           <div className="lg:hidden bg-foreground/98 backdrop-blur-md border-t border-background/10 animate-fade-in">
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
-              <a href="/#home" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.home}</a>
-              <a href="/#about" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.about}</a>
-              <a href="/#path" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.path}</a>
-              <a href="/tour" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.tour}</a>
-              <a href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-primary transition-colors font-medium text-lg py-2">{t.nav.gallery}</a>
-              <a href="/blog" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.galleryPage.blog}</a>
-              <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">{t.nav.contacts}</a>
+              <a href="/#home" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Главная</a>
+              <a href="/#about" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">О нас</a>
+              <a href="/#path" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Ваш Путь</a>
+              <a href="/tour" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Описание Пути</a>
+              <a href="/gallery" onClick={() => setMobileMenuOpen(false)} className="text-primary transition-colors font-medium text-lg py-2">Галерея</a>
+              <a href="/blog" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Блог</a>
+              <a href="/#contact" onClick={() => setMobileMenuOpen(false)} className="text-background hover:text-primary transition-colors font-medium text-lg py-2">Контакты</a>
               <a href="/" className="sm:hidden">
                 <Button variant="default" className="w-full bg-primary hover:bg-primary/90 text-white font-semibold">
-                  {t.galleryPage.toHome}
+                  На главную
                 </Button>
               </a>
             </div>
@@ -104,50 +176,56 @@ const Gallery = () => {
         )}
       </nav>
 
-      <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-br from-primary/5 via-background to-primary/5">
-        <div className="absolute inset-0 bg-[url('https://cdn.poehali.dev/projects/c4212dcd-652d-4010-aca8-ce0bf3b0da2c/files/f6e8ec5d-14f7-497a-bf69-2d99142f26ed.jpg')] opacity-5 bg-cover bg-center"></div>
-        <div className="container mx-auto px-4 py-16 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-orange-500 to-red-500 bg-clip-text text-transparent animate-fade-in">
-            {t.galleryPage.title}
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            {t.galleryPage.subtitle}
+      <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden pt-20 bg-gradient-to-b from-foreground/5 to-background">
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto py-8 md:py-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground leading-tight" style={{ fontFamily: 'Cormorant, serif' }}>
+            Галерея Японии
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light mb-6">
+            Моменты, которые становятся воспоминаниями
           </p>
+          <a href="/tour">
+            <Button className="bg-primary hover:bg-primary/90 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-semibold shadow-lg">
+              <Icon name="BookOpen" size={20} className="mr-2" />
+              Ознакомься с маршрутом
+            </Button>
+          </a>
         </div>
       </section>
 
-      <section className="py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-8 md:py-12 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {galleryImages.map((image, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-xl shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg cursor-pointer transform transition-all duration-500 hover:scale-105 hover:shadow-2xl"
                 onClick={() => openImage(index)}
               >
-                <div className="aspect-square relative">
-                  {imageLoading[index] !== false && (
-                    <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
-                      <Icon name="Loader2" className="animate-spin text-muted-foreground" size={32} />
-                    </div>
-                  )}
-                  <img
-                    src={image.url}
-                    alt={image.title}
-                    className={`w-full h-full object-cover transition-all duration-300 ${
-                      imageLoading[index] === false ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    onLoad={() => setImageLoading(prev => ({ ...prev, [index]: false }))}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                    <h3 className="text-white text-xl font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                {imageLoading[index] !== false && (
+                  <div className="absolute inset-0 bg-foreground/10 animate-pulse flex items-center justify-center">
+                    <Icon name="Loader2" size={40} className="text-primary animate-spin" />
+                  </div>
+                )}
+                <img
+                  src={image.url}
+                  alt={image.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onLoad={() => setImageLoading(prev => ({ ...prev, [index]: false }))}
+                  style={{ display: imageLoading[index] === false ? 'block' : 'none' }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
                       {image.title}
                     </h3>
-                    <p className="text-white/90 text-sm transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">
+                    <p className="text-sm md:text-base text-white/90">
                       {image.description}
                     </p>
                   </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Icon name="ZoomIn" size={24} className="text-white" />
                 </div>
               </div>
             ))}
@@ -157,56 +235,77 @@ const Gallery = () => {
 
       {selectedImage !== null && (
         <div
-          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in"
+          className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4 animate-fade-in"
           onClick={closeImage}
         >
           <button
             onClick={closeImage}
-            className="absolute top-4 right-4 text-white hover:text-primary transition-colors p-2 z-10"
+            className="absolute top-4 right-4 z-[110] bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-3 transition-all duration-300 hover:scale-110"
             aria-label="Закрыть"
           >
-            <Icon name="X" size={32} />
+            <Icon name="X" size={28} className="text-white" />
           </button>
 
           <button
             onClick={(e) => { e.stopPropagation(); prevImage(); }}
-            className="absolute left-4 text-white hover:text-primary transition-colors p-2 z-10"
+            className="absolute left-4 z-[110] bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-4 transition-all duration-300 hover:scale-110"
             aria-label="Предыдущее фото"
           >
-            <Icon name="ChevronLeft" size={48} />
+            <Icon name="ChevronLeft" size={32} className="text-white" />
           </button>
 
           <button
             onClick={(e) => { e.stopPropagation(); nextImage(); }}
-            className="absolute right-4 text-white hover:text-primary transition-colors p-2 z-10"
+            className="absolute right-4 z-[110] bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-4 transition-all duration-300 hover:scale-110"
             aria-label="Следующее фото"
           >
-            <Icon name="ChevronRight" size={48} />
+            <Icon name="ChevronRight" size={32} className="text-white" />
           </button>
 
-          <div className="max-w-7xl w-full" onClick={(e) => e.stopPropagation()}>
+          <div className="relative flex items-center justify-center max-w-[95vw] max-h-[90vh] w-full h-full" onClick={(e) => e.stopPropagation()}>
             <img
               src={galleryImages[selectedImage].url}
               alt={galleryImages[selectedImage].title}
-              className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+              className="max-w-full max-h-[90vh] w-auto h-auto object-contain rounded-lg animate-scale-in"
             />
-            <div className="text-center mt-6">
-              <h3 className="text-white text-2xl font-bold mb-2">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 md:p-6 rounded-b-lg">
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Cormorant, serif' }}>
                 {galleryImages[selectedImage].title}
               </h3>
-              <p className="text-white/80 text-lg">
+              <p className="text-sm md:text-base lg:text-lg text-white/90">
                 {galleryImages[selectedImage].description}
               </p>
+              <p className="text-xs md:text-sm text-white/70 mt-2">
+                {selectedImage + 1} / {galleryImages.length}
+              </p>
             </div>
-          </div>
-
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/60 text-sm">
-            {selectedImage + 1} / {galleryImages.length}
           </div>
         </div>
       )}
 
+      <section className="py-12 md:py-16 px-4 bg-gradient-to-b from-background to-accent/5">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 text-foreground" style={{ fontFamily: 'Cormorant, serif' }}>
+            Готовы создать свои воспоминания?
+          </h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/">
+              <Button size="lg" variant="outline" className="px-10 py-6 text-lg border-2">
+                <Icon name="Home" size={20} className="mr-2" />
+                На главную
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <ContactSection />
+
+      <footer className="bg-foreground text-background py-8 px-4">
+        <div className="container mx-auto max-w-6xl text-center">
+          <p className="text-sm text-background/70">© 2026 JAPAN : ДА! Все права защищены.</p>
+        </div>
+      </footer>
     </div>
   );
 };
