@@ -162,12 +162,11 @@ const ToursBoard = () => {
                     </span>
                   </a>
                 ) : (
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 bg-red-600 rounded-full shadow-lg shadow-red-600/70"></span>
-                    <span className="inline-block bg-red-600/20 text-red-600 px-2 py-1 rounded text-xs font-bold uppercase border border-red-600/30">
-                      Группа закрыта
-                    </span>
-                  </div>
+                  <a href="#contact" onClick={(e) => { e.preventDefault(); const contactSection = document.getElementById('contact'); if (contactSection) { contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }}>
+                    <Button variant="outline" className="border-orange-500/50 text-orange-600 hover:bg-orange-500/10 px-3 py-1.5 text-xs md:text-sm font-semibold">
+                      Лист ожидания
+                    </Button>
+                  </a>
                 )}
               </div>
             </div>
