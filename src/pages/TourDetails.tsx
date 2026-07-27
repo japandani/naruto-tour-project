@@ -129,10 +129,10 @@ const TourDetails = () => {
   ];
 
   const tourDates = [
-    { date: "17 сентября - 30 сентября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
-    { date: "2 октября - 15 октября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
-    { date: "16 октября - 29 октября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
-    { date: "1 ноября - 14 ноября 2026", status: "available", seats: 4, season: "autumn", badge: "🍁 Момодзи (красные клёны)" }
+    { date: "17 сентября - 30 сентября 2026", status: "available", seats: 1, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
+    { date: "2 октября - 15 октября 2026", status: "closed", seats: 0, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
+    { date: "16 октября - 29 октября 2026", status: "closed", seats: 0, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
+    { date: "1 ноября - 14 ноября 2026", status: "available", seats: 2, season: "autumn", badge: "🍁 Момодзи (красные клёны)" }
   ];
 
   return (
@@ -493,6 +493,12 @@ const TourDetails = () => {
                     <div className="flex items-center gap-2">
                       {tour.status === 'available' ? (
                         <>
+                          <span className="flex items-center gap-1.5">
+                            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse shadow-lg shadow-orange-500/70"></span>
+                            <span className="text-xs font-bold text-orange-600 uppercase whitespace-nowrap">
+                              {tour.seats === 1 ? 'Последнее место' : `Осталось ${tour.seats} места`}
+                            </span>
+                          </span>
                           <a href="#contact" onClick={(e) => { e.preventDefault(); const contactSection = document.getElementById('contact'); if (contactSection) { contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }}>
                             <Button className="bg-primary hover:bg-primary/90 text-white px-3 py-1.5 text-xs md:text-sm font-semibold">
                               Забронировать
@@ -510,7 +516,7 @@ const TourDetails = () => {
                         <div className="flex items-center gap-1.5">
                           <span className="w-2 h-2 bg-red-600 rounded-full shadow-lg shadow-red-600/70"></span>
                           <span className="inline-block bg-red-600/20 text-red-600 px-2 py-1 rounded text-xs font-bold uppercase border border-red-600/30">
-                            Группа закрыта
+                            Мест нет
                           </span>
                         </div>
                       )}
