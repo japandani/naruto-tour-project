@@ -4,15 +4,10 @@ import Icon from "@/components/ui/icon";
 
 const ToursBoard = () => {
   const tourDates = [
-    { date: "18 марта - 1 апреля 2026", status: "waitlist", seats: 0, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
-    { date: "1 апреля - 15 апреля 2026", status: "waitlist", seats: 0, season: "spring", badge: "🌸 Ханами (цветение сакуры)" },
-    { date: "17 апреля - 2 мая 2026", status: "closed", seats: 0, season: "spring" },
-    { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0, season: "spring", duration: "11 дней | 10 ночей" },
-    { date: "12 мая - 25 мая 2026", status: "closed", seats: 0, season: "spring" },
-    { date: "17 сентября - 30 сентября 2026", status: "available", seats: 5, season: "autumn" },
-    { date: "2 октября - 15 октября 2026", status: "available", seats: 6, season: "autumn" },
-    { date: "16 октября - 29 октября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
-    { date: "1 ноября - 14 ноября 2026", status: "available", seats: 4, season: "autumn", badge: "🍁 Момодзи (красные клёны)" }
+    { date: "17 сентября - 1 октября 2026", status: "available", seats: 1, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
+    { date: "2 октября - 15 октября 2026", status: "closed", seats: 0, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
+    { date: "16 октября - 29 октября 2026", status: "closed", seats: 0, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
+    { date: "4 ноября - 19 ноября 2026", status: "available", seats: 2, season: "autumn", badge: "🍁 Момодзи (красные клёны)" }
   ];
 
   return (
