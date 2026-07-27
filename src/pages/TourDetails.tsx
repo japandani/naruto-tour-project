@@ -129,11 +129,6 @@ const TourDetails = () => {
   ];
 
   const tourDates = [
-    { date: "18 марта - 1 апреля 2026", status: "closed", seats: 0, season: "spring" },
-    { date: "1 апреля - 15 апреля 2026", status: "closed", seats: 0, season: "spring" },
-    { date: "17 апреля - 2 мая 2026", status: "closed", seats: 0, season: "spring" },
-    { date: "29 апреля - 10 мая 2026", status: "closed", seats: 0, season: "spring" },
-    { date: "12 мая - 25 мая 2026", status: "closed", seats: 0, season: "spring" },
     { date: "17 сентября - 30 сентября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
     { date: "2 октября - 15 октября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
     { date: "16 октября - 29 октября 2026", status: "available", seats: 6, season: "autumn", badge: "🍁 Момодзи (красные клёны)" },
