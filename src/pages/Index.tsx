@@ -79,7 +79,7 @@ const AirportBoard = () => {
           {renderText('ТОКИО', 3000)}
         </div>
         <div className="text-[10px] md:text-base lg:text-lg font-bold tracking-tight md:tracking-wider text-center whitespace-nowrap">
-          {renderText('18.09', 4000)}
+          {renderText('4.11', 4000)}
         </div>
         <div className="text-right">
           <span className="inline-block bg-[#d4af37] text-black px-0.5 md:px-2 py-0.5 rounded text-[8px] md:text-xs font-bold uppercase tracking-tight whitespace-nowrap">
@@ -99,7 +99,7 @@ const AirportBoard = () => {
           <div className="flex items-center justify-center gap-0.5 md:gap-1.5">
             <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-orange-500 rounded-full animate-pulse shadow-lg shadow-orange-500/50 flex-shrink-0"></span>
             <span className="text-[9px] md:text-sm font-bold text-orange-500 uppercase tracking-tight whitespace-nowrap">
-              Осталось 4 места
+              Осталось 2 места
             </span>
           </div>
         </a>
